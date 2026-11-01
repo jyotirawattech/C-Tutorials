@@ -1,0 +1,10 @@
+# Build artifacts
+*.o
+*.out
+test_runner
+*.dSYM/
+.DS_Store
+
+# Temporary files
+*.tmp
+*~
