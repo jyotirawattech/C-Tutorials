@@ -1,0 +1,37 @@
+{
+  "source_sha256": "d7c881ad0ece637b929b7df1e4260ae3ff79db4bd3690f518b9abb5a1d9e409c",
+  "baseline": {
+    "name": "Recursive build with inorder linear searches",
+    "approach": "For each subtree root, scan its inorder range to locate the split.",
+    "time": "O(n^2) worst case",
+    "space": "O(h) recursion plus O(n) returned nodes"
+  },
+  "archived": {
+    "name": "Direct value-to-inorder lookup",
+    "time": "O(n+V), V=6001",
+    "space": "O(V+h) auxiliary storage plus O(n) returned nodes"
+  },
+  "why": "A precomputed bounded-domain index replaces repeated inorder scans with constant-time root-position lookup.",
+  "quantitative_comparison": "The baseline can inspect n+(n-1)+...+1 inorder positions on a skewed case. The archive initializes V slots and maps/constructs each of n nodes once. No timing ratio follows from those counts.",
+  "tradeoffs": "Extra fixed lookup storage may dominate tiny inputs. Unique values in -3000..3000 and matching traversals are required; recursion remains O(n) in a skewed tree and allocations are unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source comparison to repeated inorder search, with bounded-domain assumptions explicit; no measured benchmark.",
+  "problem_id": 106,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2041565369/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "16.24",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.86%",
+    "captured_at": "2026-11-02T13:49:21.390Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2041565369/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

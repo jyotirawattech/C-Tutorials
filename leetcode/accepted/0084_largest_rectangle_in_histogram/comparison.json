@@ -1,0 +1,37 @@
+{
+  "source_sha256": "065df584b6134b268fe9e3cef28e9cafdb1327c1d35472ab010c7a2428ad7734",
+  "baseline": {
+    "name": "Enumerate every histogram interval",
+    "approach": "Extend every left endpoint rightward while tracking the minimum height.",
+    "time": "O(n^2)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Monotonic index stack",
+    "time": "O(n)",
+    "space": "O(n)"
+  },
+  "why": "The next smaller height determines a popped bar's maximal width, so already resolved candidates need no rescanning.",
+  "quantitative_comparison": "The baseline examines n(n+1)/2 intervals. Each real bar enters and leaves the archived stack at most once, giving at most n pushes and n pops for those bars. These are different operation counts, not a speed multiplier.",
+  "tradeoffs": "Linear auxiliary memory replaces the baseline's constant space. Allocation failure and int area overflow outside problem constraints are not handled.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Monotonic-stack amortized analysis from the captured source and the defined interval baseline; no paired timing.",
+  "problem_id": 84,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033033041/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "15",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "8.25%",
+    "memory_display": "17.58",
+    "memory_unit": "MB",
+    "memory_beats_display": "7.90%",
+    "captured_at": "2026-11-02T13:42:42.796Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033033041/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

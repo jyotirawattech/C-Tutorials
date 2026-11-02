@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b2015aa17529ff17bd4fb240a1efe8bfdc9124468f4fdbe2d6785eebf2be573d",
+  "baseline": {
+    "name": "Linear scan of the rotated array",
+    "approach": "Compare the target with each element until found or exhausted.",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Sorted-half binary search",
+    "time": "O(log n), where n=numsSize",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "Distinct values let each iteration identify a sorted half and eliminate a half that cannot contain the target.",
+  "quantitative_comparison": "An unsuccessful linear scan checks n elements. Binary search performs at most floor(log2(n))+1 iterations for n>0, with several comparisons per iteration. The iteration bound improves; no fixed ratio of machine instructions or elapsed time follows.",
+  "tradeoffs": "Requires a rotated sorted array with distinct values. The simpler linear scan works without that structural assumption.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 33,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040565062/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.02",
+    "memory_unit": "MB",
+    "memory_beats_display": "59.57%",
+    "captured_at": "2026-11-02T13:49:29.047Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040565062/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "8f03916fff857afc897e533051957c2ca3d4466481ac9af54d87fceefa6d7d39",
+  "baseline": {
+    "name": "Original-to-clone hash map",
+    "approach": "Allocate clones and use a map to translate original next/random pointers.",
+    "time": "Expected O(n)",
+    "space": "O(n) auxiliary map plus O(n) output nodes"
+  },
+  "archived": {
+    "name": "Weave, connect random pointers, unweave",
+    "time": "O(n), three list passes",
+    "space": "O(1) auxiliary pointers plus O(n) output nodes"
+  },
+  "why": "The clone next to each original temporarily acts as the translation map, so random targets resolve without a separate table.",
+  "quantitative_comparison": "The archive replaces n map entries with a constant number of working pointers while still allocating n clones. Both have linear expected traversal work; the archive uses three explicit passes.",
+  "tradeoffs": "Temporarily mutates the original list, excludes concurrent readers, and has no allocation-failure rollback. The map baseline can leave the original structure untouched.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static ownership/storage comparison against the stated map baseline; no matched timing.",
+  "problem_id": 138,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2037081804/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "14",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "8.40%",
+    "memory_display": "14.90",
+    "memory_unit": "MB",
+    "memory_beats_display": "78.58%",
+    "captured_at": "2026-11-02T13:51:21.457Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2037081804/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "f0cf5e9539cafa9f6953c8db6314142a02e780d4eef71b6118d974db5509c4f4",
+  "baseline": {
+    "name": "Simulate one queue turn per purchased ticket",
+    "approach": "Rotate the queue and decrement one ticket at a time until the target person finishes.",
+    "time": "O(T) ticket events plus queue setup, where T is tickets bought before target completion",
+    "space": "O(n) explicit queue, or O(1) indices with input mutation"
+  },
+  "archived": {
+    "name": "Sum each person's capped ticket contribution",
+    "time": "O(n), where n=ticketsSize",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "The target's final turn determines exactly how many visits each position can receive; a formula replaces queue events.",
+  "quantitative_comparison": "The simulation performs T=sum(i<=k,min(tickets[i],tickets[k]))+sum(i>k,min(tickets[i],tickets[k]-1)) ticket events. The archive evaluates n capped contributions. For n=100, all counts=100 and k=99, these are 10000 events versus 100 contributions; that 100:1 event-count example is not a measured time ratio.",
+  "tradeoffs": "Does not produce the queue's intermediate history and assumes a valid k/positive bounded counts. It preserves the input.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 2073,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033036947/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.82",
+    "memory_unit": "MB",
+    "memory_beats_display": "32.93%",
+    "captured_at": "2026-11-02T13:42:06.066Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033036947/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "367371f5d04d04fc48c5098e146add0ffe6e280cd3f9b629f70c44eeb3d5153c",
+  "baseline": {
+    "name": "Build a new list of unique sorted values",
+    "approach": "Scan the original list and allocate one new node per distinct value.",
+    "time": "O(n)",
+    "space": "O(u) newly allocated output nodes for u distinct values; O(1) other state"
+  },
+  "archived": {
+    "name": "Unlink and free duplicate nodes",
+    "time": "O(n), where n is the number of list nodes",
+    "space": "O(1) auxiliary space; list links are modified and removed nodes are freed"
+  },
+  "why": "Reusing the existing unique nodes avoids building an independent output list.",
+  "quantitative_comparison": "Both inspect a linear number of links. The copy baseline allocates u output nodes; the archived source allocates no new nodes and frees n-u duplicates. This compares allocation volume, not elapsed time or universal memory safety.",
+  "tradeoffs": "Requires ownership compatible with freeing removed nodes and invalidates aliases to them. A copied output preserves the original list and its node identities.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 83,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033723539/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "11.82",
+    "memory_unit": "MB",
+    "memory_beats_display": "7.43%",
+    "captured_at": "2026-11-02T13:52:10.839Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033723539/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e53351bf587a8b0f3c1881dceb58f02d3dab943b23c03da2068d6d204ee63aa9",
+  "baseline": {
+    "name": "Scan rightward visibility for each person",
+    "approach": "For each starting person, walk right while tracking the blocking horizon.",
+    "time": "O(n^2) worst case",
+    "space": "O(1) working state plus O(n) output"
+  },
+  "archived": {
+    "name": "Right-to-left monotonic stack",
+    "time": "O(n)",
+    "space": "O(n) working stack plus O(n) output"
+  },
+  "why": "Shorter horizons that are popped cannot matter to future left-side observers, so repeated suffix scans are avoided.",
+  "quantitative_comparison": "A naive scan can consider n(n-1)/2 observer/right-person pairs. The archive pushes each height once and pops it at most once, plus one surviving-barrier check per person. No timing ratio is derived.",
+  "tradeoffs": "Uses extra linear stack storage and the distinct-height visibility model. Small inputs may not amortize allocation overhead; source hardware comments are not benchmarks.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static monotonic-stack amortized argument and stated scan baseline; no paired timing.",
+  "problem_id": 1944,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2049493001/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "2",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "94.80%",
+    "memory_display": "54.90",
+    "memory_unit": "MB",
+    "memory_beats_display": "51.06%",
+    "captured_at": "2026-11-02T13:47:14.671Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2049493001/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

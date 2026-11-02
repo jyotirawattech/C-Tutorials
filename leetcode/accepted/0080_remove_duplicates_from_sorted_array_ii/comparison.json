@@ -1,0 +1,37 @@
+{
+  "source_sha256": "3c779bb6ab45e11334f64efb7cf3a19c916b02ee4bcfd4f176e2cbd9a5a97e20",
+  "baseline": {
+    "name": "Collect allowed duplicates in a temporary array",
+    "approach": "Scan sorted input, keep at most two copies per value in another array, then copy back.",
+    "time": "O(n)",
+    "space": "O(n) temporary storage"
+  },
+  "archived": {
+    "name": "Two-behind in-place compaction",
+    "time": "O(n)",
+    "space": "O(1) auxiliary storage"
+  },
+  "why": "Comparing with the retained value two slots behind the write cursor enforces the duplicate limit without another array.",
+  "quantitative_comparison": "For n>2 the archive inspects n-2 scanned positions and avoids an n-element temporary buffer and copy-back pass. Both methods remain linear; no elapsed-time ratio is available.",
+  "tradeoffs": "Sorted input and permission to overwrite its prefix are required. The archive is not asymptotically better than other in-place linear solutions.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static loop/storage comparison with a temporary-array baseline; no measured benchmark.",
+  "problem_id": 80,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2035107421/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "33",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "17.35%",
+    "memory_display": "15.22",
+    "memory_unit": "MB",
+    "memory_beats_display": "13.26%",
+    "captured_at": "2026-11-02T13:51:31.808Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2035107421/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

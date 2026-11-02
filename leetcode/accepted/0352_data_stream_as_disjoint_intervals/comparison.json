@@ -1,0 +1,37 @@
+{
+  "source_sha256": "a2c99f58f565ce88468455f28d4ae478d033ce3373a0e280da0ad414323769fa",
+  "baseline": {
+    "name": "Presence array and complete domain scan",
+    "approach": "Mark each value and scan the bounded domain to emit maximal seen runs.",
+    "time": "O(1) add and O(V) enumeration",
+    "space": "O(V) presence flags plus output"
+  },
+  "archived": {
+    "name": "Presence flags plus endpoint-parent links",
+    "time": "Worst O(V) add without rank balancing; O(V) enumeration; O(V) create",
+    "space": "O(V) flags/parents, output buffers and possible recursive find depth"
+  },
+  "why": "Endpoint links can skip contiguous runs during enumeration, but their traversal/maintenance adds work and does not improve the stated worst-case bounds over this bounded-domain baseline.",
+  "quantitative_comparison": "Both reserve domain-sized arrays and have an O(V) enumeration bound. The archive adds V parent integers and can traverse a long parent chain on insertion; no proven general improvement is established.",
+  "tradeoffs": "May reduce some enumeration loop steps after compression, but adds recursive depth, allocations and a fixed 0..10000 domain. An ordered interval map is another baseline with different trade-offs.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static comparison against a presence-array baseline on the same value universe; no paired measurements.",
+  "problem_id": 352,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029363865/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "7",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "6.67%",
+    "memory_display": "17.30",
+    "memory_unit": "MB",
+    "memory_beats_display": "7.62%",
+    "captured_at": "2026-11-02T13:45:38.584Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029363865/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

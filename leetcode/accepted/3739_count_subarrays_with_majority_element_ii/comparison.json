@@ -1,0 +1,37 @@
+{
+  "source_sha256": "c2a5121e49e0a8e7058c9e2550864045c8c7552e7e3519fdc2b05046d895451c",
+  "baseline": {
+    "name": "Extend every subarray and count its target frequency",
+    "approach": "For each start position, incrementally count target/non-target values for every end position and test majority.",
+    "time": "O(n^2)",
+    "space": "O(1) auxiliary"
+  },
+  "archived": {
+    "name": "One-step prefix-frequency majority counting",
+    "time": "O(n), including initialization of O(n) frequency slots",
+    "space": "O(n) auxiliary frequency array; counters use long long for the total"
+  },
+  "why": "Mapping target to +1 turns majority into a positive subarray sum; prefix sums change by one, so a frequency at one boundary updates the count of valid earlier prefixes.",
+  "quantitative_comparison": "The baseline examines n(n+1)/2 subarray extensions. The archive performs n prefix transitions plus initialization of 2n+3 frequency slots. This is a candidate/work-structure comparison, not a stopwatch speedup or a universal constant-factor guarantee.",
+  "tradeoffs": "Uses O(n) frequency storage and wider total counters. Returning zero on allocation failure is ambiguous, and size arithmetic depends on judged bounds.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 3739,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046769368/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "21.36",
+    "memory_unit": "MB",
+    "memory_beats_display": "47.06%",
+    "captured_at": "2026-11-02T13:48:28.952Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046769368/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

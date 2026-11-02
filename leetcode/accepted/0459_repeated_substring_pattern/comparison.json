@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b27ad2d360975304cec1b25be67390c8382215ad178035bb3486e3c0379f51a4",
+  "baseline": {
+    "name": "Try each possible repeating block length",
+    "approach": "For every candidate period up to n/2, check the string against that repeating prefix and require divisibility.",
+    "time": "O(n^2) upper bound for naive repeated full-string checks",
+    "space": "O(1) auxiliary"
+  },
+  "archived": {
+    "name": "KMP longest-prefix/suffix periodicity test",
+    "time": "O(n), where n is string length; fallback transitions are amortized linear",
+    "space": "O(n) auxiliary LPS array"
+  },
+  "why": "The LPS table reuses prefix-matching information instead of restarting a full check for every candidate block length.",
+  "quantitative_comparison": "A naive candidate strategy can make up to floor(n/2) string-check attempts, each of up to n character comparisons. KMP's construction has O(n) amortized character-comparison growth. These are upper bounds; early exits and libc/compiler behavior prevent a fixed runtime factor.",
+  "tradeoffs": "Uses O(n) LPS storage instead of constant auxiliary state. Allocation failure returns false, so a resource failure is not distinguishable from a nonrepeating string.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 459,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033708350/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "2",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "82.55%",
+    "memory_display": "12.54",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.13%",
+    "captured_at": "2026-11-02T13:52:21.995Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033708350/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

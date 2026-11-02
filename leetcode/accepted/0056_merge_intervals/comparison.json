@@ -1,0 +1,37 @@
+{
+  "source_sha256": "7a26138e7a485106ceb63db94c5fa06f4600196fb614784049b88c7cfda36db8",
+  "baseline": {
+    "name": "Sort and merge directly into output",
+    "approach": "Sort by interval start and append or extend disjoint result rows during one sweep.",
+    "time": "Usually O(n log n) with an O(n) sweep",
+    "space": "O(k) returned rows plus sort workspace for k merged intervals"
+  },
+  "archived": {
+    "name": "Sort, compact input, then allocate output",
+    "time": "Usually O(n log n), plus O(n) sweep and O(k) copy",
+    "space": "O(k) returned rows plus implementation-dependent qsort workspace"
+  },
+  "why": "Sorting makes overlap decisions local, but the archived second allocation/copy does not remove the sort or output-storage costs of this baseline.",
+  "quantitative_comparison": "Both perform one sort and one linear merge sweep; the archive additionally copies k compacted intervals into allocated output. No asymptotic or measured advantage over this baseline is established.",
+  "tradeoffs": "Input pointers/endpoints are mutated. Comparator subtraction can overflow outside the bounded problem domain, and allocations are unchecked. C does not prescribe qsort's algorithmic bound.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static pass/allocation comparison of the exact source and a conventional sort-and-output baseline; no timing benchmark.",
+  "problem_id": 56,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046774188/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "3",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "66.99%",
+    "memory_display": "18.75",
+    "memory_unit": "MB",
+    "memory_beats_display": "38.42%",
+    "captured_at": "2026-11-02T13:48:17.219Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046774188/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

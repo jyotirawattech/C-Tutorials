@@ -1,0 +1,37 @@
+{
+  "source_sha256": "55c9532f7d396bd33e441134d7d2b7eb60871b7f2c1fb719ffb30596e4f8ca15",
+  "baseline": {
+    "name": "Enumerate all unordered square-root pairs",
+    "approach": "For U=floor(sqrt(c)), test every 0<=a<=b<=U.",
+    "time": "O(c) pair-count bound",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Converging two-pointer square-sum search",
+    "time": "O(sqrt(c)) for nonnegative c",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "Monotonic squared sums identify which boundary can move, so one unsuccessful test removes an entire boundary choice.",
+  "quantitative_comparison": "The complete baseline has (U+1)(U+2)/2 candidate pairs. The two-pointer loop has at most U+1 iterations because each move narrows the gap by one. This compares worst-case candidate bounds, not an observed time ratio; either method can stop earlier on a match.",
+  "tradeoffs": "Requires nonnegative input, a suitable sqrt bound and widened squared-sum arithmetic. A one-loop search using a square-root test is another O(sqrt(c)) alternative, so the archive is not asymptotically better than every reasonable method.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 633,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040541036/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.50",
+    "memory_unit": "MB",
+    "memory_beats_display": "54.41%",
+    "captured_at": "2026-11-02T13:49:32.182Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040541036/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

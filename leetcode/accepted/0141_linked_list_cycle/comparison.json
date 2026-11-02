@@ -1,0 +1,37 @@
+{
+  "source_sha256": "eda9ecbbefc56c205c719c49f283c0c552cabe13dc5451e985d682a74ade338f",
+  "baseline": {
+    "name": "Remember every visited node address",
+    "approach": "Insert node addresses in a hash set and report a cycle when one repeats.",
+    "time": "Expected O(d) for d distinct reachable nodes",
+    "space": "O(d) stored addresses"
+  },
+  "archived": {
+    "name": "Floyd slow/fast pointers",
+    "time": "O(mu+lambda) for a cyclic list with prefix length mu and cycle length lambda; O(n) for an acyclic list",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "Relative pointer motion detects repetition without retaining the visited set.",
+  "quantitative_comparison": "The set can store d addresses plus hash metadata. Floyd uses two cursor variables and O(mu+lambda) iterations for a cycle with prefix mu and length lambda. Both have linear growth; no faster-runtime factor is established, and Floyd dereferences more links per iteration.",
+  "tradeoffs": "The set approach can directly retain the first repeated node. Floyd requires valid stable next pointers and an additional phase if the cycle entry is needed.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 141,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2043139098/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "9",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "80.16%",
+    "memory_display": "12.04",
+    "memory_unit": "MB",
+    "memory_beats_display": "6.26%",
+    "captured_at": "2026-11-02T13:49:07.305Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2043139098/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -18,6 +18,30 @@ Scan with a read index and keep a write index for retained values. Copy each val
 - Time: O(n), where n=numsSize
 - Auxiliary space / ownership: O(1) auxiliary space; input is modified
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Delete each matching value by shifting its suffix. When val is found, move every later element one slot left and continue.
+
+- Baseline time: O(n^2) worst case. Space: O(1) auxiliary.
+- Submitted approach: Stable read/write compaction. Time: O(n), where n=numsSize. Space: O(1) auxiliary space; input is modified.
+
+**How much, by analysis:** Repeated deletion can move n(n-1)/2 elements when all values are removed. Compaction performs n value tests and at most n retained-element writes; for that all-removed case it performs zero writes. These are element-operation counts, not a stopwatch speedup.
+
+**Why:** A write cursor retains useful elements directly, avoiding repeated movement of the same suffix.
+
+**Trade-offs and conditions:** Both modify the array. The returned length defines the useful prefix; trailing values are not cleared or deallocated.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2033798016/) displayed the following at capture on **2026-11-02T13:51:39.971Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **10.41 MB**; reported memory `Beats`: **20.75%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Only the first returned-count elements are meaningful after compaction. The tail is not cleared and the allocation is not resized; callers must use the returned logical length.

@@ -32,3 +32,5 @@ jobs:
         run: make test
       - name: Verify accepted archive integrity and compile objects (no execution)
         run: make test-accepted
+      - name: Verify all comparison records and judge snapshot provenance
+        run: make test-comparisons

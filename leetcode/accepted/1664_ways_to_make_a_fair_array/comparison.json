@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b1ee6deadfecf6e9a04f2c3767c1a6dc5a0b30d8e249736476d69a3b44e54a6b",
+  "baseline": {
+    "name": "Remove each candidate and rescan parity sums",
+    "approach": "For every removal index, walk all remaining values and recompute even/odd totals.",
+    "time": "O(n^2)",
+    "space": "O(1) if removal is simulated"
+  },
+  "archived": {
+    "name": "Rolling left/right parity sums",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "Removing an index swaps only the right suffix's parity, so four rolling sums evaluate a candidate without rescanning it.",
+  "quantitative_comparison": "The baseline can inspect n*(n-1) retained values across all removals. The archive uses two complete input passes and constant arithmetic per candidate; no elapsed multiplier is measured.",
+  "tradeoffs": "Requires sums representable by long long and careful parity bookkeeping. It does not beat every alternative O(n) prefix-sum solution in time growth, though it avoids their prefix arrays.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static count/parity transformation versus the explicitly defined rescan baseline; no benchmark.",
+  "problem_id": 1664,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040524225/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "6",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "24.49%",
+    "memory_display": "16.59",
+    "memory_unit": "MB",
+    "memory_beats_display": "30.61%",
+    "captured_at": "2026-11-02T13:50:35.372Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040524225/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

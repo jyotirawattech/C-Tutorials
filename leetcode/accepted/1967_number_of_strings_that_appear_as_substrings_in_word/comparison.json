@@ -1,0 +1,37 @@
+{
+  "source_sha256": "c1780ad23d9fc72a1fe00ef65b9a2172779cb5c6ef0ceb7d5594dedbe9f52cc1",
+  "baseline": {
+    "name": "Explicit naive substring search for each pattern",
+    "approach": "For every pattern, try each possible starting position and compare characters.",
+    "time": "O(P*W*Lmax) naive upper bound",
+    "space": "O(1) explicit search state"
+  },
+  "archived": {
+    "name": "One libc strstr call per pattern",
+    "time": "Sum of substring-search costs over all P patterns; a naive search bound is O(P*W*Lmax), where W is word length and Lmax maximum pattern length. Actual strstr implementation cost is platform-dependent.",
+    "space": "O(1) explicit counter state; any library search workspace is implementation-dependent"
+  },
+  "why": "Using the library expresses the same substring predicate clearly, but its implementation is a separate platform detail.",
+  "quantitative_comparison": "The archive makes P strstr calls instead of P explicit search procedures. That alone says nothing about the number of character comparisons; a libc may optimize searches, but no version-specific work count or benchmark was established. No quantitative advantage is claimed.",
+  "tradeoffs": "Library reuse reduces custom matching code. It assumes valid NUL-terminated strings, and actual time/workspace are libc-dependent.",
+  "verdict": "not_established",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1967,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2049518696/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.05",
+    "memory_unit": "MB",
+    "memory_beats_display": "64.44%",
+    "captured_at": "2026-11-02T13:47:11.081Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2049518696/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

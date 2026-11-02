@@ -18,6 +18,30 @@ Sort the input array and then inspect adjacent elements for equality. Sorting gr
 - Time: O(n log n) if the platform qsort implementation provides that sorting bound; final scan O(n). The C standard does not prescribe qsort's worst-case complexity.
 - Auxiliary space / ownership: Sorting workspace is implementation-dependent; the explicit adjacent scan uses O(1) state
 
+## How this solution compares
+
+**Conclusion:** Same or worse against this comparator.
+
+**Named baseline:** Hash-set duplicate detection. Scan values, stopping when insertion finds a value already present.
+
+- Baseline time: Expected O(n), O(n^2) worst case for an unsuitable chained table. Space: O(n) auxiliary set.
+- Submitted approach: qsort plus adjacent equality scan. Time: O(n log n) if the platform qsort implementation provides that sorting bound; final scan O(n). The C standard does not prescribe qsort's worst-case complexity.. Space: Sorting workspace is implementation-dependent; the explicit adjacent scan uses O(1) state.
+
+**How much, by analysis:** The archive performs one sort plus at most n-1 adjacent checks. A hash set performs at most n insert/lookups in expectation. Sorting work and workspace depend on libc; no reduction in bytes, comparisons or milliseconds is established here.
+
+**Why:** Sorting makes duplicates adjacent and uses a standard library routine, but does not improve expected time growth over a suitable hash set.
+
+**Trade-offs and conditions:** The archive mutates input and its subtracting comparator relies on bounded values. Avoiding a custom hash table is a simplicity trade-off, not evidence that the solution is faster or uses less memory on this platform.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/463988887/) displayed the following at capture on **2026-11-02T13:46:10.407Z**:
+
+- Runtime: **16 ms**; reported runtime `Beats`: **91.51%**.
+- Memory: **8.92 MB**; reported memory `Beats`: **100.00%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 qsort mutates the input. The comparator subtracts two ints, which can overflow outside the problem's bounded value range; this fragment also relies on judge-supplied declarations for bool and qsort.

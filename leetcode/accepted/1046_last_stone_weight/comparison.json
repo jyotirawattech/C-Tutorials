@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e6296e3a4c6b9563dab9be4dcf290758ef80d382e94b24690d23c9b60939b1a1",
+  "baseline": {
+    "name": "Resort stones before every smash",
+    "approach": "Sort the remaining stones each round to find the two largest.",
+    "time": "O(n^2 log n) conservative worst-case bound over shrinking rounds",
+    "space": "Sort-implementation-dependent workspace"
+  },
+  "archived": {
+    "name": "Reusable max-heap",
+    "time": "O(n log n), with O(n) heap build",
+    "space": "O(log n) recursive heapify stack; input-backed heap"
+  },
+  "why": "The heap repairs only paths affected by two removals and an optional insertion instead of fully sorting again.",
+  "quantitative_comparison": "There are at most n-1 smash rounds; each archive round performs two pops and at most one push with logarithmic repair, rather than one whole-array sort. No elapsed-time multiplier is established.",
+  "tradeoffs": "Input order/content is changed, heap helpers assume valid sizes, and heap overhead may not help tiny stone sets. No claim over every alternative priority queue is made.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static heap-operation comparison to repeated sorting; no benchmark.",
+  "problem_id": 1046,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033567278/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.72",
+    "memory_unit": "MB",
+    "memory_beats_display": "9.20%",
+    "captured_at": "2026-11-02T13:41:58.615Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033567278/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

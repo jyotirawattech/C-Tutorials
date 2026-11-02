@@ -22,6 +22,11 @@ with original code, problem/submission links, dates, explanations and source-rev
 notes. The twelve standalone practice examples below are a separate, partly
 overlapping collection; they are not twelve additional accepted solves.
 
+Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
+what work or storage changes, why, the conditions and trade-offs, and the dated
+LeetCode runtime/memory displays. Platform `Beats` values and theoretical bounds
+are kept separate from measured gains; no new paired benchmark is claimed.
+
 ---
 
 ## 🎯 Motivation & Engineering Philosophy

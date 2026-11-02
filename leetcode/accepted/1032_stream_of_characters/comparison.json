@@ -1,0 +1,37 @@
+{
+  "source_sha256": "7598463d9d5f957a72f90de47f23051968c9ddb55ed2863d9e76468a41b316d9",
+  "baseline": {
+    "name": "Compare every dictionary word with the stream suffix",
+    "approach": "For each query, test each word's characters against the current stream ending.",
+    "time": "O(S) worst case per query, S total dictionary characters",
+    "space": "Dictionary and recent stream storage"
+  },
+  "archived": {
+    "name": "Reversed-word trie",
+    "time": "O(P+S) build; O(L) per query, L longest word",
+    "space": "Fixed P=400005 trie nodes and Q=40005 stream characters"
+  },
+  "why": "Shared reversed prefixes let one backward stream walk test many dictionary suffixes together.",
+  "quantitative_comparison": "A query follows at most L trie edges rather than comparing up to S dictionary characters in the stated baseline. Build cost and the preallocated P-node memory must be included; no measured speedup or exact query savings are known.",
+  "tradeoffs": "Only lowercase a..z and bounded total nodes/queries are supported. Fixed allocation can be wasteful for small dictionaries, and capacity/allocation failures are unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static trie path bound and allocated capacities versus per-word suffix checks; no benchmark.",
+  "problem_id": 1032,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029357663/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "47",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "141.70",
+    "memory_unit": "MB",
+    "memory_beats_display": "92.86%",
+    "captured_at": "2026-11-02T13:45:42.782Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029357663/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

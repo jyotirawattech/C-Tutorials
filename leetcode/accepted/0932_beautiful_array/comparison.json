@@ -1,0 +1,37 @@
+{
+  "source_sha256": "39682d391631f05c31207643db2affe623ec5ec2af91f6aa71ba79e0a3e5b288",
+  "baseline": {
+    "name": "Recursive construction reusing one half-order",
+    "approach": "Recursively compute one beautiful half-order of size ceil(n/2) once, then reuse that order to emit the bounded odd and even mappings. Do not make two independent recursive subcalls.",
+    "time": "O(n) under T(n)=T(ceil(n/2))+O(n)",
+    "space": "O(n) total arrays plus O(log n) recursion depth"
+  },
+  "archived": {
+    "name": "Iterative odd/even expansion",
+    "time": "O(n)",
+    "space": "O(n) temporary buffer plus O(n) output"
+  },
+  "why": "The archive flattens the same parity-preserving construction into buffer passes and avoids recursive calls.",
+  "quantitative_comparison": "Expansion lengths double until n, so the sum of processed lengths is O(n). The recursive baseline can also have O(n) total work and storage; removing logarithmic call depth does not establish a better dominant bound or measured speed.",
+  "tradeoffs": "Two n-element buffers are reserved, n must be positive, and a partial allocation failure leaks the other successful allocation. No general better-performance claim is established.",
+  "verdict": "not_established",
+  "evidence_basis": "Static comparison of equivalent constructive recurrences; no timing benchmark.",
+  "problem_id": 932,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2041563723/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "11.76",
+    "memory_unit": "MB",
+    "memory_beats_display": "92.00%",
+    "captured_at": "2026-11-02T13:49:25.262Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2041563723/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

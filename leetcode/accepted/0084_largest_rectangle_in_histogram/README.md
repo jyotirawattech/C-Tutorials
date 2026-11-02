@@ -18,6 +18,30 @@ Keep indices in a stack whose heights are nondecreasing. When a shorter bar arri
 - Time: O(n), where n is the number of bars.
 - Auxiliary space / ownership: O(n) auxiliary stack.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Enumerate every histogram interval. Extend every left endpoint rightward while tracking the minimum height.
+
+- Baseline time: O(n^2). Space: O(1).
+- Submitted approach: Monotonic index stack. Time: O(n). Space: O(n).
+
+**How much, by analysis:** The baseline examines n(n+1)/2 intervals. Each real bar enters and leaves the archived stack at most once, giving at most n pushes and n pops for those bars. These are different operation counts, not a speed multiplier.
+
+**Why:** The next smaller height determines a popped bar's maximal width, so already resolved candidates need no rescanning.
+
+**Trade-offs and conditions:** Linear auxiliary memory replaces the baseline's constant space. Allocation failure and int area overflow outside problem constraints are not handled.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2033033041/) displayed the following at capture on **2026-11-02T13:42:42.796Z**:
+
+- Runtime: **15 ms**; reported runtime `Beats`: **8.25%**.
+- Memory: **17.58 MB**; reported memory `Beats`: **7.90%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Assumes nonnegative heights and a maximum area representable by int. The allocated stack is not checked for allocation failure; exercise increasing, decreasing, equal-height and empty histograms.

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "1e2752019e4a81ab912622727248b56f03659bc12cbd97fb301a2eda79e41c38",
+  "baseline": {
+    "name": "Enumerate removable subarrays",
+    "approach": "Extend each left boundary while maintaining the removed sum modulo p.",
+    "time": "O(n^2)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Most-recent prefix remainder hash",
+    "time": "Expected O(n+H), worst O(n^2+H); H=100003",
+    "space": "O(H+min(n+1,p))"
+  },
+  "why": "The needed earlier prefix remainder identifies a valid removal without enumerating every possible start. The latest matching index minimizes length for the current end.",
+  "quantitative_comparison": "The baseline may consider n(n+1)/2 intervals. The archive performs up to two hash-chain operations per endpoint plus table initialization/cleanup; short-chain behavior is assumed for expected linear work, not a guaranteed speed ratio.",
+  "tradeoffs": "Extra hash storage/init cost can dominate small n; collisions restore quadratic worst-case work. Positive p, nonnegative values, bounded sums and successful allocations are assumed.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static prefix-remainder invariant and hash-cost assumptions; no matched benchmark.",
+  "problem_id": 1590,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040516582/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "105",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "13.67%",
+    "memory_display": "70.41",
+    "memory_unit": "MB",
+    "memory_beats_display": "18.63%",
+    "captured_at": "2026-11-02T13:51:10.664Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040516582/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "82927b1e1010b30dd5a4a50154d33c4e63477bb1148c006978b85aa782daf29f",
+  "baseline": {
+    "name": "DFS with separate visited grid",
+    "approach": "Flood-fill each unvisited land component using an explicit visited matrix.",
+    "time": "O(m*n)",
+    "space": "O(m*n) visited storage and worst-case traversal stack"
+  },
+  "archived": {
+    "name": "Recursive sink-in-place DFS",
+    "time": "O(m*n)",
+    "space": "O(m*n) worst-case recursive stack; no visited matrix"
+  },
+  "why": "Changing visited land to water removes the separate visited grid while preserving once-per-cell exploration.",
+  "quantitative_comparison": "One m-by-n visited matrix is avoided, but worst-case auxiliary growth remains O(m*n) because recursion can reach every land cell. No asymptotic total-space or elapsed-time superiority is established.",
+  "tradeoffs": "The input map is destroyed, and a large connected island can exhaust the stack. An iterative traversal can provide better stack control.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static comparison isolating the avoided visited allocation, with recursion costs retained; no timing benchmark.",
+  "problem_id": 200,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046776629/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "20",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "64.03%",
+    "memory_display": "12.32",
+    "memory_unit": "MB",
+    "memory_beats_display": "58.33%",
+    "captured_at": "2026-11-02T13:48:09.280Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046776629/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e101bdc2a6f879f4a3faad904e64e4e61af636e5e20aa6ce732e39b5d5fcfd38",
+  "baseline": {
+    "name": "Branch-based consecutive-ones counter",
+    "approach": "If the current value is one increment the run, otherwise reset it; update the maximum.",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Arithmetic reset of the consecutive-ones counter",
+    "time": "O(n), where n=numsSize",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "Multiplication resets or extends the run for binary values, but computes the same linear scan as a straightforward conditional.",
+  "quantitative_comparison": "Both perform n run updates and at most n maximum checks. The archive replaces a reset branch with arithmetic; actual machine branches, instruction cost and prediction behavior are compiler/input dependent. No 'how many times faster' claim is established.",
+  "tradeoffs": "Arithmetic requires the binary-value contract. The conditional version is more explicit; source-level branchless arithmetic alone is not a measured improvement.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 485,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032923073/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "13.29",
+    "memory_unit": "MB",
+    "memory_beats_display": "54.15%",
+    "captured_at": "2026-11-02T13:43:57.845Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032923073/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

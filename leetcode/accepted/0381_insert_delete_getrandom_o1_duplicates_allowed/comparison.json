@@ -1,0 +1,37 @@
+{
+  "source_sha256": "1ea3e0d055efbed3ef33d835036a206eceb2694b68e108afc54ea24b54063a95",
+  "baseline": {
+    "name": "Dense occurrence array with per-value index sets",
+    "approach": "Keep an indexed set of positions for each value and repair the moved last occurrence with expected-constant hash-set operations.",
+    "time": "Expected O(1) insert/remove/getRandom under hash assumptions; worst case depends on maps",
+    "space": "O(n) occurrence/index storage plus hash metadata"
+  },
+  "archived": {
+    "name": "Dense occurrence array with scanned hash chains",
+    "time": "getRandom O(1); insert/remove O(n) worst case because they scan hash chains, including occurrence-index repair. Constant expected time requires favorable bucket/load behavior not guaranteed by this fixed table.",
+    "space": "O(C+H+n) for fixed C=200005 array capacity, H=100003 buckets and n occurrence nodes"
+  },
+  "why": "The archive uses the dense-array idea, but linked-chain searches and moved-index repair do not establish an advantage over proper per-value index sets.",
+  "quantitative_comparison": "An archive insert/remove can traverse up to O(n) chain nodes. The named comparator uses a constant expected number of hash operations. The archive also preallocates C=200005 values and H=100003 bucket heads; no exact byte or latency gain is demonstrated.",
+  "tradeoffs": "Fixed capacity is unchecked, getRandom requires nonempty input, and rand()%size can be biased. Both designs need a separately justified random-index method if exact uniformity matters.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 381,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029527256/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "60",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "68.57%",
+    "memory_display": "99.12",
+    "memory_unit": "MB",
+    "memory_beats_display": "50.00%",
+    "captured_at": "2026-11-02T13:45:31.021Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029527256/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

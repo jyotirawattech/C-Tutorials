@@ -1,0 +1,37 @@
+{
+  "source_sha256": "365456f43dd7cbe277a5e086e1a77e0939a4ec241619e5683337c086fc808230",
+  "baseline": {
+    "name": "Scan forward independently for every warmer day",
+    "approach": "For each index, inspect later temperatures until finding a strictly warmer one.",
+    "time": "O(n^2) worst case",
+    "space": "O(1) auxiliary, excluding the n-result array"
+  },
+  "archived": {
+    "name": "Monotonic unresolved-index stack",
+    "time": "O(n) amortized, because every index is pushed once and popped at most once",
+    "space": "O(n) auxiliary stack and O(n) returned result"
+  },
+  "why": "Each unresolved day is stored once and removed when its first warmer day arrives.",
+  "quantitative_comparison": "On nonincreasing input the baseline compares n(n-1)/2 day pairs. The archive pushes n indices and pops at most n indices, with amortized linear loop work. Stack actions and temperature comparisons differ, so this does not establish a numeric elapsed-time factor.",
+  "tradeoffs": "Uses O(n) auxiliary stack storage. Equal temperatures must not resolve each other, and both allocations are unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 739,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033029335/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "5",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "89.55%",
+    "memory_display": "70.84",
+    "memory_unit": "MB",
+    "memory_beats_display": "57.85%",
+    "captured_at": "2026-11-02T13:42:46.421Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033029335/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

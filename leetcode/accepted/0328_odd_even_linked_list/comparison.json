@@ -1,0 +1,37 @@
+{
+  "source_sha256": "1e2e145e569cf0c6ac643cc2c3d6bfc0bfb8cb0d2df55202d039e24743fbc930",
+  "baseline": {
+    "name": "Construct separate odd/even-position output",
+    "approach": "Copy odd-position nodes then even-position nodes into a new list.",
+    "time": "O(n)",
+    "space": "O(n) allocated copy"
+  },
+  "archived": {
+    "name": "Relink existing odd/even chains",
+    "time": "O(n)",
+    "space": "O(1) working pointers"
+  },
+  "why": "Existing nodes supply both chains, avoiding new node allocations and copied payloads.",
+  "quantitative_comparison": "The archive allocates zero replacement nodes versus n new nodes in the copy baseline. Both visit a linear number of nodes; no measured runtime reduction is available.",
+  "tradeoffs": "Changes original links and cannot preserve the original list topology for other readers. Grouping is by position rather than value parity.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static allocation/ownership comparison against a copy-preserving baseline; no benchmark.",
+  "problem_id": 328,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033789935/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "12.09",
+    "memory_unit": "MB",
+    "memory_beats_display": "70.30%",
+    "captured_at": "2026-11-02T13:52:06.764Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033789935/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

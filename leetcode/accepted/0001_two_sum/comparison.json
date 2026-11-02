@@ -1,0 +1,37 @@
+{
+  "source_sha256": "1b0f37a939a17a73c156cc068b860f0cba14c810c0624da3461647d4524e5782",
+  "baseline": {
+    "name": "Enumerate every unordered pair",
+    "approach": "Test all i<j pairs for the target sum.",
+    "time": "O(n^2)",
+    "space": "O(1) auxiliary, excluding the two-index output"
+  },
+  "archived": {
+    "name": "One-pass chained-hash lookup",
+    "time": "Expected O(n+B) with favorable hashing and O(n^2+B) worst case, where B=10007 buckets; fixed B gives the usual expected O(n) description",
+    "space": "O(n+B) auxiliary hash storage and a two-integer returned allocation"
+  },
+  "why": "Looking up the complement reuses earlier work instead of checking every earlier value separately, provided hash chains stay short.",
+  "quantitative_comparison": "The complete pair baseline visits n(n-1)/2 pairs. This source performs at most n outer iterations, but a lookup can traverse a long chain and success also scans B=10007 buckets for cleanup. Only expected growth improves under favorable hashing; there is no universal factor or measured time gain.",
+  "tradeoffs": "Uses bucket/node allocations rather than constant auxiliary state. Collisions preserve a quadratic worst case, and unchecked allocations plus the invalid no-solution fallback limit robustness.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2037075478/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "6",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "90.86%",
+    "memory_display": "15.70",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.06%",
+    "captured_at": "2026-11-02T13:51:26.304Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2037075478/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

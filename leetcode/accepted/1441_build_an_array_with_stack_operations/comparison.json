@@ -1,0 +1,37 @@
+{
+  "source_sha256": "5d6fd7a802f91c73e0ced594ac8885708272d3d39d18c2530754c51408497954",
+  "baseline": {
+    "name": "Allocate and copy each output operation string",
+    "approach": "Generate the same Push/Pop sequence but allocate a separate string for each emitted operation.",
+    "time": "O(m) for largest target m and O(m) short output strings",
+    "space": "O(m) pointer output plus separately allocated operation-string payloads"
+  },
+  "archived": {
+    "name": "Operation pointers to shared string literals",
+    "time": "O(m), where m is the largest target value",
+    "space": "O(1) auxiliary state; O(m) returned operation-pointer allocation"
+  },
+  "why": "The output sequence is identical, but constant operation labels can be shared rather than copied per output item.",
+  "quantitative_comparison": "For p emitted operations, the comparator makes p string allocations in addition to its pointer-array allocation. The archive makes one pointer-array allocation and reuses two literals, eliminating those p per-string allocations/copies. No milliseconds or allocator-byte ratio is established.",
+  "tradeoffs": "Consumers must free only the pointer array, never the literals or write through them. The target must be nonempty/increasing and the output allocation is unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1441,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032945463/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.70",
+    "memory_unit": "MB",
+    "memory_beats_display": "44.62%",
+    "captured_at": "2026-11-02T13:43:00.716Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032945463/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

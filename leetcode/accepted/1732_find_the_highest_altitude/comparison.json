@@ -1,0 +1,37 @@
+{
+  "source_sha256": "55f60cd864b39cbeadf73664830cc4544881eb2c2ad913549b1d07f2a47ce264",
+  "baseline": {
+    "name": "Materialize all prefix altitudes",
+    "approach": "Store the starting altitude and every cumulative altitude, then find the maximum.",
+    "time": "O(n)",
+    "space": "O(n) altitude array"
+  },
+  "archived": {
+    "name": "Streaming altitude maximum",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "Only the current altitude and largest altitude are needed when returning one maximum.",
+  "quantitative_comparison": "The archive replaces n+1 stored altitudes with two integers and combines accumulation/maximum checks in one pass. Time growth stays linear; no elapsed speedup is claimed.",
+  "tradeoffs": "Does not retain the route for later queries, and cumulative altitude must fit int. The benefit is storage relative to a materialized-route baseline.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static live-state analysis versus prefix materialization; no benchmark.",
+  "problem_id": 1732,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2037096592/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.04",
+    "memory_unit": "MB",
+    "memory_beats_display": "22.93%",
+    "captured_at": "2026-11-02T13:51:14.452Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2037096592/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

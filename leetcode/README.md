@@ -6,6 +6,13 @@
 
 The twelve standalone practice examples elsewhere in this repository are a separate, partly overlapping collection. They are not twelve additional accepted solves. This archive selects one accepted C submission per solved problem, rather than duplicating every language variant or attempt.
 
+Every entry now includes a named baseline, an explanation of how much difference
+the available analysis supports and why, and explicit trade-offs. It also records
+the exact runtime, memory and separate `Beats` values displayed on its submission
+page at capture. See the [comparison standard](../docs/comparison-guidance.md).
+These dated platform displays are separate from theoretical work models and
+paired benchmarks; no new measured speedup or memory reduction is claimed.
+
 ## What can be reproduced
 
 ```sh

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "12fcb179e0e50e63df780a8a6bceb7af643c6ee1571d96b0c5d096512ec7c460",
+  "baseline": {
+    "name": "Check all index pairs for nums[i] > 2*nums[j]",
+    "approach": "Enumerate i<j and count the pairs satisfying the widened arithmetic comparison.",
+    "time": "O(n^2)",
+    "space": "O(1) auxiliary"
+  },
+  "archived": {
+    "name": "Merge-sort counting with a monotone cross-half pointer",
+    "time": "O(n log n), where n=numsSize",
+    "space": "O(n) shared temporary array plus O(log n) recursion depth"
+  },
+  "why": "Sorted halves let one pointer count a whole run of qualifying right-side values instead of revisiting every cross pair.",
+  "quantitative_comparison": "The pair baseline evaluates n(n-1)/2 inequalities. Merge counting performs O(n) pointer/merge work per recursion level over O(log n) levels. Those are different operation families, so no fixed millisecond speedup is inferred.",
+  "tradeoffs": "Adds O(n) temporary memory and sorts the input. Allocation failure returns zero and int result capacity depends on the judged length bound.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 493,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2041566308/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "65",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "56.75%",
+    "memory_display": "14.66",
+    "memory_unit": "MB",
+    "memory_beats_display": "63.62%",
+    "captured_at": "2026-11-02T13:49:18.112Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2041566308/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

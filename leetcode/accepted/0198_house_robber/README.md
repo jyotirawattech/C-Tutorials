@@ -18,6 +18,30 @@ Track the best totals for the previous two prefixes. At each house, choose betwe
 - Time: O(n), where n is the number of houses.
 - Auxiliary space / ownership: O(1) auxiliary state.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Full prefix-DP table. Store the best nonadjacent total for every prefix.
+
+- Baseline time: O(n). Space: O(n) DP table.
+- Submitted approach: Rolling two-prefix DP. Time: O(n). Space: O(1).
+
+**How much, by analysis:** The archive replaces n stored DP values with two rolling values and a temporary current value. Both compute n recurrence steps; this is a storage reduction, not a measured runtime gain.
+
+**Why:** The recurrence only reads the previous two prefix optima, so older table cells are unnecessary when only the total is returned.
+
+**Trade-offs and conditions:** The chosen-house sequence is not retained for reconstruction. Nonnegative values and bounded integer totals are assumed.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2046775170/) displayed the following at capture on **2026-11-02T13:48:13.290Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **8.76 MB**; reported memory `Beats`: **52.48%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Assumes the problem's nonnegative values and an optimal sum fitting int. Empty input returns zero; a single element returns that element directly. Exercise zero-valued houses and cases where taking a locally larger value blocks a better later combination.

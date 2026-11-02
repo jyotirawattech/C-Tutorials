@@ -1,0 +1,37 @@
+{
+  "source_sha256": "79e0f06a0018f71b03283a993007f8ec73fd16d968740a7387a02e4479848d31",
+  "baseline": {
+    "name": "Indexed interleave into output",
+    "approach": "Write nums[i] to output[2*i] and nums[n+i] to output[2*i+1].",
+    "time": "O(n)",
+    "space": "O(1) auxiliary state plus O(n) output"
+  },
+  "archived": {
+    "name": "Pointer-cursor interleave",
+    "time": "O(n)",
+    "space": "O(1) auxiliary pointers plus O(n) output"
+  },
+  "why": "The pointer version expresses the same two reads and two writes per pair as the indexed baseline.",
+  "quantitative_comparison": "Both read and write exactly 2n elements. Pointer syntax does not establish fewer compiled instructions or lower runtime; no advantage is measured.",
+  "tradeoffs": "Requires numsSize==2*n, valid lengths and successful output allocation. Readability preferences and compiler optimization determine any constant-level differences.",
+  "verdict": "not_established",
+  "evidence_basis": "Static equivalence of data movement in the two formulations; no generated-code or timing study.",
+  "problem_id": 1470,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032914942/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "12",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "73.68%",
+    "memory_display": "12.35",
+    "memory_unit": "MB",
+    "memory_beats_display": "25.73%",
+    "captured_at": "2026-11-02T13:44:06.267Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032914942/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

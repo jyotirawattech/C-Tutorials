@@ -18,6 +18,30 @@ Maintain an inclusive interval that still could contain the target. Compare the 
 - Time: O(log n) for a sorted array of length n.
 - Auxiliary space / ownership: O(1) auxiliary storage.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Sequential target search. Inspect sorted entries from the beginning until finding or passing the target.
+
+- Baseline time: O(n). Space: O(1).
+- Submitted approach: Inclusive-bound binary search. Time: O(log n). Space: O(1).
+
+**How much, by analysis:** For n>=1, binary search performs at most floor(log2(n))+1 loop iterations versus up to n inspected entries in sequential search. For n=1024 that is at most 11 iterations versus 1024 entries; these different operations are not a measured speed ratio.
+
+**Why:** Sorted order lets each midpoint comparison discard roughly half of the remaining candidates.
+
+**Trade-offs and conditions:** Requires random-access sorted data. A small or cache-friendly sequential search may still be faster on a particular host; duplicate targets need not return the first position.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2040540292/) displayed the following at capture on **2026-11-02T13:50:08.694Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.95 MB**; reported memory `Beats`: **69.59%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Requires ascending sorted input; with duplicates it returns a matching position rather than necessarily the first. The midpoint formula avoids adding two potentially large indices. Exercise an absent target, endpoint hits and empty input.

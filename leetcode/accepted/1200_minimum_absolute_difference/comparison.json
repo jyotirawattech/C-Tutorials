@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b839602158c236f20b07abf64533c64ec1c92911d8db5a52e1054f64103edb6f",
+  "baseline": {
+    "name": "Compare all unordered value pairs",
+    "approach": "Examine each pair to find the minimum absolute difference and collect all matching pairs.",
+    "time": "O(n^2)",
+    "space": "Output storage plus O(1) comparison state"
+  },
+  "archived": {
+    "name": "Sort and compare adjacent values",
+    "time": "Usually O(n log n), then two O(n) scans",
+    "space": "Output storage plus qsort-dependent workspace"
+  },
+  "why": "For sorted distinct values, a minimum-difference pair is adjacent, so nonadjacent pair comparisons are unnecessary.",
+  "quantitative_comparison": "The baseline evaluates n(n-1)/2 pairs. After sorting, the archive examines n-1 adjacent differences in each of two passes; sorting remains part of the cost, so these counts are not a speed ratio.",
+  "tradeoffs": "Mutates input order and relies on bounded int differences and successful allocations. C does not specify qsort's algorithmic bound; small inputs may not benefit from sorting overhead.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static adjacent-pair theorem applied to the captured loops; no paired timing.",
+  "problem_id": 1200,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040527387/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "31",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "30.56%",
+    "memory_display": "21.59",
+    "memory_unit": "MB",
+    "memory_beats_display": "53.70%",
+    "captured_at": "2026-11-02T13:50:31.890Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040527387/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

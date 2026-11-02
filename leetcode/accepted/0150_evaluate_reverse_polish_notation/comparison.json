@@ -1,0 +1,37 @@
+{
+  "source_sha256": "65fbbf6b107fda425a504b89272f08c79c96225905a07633d2c4a7ef4fcccc27",
+  "baseline": {
+    "name": "Conventional operand-stack RPN evaluation",
+    "approach": "Parse tokens, push numbers and apply operators to the last two operands.",
+    "time": "O(t+L), for token count t and parsed numeric characters L",
+    "space": "O(t)"
+  },
+  "archived": {
+    "name": "Array operand stack",
+    "time": "O(t+L)",
+    "space": "O(t)"
+  },
+  "why": "The archive implements the same stack invariant as the standard baseline; single-character operator recognition keeps negative numbers distinct.",
+  "quantitative_comparison": "Each token is processed once and each operator performs two operand pops plus one result push in both models. No reduction in growth order or measured speed is established.",
+  "tradeoffs": "Valid expressions, nonzero divisors and bounded arithmetic are assumed. atoi and allocation errors are unchecked; contiguous storage does not by itself prove faster execution.",
+  "verdict": "not_established",
+  "evidence_basis": "Static comparison with the conventional algorithm, not a paired benchmark.",
+  "problem_id": 150,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033021128/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "10.43",
+    "memory_unit": "MB",
+    "memory_beats_display": "30.29%",
+    "captured_at": "2026-11-02T13:42:57.229Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033021128/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

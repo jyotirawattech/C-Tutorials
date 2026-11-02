@@ -1,0 +1,37 @@
+{
+  "source_sha256": "291a1d002fb244964600742bbdd1fe080119fafdb7dd7117ee4ad3a44bec1579",
+  "baseline": {
+    "name": "Literal queue-rotation simulation",
+    "approach": "Rotate students who reject the next sandwich, stopping after a complete unsuccessful round.",
+    "time": "O(n*m) conservative worst-case rotations for n students and m sandwiches",
+    "space": "O(n) explicit queue"
+  },
+  "archived": {
+    "name": "Preference counts",
+    "time": "O(n+m)",
+    "space": "O(1), two counters"
+  },
+  "why": "Only availability of each binary preference matters: rotations cannot help once no remaining student wants the next sandwich.",
+  "quantitative_comparison": "The archive counts n students once and inspects at most m sandwiches, avoiding repeated queue rotations and queue storage. This is an operation-growth comparison, not a measured time ratio.",
+  "tradeoffs": "Depends on the binary preference domain and the problem's freely rotating queue rules. Other scheduling constraints would invalidate the aggregate-count model.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static queue/count equivalence under the stated problem rules; no empirical benchmark.",
+  "problem_id": 1700,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033035894/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.95",
+    "memory_unit": "MB",
+    "memory_beats_display": "24.59%",
+    "captured_at": "2026-11-02T13:42:09.555Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033035894/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

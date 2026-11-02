@@ -1,0 +1,37 @@
+{
+  "source_sha256": "50cbefb7d606b1d001a11838c127831ac2b9152deacb2075261c7a13d5e6ddbc",
+  "baseline": {
+    "name": "Full prefix-DP table",
+    "approach": "Store the best nonadjacent total for every prefix.",
+    "time": "O(n)",
+    "space": "O(n) DP table"
+  },
+  "archived": {
+    "name": "Rolling two-prefix DP",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "The recurrence only reads the previous two prefix optima, so older table cells are unnecessary when only the total is returned.",
+  "quantitative_comparison": "The archive replaces n stored DP values with two rolling values and a temporary current value. Both compute n recurrence steps; this is a storage reduction, not a measured runtime gain.",
+  "tradeoffs": "The chosen-house sequence is not retained for reconstruction. Nonnegative values and bounded integer totals are assumed.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static recurrence-dependency and storage analysis; no matched benchmark.",
+  "problem_id": 198,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046775170/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.76",
+    "memory_unit": "MB",
+    "memory_beats_display": "52.48%",
+    "captured_at": "2026-11-02T13:48:13.290Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046775170/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "854c25733d3570e0d4b5adf2fff217c5b19742ef9789dba677638272cf2904b4",
+  "baseline": {
+    "name": "Frequency array for 1..n",
+    "approach": "Count every value and scan the n counters for the zero and repeated count.",
+    "time": "O(n)",
+    "space": "O(n) auxiliary counters plus the two-value result"
+  },
+  "archived": {
+    "name": "XOR partition plus duplicate identification",
+    "time": "O(n), where n=numsSize",
+    "space": "O(1) auxiliary space; a two-integer returned allocation"
+  },
+  "why": "XOR cancels matched values and separates the two anomalies using one distinguishing bit, avoiding n frequency counters.",
+  "quantitative_comparison": "The baseline stores n+1 counters. The archive has constant-sized counters/masks and a two-value result, using two complete XOR/partition passes and up to one more input scan. Both have linear work growth; a speed improvement is not established.",
+  "tradeoffs": "Requires exactly one duplicate and one missing value in the stated range. XOR reasoning is less direct than frequency counting, and the result allocation is unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 645,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032936506/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "1",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "42.03%",
+    "memory_display": "10.10",
+    "memory_unit": "MB",
+    "memory_beats_display": "72.17%",
+    "captured_at": "2026-11-02T13:43:54.109Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032936506/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

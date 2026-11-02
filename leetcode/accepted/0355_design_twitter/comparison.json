@@ -1,0 +1,37 @@
+{
+  "source_sha256": "4b940978dba76972853467a0e9b548c852aaaf46d0cbaa0b07b6356c3b8fb2a2",
+  "baseline": {
+    "name": "Correct newest-first merge of per-user tweet streams",
+    "approach": "Place each followed user's newest tweet in a max-heap; pop up to ten newest tweets, advancing the corresponding user stream.",
+    "time": "O(U+F+L log(F+1)) for F followed streams and L<=10 outputs, after gathering streams",
+    "space": "O(F) feed heap, plus stored tweets/follow relationships"
+  },
+  "archived": {
+    "name": "Ten-pass partial bubble ordering of a collected feed",
+    "time": "post/follow/unfollow: O(1); feed: O(U + 10T), where U=500 candidate users and T<=10U retained candidate tweets",
+    "space": "Per object O(U^2 + 10U); feed temporary O(T), plus at most ten returned IDs"
+  },
+  "why": "Retaining only ten tweets per user bounds collection size, but this source's ten left-to-right bubble passes do not reliably put the newest ten tweets at the front.",
+  "quantitative_comparison": "A focused local regression expects IDs 309..300 after three users post ten tweets each, but this archive returns 209..200. It therefore fails that concrete correctness comparison. Operation bounds cannot turn an incorrect output into an improvement.",
+  "tradeoffs": "Historical Accepted metadata is preserved, alongside the independently reproduced limitation. The named heap comparator is an analytical correct alternative; no replacement was implemented or benchmarked.",
+  "verdict": "known_correctness_limit",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 355,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029610348/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "19",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "96.03%",
+    "memory_display": "26.77",
+    "memory_unit": "MB",
+    "memory_beats_display": "96.03%",
+    "captured_at": "2026-11-02T13:44:22.563Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029610348/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

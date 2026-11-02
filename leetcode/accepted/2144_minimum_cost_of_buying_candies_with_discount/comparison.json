@@ -1,0 +1,37 @@
+{
+  "source_sha256": "8d80a3a28e32d494530aaa8872cd1e5758ed20fe56e2daf5486c864988808e75",
+  "baseline": {
+    "name": "Sort prices descending and skip every third",
+    "approach": "Use comparison sorting, then pay for the first two candies in each group of three.",
+    "time": "O(n log n) with a comparison sort",
+    "space": "Sort-dependent workspace"
+  },
+  "archived": {
+    "name": "Bounded price-frequency sweep",
+    "time": "O(n+V), V=100",
+    "space": "O(V)"
+  },
+  "why": "The known 1..100 price domain replaces comparison sorting with counts and descending enumeration.",
+  "quantitative_comparison": "The archive counts n prices, visits 100 price bins and consumes n counted candies. This replaces comparison-sort growth with n+100 domain work, not a measured runtime percentage.",
+  "tradeoffs": "Requires the bounded price domain and safe integer totals. For small n or a wide unconstrained domain, sorting may be simpler or faster; guaranteed cache-hit comments are unsupported.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static counting-sort-style work model and fixed domain from the source; no benchmark.",
+  "problem_id": 2144,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046771410/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.27",
+    "memory_unit": "MB",
+    "memory_beats_display": "6.30%",
+    "captured_at": "2026-11-02T13:48:25.408Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046771410/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

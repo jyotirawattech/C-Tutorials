@@ -18,6 +18,30 @@ Track even- and odd-index sums on each side of a candidate removal. Remove the c
 - Time: O(n), with one initialization pass and one candidate-removal pass.
 - Auxiliary space / ownership: O(1) auxiliary accumulators.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Remove each candidate and rescan parity sums. For every removal index, walk all remaining values and recompute even/odd totals.
+
+- Baseline time: O(n^2). Space: O(1) if removal is simulated.
+- Submitted approach: Rolling left/right parity sums. Time: O(n). Space: O(1).
+
+**How much, by analysis:** The baseline can inspect n*(n-1) retained values across all removals. The archive uses two complete input passes and constant arithmetic per candidate; no elapsed multiplier is measured.
+
+**Why:** Removing an index swaps only the right suffix's parity, so four rolling sums evaluate a candidate without rescanning it.
+
+**Trade-offs and conditions:** Requires sums representable by long long and careful parity bookkeeping. It does not beat every alternative O(n) prefix-sum solution in time growth, though it avoids their prefix arrays.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2040524225/) displayed the following at capture on **2026-11-02T13:50:35.372Z**:
+
+- Runtime: **6 ms**; reported runtime `Beats`: **24.49%**.
+- Memory: **16.59 MB**; reported memory `Beats`: **30.61%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Uses long long totals and assumes they can represent the input sums. It leaves the input unchanged. Exercise a single-element array, equal repeated values and removals at each end, where one side has no contribution.

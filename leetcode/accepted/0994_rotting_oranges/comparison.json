@@ -1,0 +1,37 @@
+{
+  "source_sha256": "46282a63a72de77c6e068c73ad6de09943d207e195bffba067ee4c229cdceecb",
+  "baseline": {
+    "name": "Minute-by-minute full grid rescans",
+    "approach": "Scan every cell at each minute and stage newly rotten cells separately before the next minute.",
+    "time": "O(m*n*d), for d propagation rounds",
+    "space": "O(m*n) staged-state storage"
+  },
+  "archived": {
+    "name": "Multi-source BFS",
+    "time": "O(m*n)",
+    "space": "Fixed 100-entry queue under a 10x10 bound; generally O(m*n)"
+  },
+  "why": "The queue visits only newly reachable cells and timestamps their propagation instead of rescanning the whole grid per minute.",
+  "quantitative_comparison": "Each grid cell enters the archived queue at most once. The baseline can inspect m*n cells during each of d minutes; this avoids a factor of repeated full scans in the work model, not a measured d-times speedup.",
+  "tradeoffs": "The archive mutates the input and has a fixed queue capacity. d=0 or tiny grids may show little elapsed benefit; the zero-latency source comment is not a measurement.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static BFS enqueue invariant versus the defined synchronous-rescan baseline; no timing benchmark.",
+  "problem_id": 994,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046777765/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "10.46",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.61%",
+    "captured_at": "2026-11-02T13:48:05.488Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046777765/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -18,6 +18,30 @@ Build the KMP longest-proper-prefix/suffix table for every prefix of the string.
 - Time: O(n), where n is string length; fallback transitions are amortized linear
 - Auxiliary space / ownership: O(n) auxiliary LPS array
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Try each possible repeating block length. For every candidate period up to n/2, check the string against that repeating prefix and require divisibility.
+
+- Baseline time: O(n^2) upper bound for naive repeated full-string checks. Space: O(1) auxiliary.
+- Submitted approach: KMP longest-prefix/suffix periodicity test. Time: O(n), where n is string length; fallback transitions are amortized linear. Space: O(n) auxiliary LPS array.
+
+**How much, by analysis:** A naive candidate strategy can make up to floor(n/2) string-check attempts, each of up to n character comparisons. KMP's construction has O(n) amortized character-comparison growth. These are upper bounds; early exits and libc/compiler behavior prevent a fixed runtime factor.
+
+**Why:** The LPS table reuses prefix-matching information instead of restarting a full check for every candidate block length.
+
+**Trade-offs and conditions:** Uses O(n) LPS storage instead of constant auxiliary state. Allocation failure returns false, so a resource failure is not distinguishable from a nonrepeating string.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2033708350/) displayed the following at capture on **2026-11-02T13:52:21.995Z**:
+
+- Runtime: **2 ms**; reported runtime `Beats`: **82.55%**.
+- Memory: **12.54 MB**; reported memory `Beats`: **5.13%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The string must be valid and NUL terminated with length fitting int. Allocation failure returns false, which is indistinguishable from a genuinely nonrepeating string.

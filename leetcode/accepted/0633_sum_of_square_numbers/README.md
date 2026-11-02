@@ -18,6 +18,30 @@ Start candidate square roots at zero and floor(sqrt(c)). If their squared sum is
 - Time: O(sqrt(c)) for nonnegative c
 - Auxiliary space / ownership: O(1) auxiliary space
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Enumerate all unordered square-root pairs. For U=floor(sqrt(c)), test every 0<=a<=b<=U.
+
+- Baseline time: O(c) pair-count bound. Space: O(1).
+- Submitted approach: Converging two-pointer square-sum search. Time: O(sqrt(c)) for nonnegative c. Space: O(1) auxiliary space.
+
+**How much, by analysis:** The complete baseline has (U+1)(U+2)/2 candidate pairs. The two-pointer loop has at most U+1 iterations because each move narrows the gap by one. This compares worst-case candidate bounds, not an observed time ratio; either method can stop earlier on a match.
+
+**Why:** Monotonic squared sums identify which boundary can move, so one unsuccessful test removes an entire boundary choice.
+
+**Trade-offs and conditions:** Requires nonnegative input, a suitable sqrt bound and widened squared-sum arithmetic. A one-loop search using a square-root test is another O(sqrt(c)) alternative, so the archive is not asymptotically better than every reasonable method.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2040541036/) displayed the following at capture on **2026-11-02T13:49:32.182Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **8.50 MB**; reported memory `Beats`: **54.41%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The input must be nonnegative. The implementation uses the platform sqrt function to establish its initial bound and long long arithmetic for squared sums; linking may require the math library on some C toolchains.

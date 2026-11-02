@@ -18,6 +18,30 @@ Build a sorted prefix behind a stack-allocated dummy node. Save the next unsorte
 - Time: O(n^2) worst case; O(n) when each next node inserts immediately at the front
 - Auxiliary space / ownership: O(1) auxiliary space; existing list nodes are relinked
 
+## How this solution compares
+
+**Conclusion:** Same or worse against this comparator.
+
+**Named baseline:** Bottom-up linked-list merge sort. Repeatedly merge adjacent runs of doubling length by relinking nodes.
+
+- Baseline time: O(n log n) worst case. Space: O(1) auxiliary for an iterative bottom-up implementation.
+- Submitted approach: Insertion into a sorted list prefix. Time: O(n^2) worst case; O(n) when each next node inserts immediately at the front. Space: O(1) auxiliary space; existing list nodes are relinked.
+
+**How much, by analysis:** For ascending distinct input, this source performs 1+2+...+(n-1)=n(n-1)/2 value comparisons. Bottom-up merging has O(n log n) comparison growth. No general improvement over merge sort is supported.
+
+**Why:** Insertion sort is direct and can be linear when each next node belongs at the front, but it repeatedly rescans long sorted prefixes on other inputs.
+
+**Trade-offs and conditions:** Both can reuse nodes. This insertion implementation is also not stable for equal values, while a merge sort can preserve their order.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2040538204/) displayed the following at capture on **2026-11-02T13:50:15.412Z**:
+
+- Runtime: **23 ms**; reported runtime `Beats`: **69.71%**.
+- Memory: **11.90 MB**; reported memory `Beats`: **61.06%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The function mutates list links and assumes an acyclic valid input list. Because the search stops before equal values, later equal-valued nodes are inserted before earlier ones, so this implementation is not stable.

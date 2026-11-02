@@ -1,0 +1,37 @@
+{
+  "source_sha256": "24cf7d1081a5ec098f50fb53b115f0c8f7966e354963441d4c58f40e44d4b301",
+  "baseline": {
+    "name": "Dense array with linear membership search",
+    "approach": "Scan the array to find or reject a value; remove by swapping the last element; select a random index.",
+    "time": "O(n) insert/remove membership checks, O(1) random lookup",
+    "space": "O(n)"
+  },
+  "archived": {
+    "name": "Dense array plus chained hash index",
+    "time": "Expected O(1) insert/remove, worst O(n) collision search; O(1) random lookup",
+    "space": "O(C+H+n), C=200005 and H=100003"
+  },
+  "why": "The hash table finds a value's array slot without a full membership scan, and swap-and-pop keeps random lookup dense.",
+  "quantitative_comparison": "The baseline may inspect n values per membership operation; the archive expects a short hash chain but can still inspect n nodes under collisions. No faster-percentage or worst-case constant-time claim is justified.",
+  "tradeoffs": "Large fixed buffers/init costs may lose for small sets; capacity and allocations are unchecked. rand()%size requires a nonempty set and can introduce modulo bias rather than exact uniformity.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static expected-work comparison under distributed-hash assumptions; no runtime or random-distribution benchmark.",
+  "problem_id": 380,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029370742/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "35",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "96.48%",
+    "memory_display": "95.14",
+    "memory_unit": "MB",
+    "memory_beats_display": "45.07%",
+    "captured_at": "2026-11-02T13:45:34.916Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029370742/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

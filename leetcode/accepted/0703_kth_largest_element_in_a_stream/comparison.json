@@ -1,0 +1,37 @@
+{
+  "source_sha256": "d714dac6f3ded6ac96849d4b5c9b0d8cef2380db5b70e11795aa4c29d647ad49",
+  "baseline": {
+    "name": "Store and sort all observed stream values after every add",
+    "approach": "Append each value, sort the growing collection and read its kth largest.",
+    "time": "O(N log N) per add at current stream length N for comparison sorting",
+    "space": "O(N) stored values plus sort workspace"
+  },
+  "archived": {
+    "name": "Min-heap retaining only the largest k values",
+    "time": "Construction O(n log(k+1)) for n initial values; add O(log(k+1)) worst case and O(1) when a full heap rejects a smaller value",
+    "space": "O(k) stored heap plus O(log(k+1)) recursive helper depth"
+  },
+  "why": "Values below a full heap's root cannot enter the top k and can be discarded immediately.",
+  "quantitative_comparison": "Storage is k heap slots instead of N stream values. An accepted heap insertion/replacement follows one heap path of depth at most floor(log2(k)); a full heap can reject a small value in constant work. Sorting-based work grows with all N values. No fixed elapsed-time factor follows.",
+  "tradeoffs": "Only the requested rank is retained, not the full stream. k must be positive and enough values must exist before the root denotes a kth-largest value; allocations are unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 703,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029347190/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "14",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "52.15%",
+    "memory_display": "23.37",
+    "memory_unit": "MB",
+    "memory_beats_display": "36.46%",
+    "captured_at": "2026-11-02T13:45:46.265Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029347190/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

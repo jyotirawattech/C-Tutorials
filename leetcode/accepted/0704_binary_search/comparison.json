@@ -1,0 +1,37 @@
+{
+  "source_sha256": "a75f89f5c3cc7a1b05f20a8724d8f00e2609ff285135478fcd15b0aea6dd12de",
+  "baseline": {
+    "name": "Sequential target search",
+    "approach": "Inspect sorted entries from the beginning until finding or passing the target.",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Inclusive-bound binary search",
+    "time": "O(log n)",
+    "space": "O(1)"
+  },
+  "why": "Sorted order lets each midpoint comparison discard roughly half of the remaining candidates.",
+  "quantitative_comparison": "For n>=1, binary search performs at most floor(log2(n))+1 loop iterations versus up to n inspected entries in sequential search. For n=1024 that is at most 11 iterations versus 1024 entries; these different operations are not a measured speed ratio.",
+  "tradeoffs": "Requires random-access sorted data. A small or cache-friendly sequential search may still be faster on a particular host; duplicate targets need not return the first position.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static interval-halving comparison with explicit size/count model; no runtime benchmark.",
+  "problem_id": 704,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040540292/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.95",
+    "memory_unit": "MB",
+    "memory_beats_display": "69.59%",
+    "captured_at": "2026-11-02T13:50:08.694Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040540292/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

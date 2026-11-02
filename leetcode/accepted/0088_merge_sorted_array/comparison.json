@@ -1,0 +1,37 @@
+{
+  "source_sha256": "ecb7c6fb3297d0ced4354d6ff9baac479e381e32382cfb377e85794971aa5e1c",
+  "baseline": {
+    "name": "Forward merge with copied first input",
+    "approach": "Copy nums1's m live values into a temporary array, then merge forward into nums1.",
+    "time": "O(m+n)",
+    "space": "O(m) auxiliary copy"
+  },
+  "archived": {
+    "name": "Backward merge into spare capacity",
+    "time": "O(m+n)",
+    "space": "O(1) auxiliary pointers"
+  },
+  "why": "Writing from the end protects unread nums1 values and removes the need for the temporary copy.",
+  "quantitative_comparison": "The archive avoids copying and storing m temporary integers while retaining linear merge work. The baseline and archive have equal time-growth order; no measured faster percentage is established.",
+  "tradeoffs": "Requires at least m+n destination slots and valid sorted inputs; supplied capacity parameters are trusted rather than checked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static pointer/write-direction and storage analysis; no benchmark.",
+  "problem_id": 88,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033796939/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "10.76",
+    "memory_unit": "MB",
+    "memory_beats_display": "29.02%",
+    "captured_at": "2026-11-02T13:51:58.171Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033796939/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

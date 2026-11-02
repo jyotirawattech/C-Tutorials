@@ -1,0 +1,37 @@
+{
+  "source_sha256": "2d3516ea3bd94de1879adb550672d3ccc2fdfeb63873876d6351edc2aff6eae4",
+  "baseline": {
+    "name": "Nonmutating run sum minus run maximum",
+    "approach": "For every same-color run, add its total cost minus its largest cost.",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Propagate the surviving maximum cost",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "Both keep the most expensive balloon in each run and remove the others. The archived propagation uses writes into the cost array rather than only local run totals.",
+  "quantitative_comparison": "Both examine n-1 adjacency relationships with linear work. The archive additionally mutates some cost entries; no asymptotic storage or measured timing advantage over the nonmutating baseline is established.",
+  "tradeoffs": "The input cost array is changed. A nonmutating run-based method retains the same complexity while preserving callers' data.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static comparison of equivalent run-cost invariants; no paired timing.",
+  "problem_id": 1578,
+  "source_submission_url": "https://leetcode.com/submissions/detail/462403664/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "124",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "0.00%",
+    "memory_display": "14.65",
+    "memory_unit": "MB",
+    "memory_beats_display": "100.00%",
+    "captured_at": "2026-11-02T13:46:18.221Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/462403664/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "6383542a19d3ccf95ccc8d87c487e864f6ab5b86a04c256868e64f60ec21256a",
+  "baseline": {
+    "name": "Two-state stock dynamic programming",
+    "approach": "Track best cash and held-stock values for each day under unlimited fee-free transactions.",
+    "time": "O(n)",
+    "space": "O(1) with rolling states"
+  },
+  "archived": {
+    "name": "Sum positive adjacent gains",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "Without fees, cooldowns or transaction limits, all positive adjacent changes telescope to the profit of rising runs.",
+  "quantitative_comparison": "Both visit every price once and use constant state. The archive uses a positive-difference accumulation instead of two DP states, but no measured constant-factor advantage is established.",
+  "tradeoffs": "The simpler greedy form cannot be transferred unchanged to fees/cooldowns/limited transactions. It reads prices[0], requiring nonempty input.",
+  "verdict": "not_established",
+  "evidence_basis": "Static greedy equivalence versus an equally linear rolling-state DP baseline; no timing comparison.",
+  "problem_id": 122,
+  "source_submission_url": "https://leetcode.com/submissions/detail/450652093/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "4",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "2.69%",
+    "memory_display": "6.73",
+    "memory_unit": "MB",
+    "memory_beats_display": "100.00%",
+    "captured_at": "2026-11-02T13:46:21.332Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/450652093/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

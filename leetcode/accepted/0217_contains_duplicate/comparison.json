@@ -1,0 +1,37 @@
+{
+  "source_sha256": "959102a7fd7c5d79bf50e0cbc6c3e125a71462cf9bffc8fcf5bae4cbd2112570",
+  "baseline": {
+    "name": "Hash-set duplicate detection",
+    "approach": "Scan values, stopping when insertion finds a value already present.",
+    "time": "Expected O(n), O(n^2) worst case for an unsuitable chained table",
+    "space": "O(n) auxiliary set"
+  },
+  "archived": {
+    "name": "qsort plus adjacent equality scan",
+    "time": "O(n log n) if the platform qsort implementation provides that sorting bound; final scan O(n). The C standard does not prescribe qsort's worst-case complexity.",
+    "space": "Sorting workspace is implementation-dependent; the explicit adjacent scan uses O(1) state"
+  },
+  "why": "Sorting makes duplicates adjacent and uses a standard library routine, but does not improve expected time growth over a suitable hash set.",
+  "quantitative_comparison": "The archive performs one sort plus at most n-1 adjacent checks. A hash set performs at most n insert/lookups in expectation. Sorting work and workspace depend on libc; no reduction in bytes, comparisons or milliseconds is established here.",
+  "tradeoffs": "The archive mutates input and its subtracting comparator relies on bounded values. Avoiding a custom hash table is a simplicity trade-off, not evidence that the solution is faster or uses less memory on this platform.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 217,
+  "source_submission_url": "https://leetcode.com/submissions/detail/463988887/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "16",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "91.51%",
+    "memory_display": "8.92",
+    "memory_unit": "MB",
+    "memory_beats_display": "100.00%",
+    "captured_at": "2026-11-02T13:46:10.407Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/463988887/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

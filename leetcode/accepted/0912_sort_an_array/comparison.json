@@ -1,0 +1,37 @@
+{
+  "source_sha256": "c1a065d9899efedb411f06f6df488825e6714b9965300525c75dec679385b919",
+  "baseline": {
+    "name": "Insertion sort",
+    "approach": "Insert each next element into its sorted prefix by shifting larger predecessors.",
+    "time": "O(n^2) worst case; O(n) for already sorted input",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Iterative in-place heapsort",
+    "time": "O(n log n) worst case; O(n) heap build",
+    "space": "O(1)"
+  },
+  "why": "Heap extraction limits each repositioning to a root-to-leaf path rather than moving a whole prefix.",
+  "quantitative_comparison": "Reverse-order insertion sort can shift n(n-1)/2 elements. The archive does n-1 heap extractions, each with O(log n) sift-down work. No elapsed speed multiplier is derived from these bounds.",
+  "tradeoffs": "Insertion sort can win for small or nearly sorted input and is stable; heapsort is unstable and returns the mutated input pointer. No claim of superiority over every O(n log n) sort is made.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static worst-case operation-growth comparison against a named sort baseline; no benchmark.",
+  "problem_id": 912,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040536510/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "58",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "38.61%",
+    "memory_display": "59.26",
+    "memory_unit": "MB",
+    "memory_beats_display": "70.38%",
+    "captured_at": "2026-11-02T13:50:19.074Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040536510/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

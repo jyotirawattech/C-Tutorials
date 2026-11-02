@@ -1,0 +1,37 @@
+{
+  "source_sha256": "5c521bb76181eee291d8c747f3473547f92133551a287cf94cdc6315a23993de",
+  "baseline": {
+    "name": "Eager rectangle writes",
+    "approach": "Rewrite every affected cell on update, then answer queries directly from the matrix.",
+    "time": "O(A) per update of area A; O(1) query",
+    "space": "Matrix storage; optional copy if preserving input"
+  },
+  "archived": {
+    "name": "Deferred update history",
+    "time": "O(1) append update; O(u) worst-case query after u updates",
+    "space": "Fixed 500-update history plus borrowed original matrix"
+  },
+  "why": "The archive shifts work from updates to queries by searching newest assignments instead of rewriting cells.",
+  "quantitative_comparison": "An update replaces A cell assignments with one five-field history append, but a query may inspect u rectangles rather than one matrix cell. Whether it is better depends on areas and the update/query mix; no universal winner is established.",
+  "tradeoffs": "Query-heavy workloads can be worse. The original matrix must remain alive/unchanged; the history capacity, bounds and allocations are trusted.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static per-operation work model with both sides of the update/query trade-off; no workload benchmark.",
+  "problem_id": 1476,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029644148/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "33",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "61.70%",
+    "memory_display": "16.64",
+    "memory_unit": "MB",
+    "memory_beats_display": "21.28%",
+    "captured_at": "2026-11-02T13:44:11.501Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029644148/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

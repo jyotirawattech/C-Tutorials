@@ -1,0 +1,37 @@
+{
+  "source_sha256": "9aa220805d10d8eab82adca10c4afa33a925335866f94983c8b549d8e70fefb9",
+  "baseline": {
+    "name": "Kahn traversal with an adjacency matrix",
+    "approach": "Store V-by-V edge flags and inspect a full row when releasing a course.",
+    "time": "O(V^2+E) to build and traverse",
+    "space": "O(V^2) matrix plus O(V) indegrees/queue"
+  },
+  "archived": {
+    "name": "Kahn traversal with adjacency lists and an edge pool",
+    "time": "O(V+E), where V=numCourses and E=prerequisitesSize",
+    "space": "O(V+E) adjacency/indegree storage plus a fixed 2000-element queue"
+  },
+  "why": "Adjacency lists visit only actual outgoing edges, which matters when prerequisites are sparse.",
+  "quantitative_comparison": "A matrix traversal can inspect V^2 neighbor slots. The archive processes V vertices and E adjacency nodes, storing V heads and E edges instead of V^2 flags. Pointer/node sizes differ, so no byte ratio is asserted; the asymptotic benefit is strongest when E is much smaller than V^2.",
+  "tradeoffs": "The source has a fixed 2000-course queue, assumes valid IDs/rows, and leaks successful allocations on a partial-allocation failure. A matrix can be simpler for very small dense graphs.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 207,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2049492075/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "12.51",
+    "memory_unit": "MB",
+    "memory_beats_display": "58.97%",
+    "captured_at": "2026-11-02T13:47:17.857Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2049492075/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

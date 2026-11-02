@@ -18,6 +18,30 @@ Scan the sorted values and begin a new component whenever the gap between adjace
 - Time: O(n + q), for n nodes and q queries.
 - Auxiliary space / ownership: O(n) component labels and O(q) returned answers.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Build threshold graph and traverse per query. Test all node pairs for edges, then run BFS/DFS for each reachability query.
+
+- Baseline time: O(n^2+q*(n+e)), for e edges and q queries. Space: O(n+e) graph/traversal storage plus answers.
+- Submitted approach: Sorted-gap component labels. Time: O(n+q). Space: O(n) labels plus O(q) answers.
+
+**How much, by analysis:** The archive examines n-1 adjacent gaps and compares two labels per query. It avoids testing n(n-1)/2 possible edges and repeated traversals in the stated baseline. These work counts do not establish an elapsed-time multiplier.
+
+**Why:** Sorted adjacent gaps completely determine connected components: every small-gap run has a connecting chain, and a large gap cannot be crossed by any permitted edge.
+
+**Trade-offs and conditions:** Requires sorted values and this specific difference-threshold graph. It is not a general replacement for graph traversal; shape/index checks and arithmetic bounds are trusted, and the source's cache guarantee is unmeasured.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2061378248/) displayed the following at capture on **2026-11-02T13:46:59.860Z**:
+
+- Runtime: **2 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **61.35 MB**; reported memory `Beats`: **84.62%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Requires n == numsSize > 0, sorted nums, two valid node indices per query, and safe integer differences under the problem bounds. Source comments claiming guaranteed L1-cache behavior are unmeasured and should not be treated as performance evidence. Allocation failures return NULL rather than answers.

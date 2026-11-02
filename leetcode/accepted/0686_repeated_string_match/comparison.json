@@ -1,0 +1,37 @@
+{
+  "source_sha256": "3f46f6a4109047f6306dde4b3cd584ed77532cf859e3a215e3bc03eb3b1f821c",
+  "baseline": {
+    "name": "Pattern matching on a virtual repeated string",
+    "approach": "Run KMP over repeated source characters without materializing the whole repeat buffer.",
+    "time": "O(a+b)",
+    "space": "O(b) prefix table"
+  },
+  "archived": {
+    "name": "Materialize bounded repeats and call strstr",
+    "time": "O(a+b) copying plus two searches; conservative O((a+b)*b) with naive substring search",
+    "space": "O(a+b) repeated buffer"
+  },
+  "why": "The repeat-count bound is useful, but the source delegates matching to strstr and does not establish a better bound than a linear pattern matcher.",
+  "quantitative_comparison": "The archive makes at most two substring-search calls after constructing ceil(b/a) copies plus at most one extra. Those two calls do not imply linear search work or a speed advantage over KMP.",
+  "tradeoffs": "Simpler implementation can help readability, while extra buffer storage and library-dependent search cost remain. Empty a divides by zero; integer sizes are constrained. SIMD behavior is not measured.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static work-bound comparison to a defined linear pattern-matching baseline; no libc-specific timing.",
+  "problem_id": 686,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033715692/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.02",
+    "memory_unit": "MB",
+    "memory_beats_display": "27.78%",
+    "captured_at": "2026-11-02T13:52:14.429Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033715692/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

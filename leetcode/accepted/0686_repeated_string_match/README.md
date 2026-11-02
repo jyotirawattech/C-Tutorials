@@ -18,6 +18,30 @@ Construct enough repeats of a to reach b's length and search that buffer for b. 
 - Time: O(a+b) buffer construction, plus two substring searches; a conservative portable bound is O((a+b)*b) if substring search is naive, where a and b denote input lengths.
 - Auxiliary space / ownership: O(a+b) allocated repeated buffer.
 
+## How this solution compares
+
+**Conclusion:** Same or worse against this comparator.
+
+**Named baseline:** Pattern matching on a virtual repeated string. Run KMP over repeated source characters without materializing the whole repeat buffer.
+
+- Baseline time: O(a+b). Space: O(b) prefix table.
+- Submitted approach: Materialize bounded repeats and call strstr. Time: O(a+b) copying plus two searches; conservative O((a+b)*b) with naive substring search. Space: O(a+b) repeated buffer.
+
+**How much, by analysis:** The archive makes at most two substring-search calls after constructing ceil(b/a) copies plus at most one extra. Those two calls do not imply linear search work or a speed advantage over KMP.
+
+**Why:** The repeat-count bound is useful, but the source delegates matching to strstr and does not establish a better bound than a linear pattern matcher.
+
+**Trade-offs and conditions:** Simpler implementation can help readability, while extra buffer storage and library-dependent search cost remain. Empty a divides by zero; integer sizes are constrained. SIMD behavior is not measured.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2033715692/) displayed the following at capture on **2026-11-02T13:52:14.429Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.02 MB**; reported memory `Beats`: **27.78%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Requires a nonempty source string and valid terminated inputs; empty a would divide by zero. Lengths/allocation arithmetic use int and rely on problem bounds. The checked allocation is freed on every completed path; memcpy sizes depend on those computed bounds, and the SIMD comment is not measured evidence.

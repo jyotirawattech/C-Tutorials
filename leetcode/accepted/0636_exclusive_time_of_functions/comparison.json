@@ -1,0 +1,37 @@
+{
+  "source_sha256": "600543617539df0fe53668d6207f878bff4896de4e1f022ee339fb431c6aa92b",
+  "baseline": {
+    "name": "Conventional parsed-event call stack",
+    "approach": "Parse each log and account elapsed time to the active call using a stack.",
+    "time": "O(n+L), n functions and L total log characters",
+    "space": "O(m) stack for m logs plus O(n) output"
+  },
+  "archived": {
+    "name": "Hand-parsed logs with active-call stack",
+    "time": "O(n+L)",
+    "space": "O(m) stack plus O(n) output"
+  },
+  "why": "The archive uses the standard nested-call accounting invariant; custom character parsing avoids some parser abstraction but retains the same work order.",
+  "quantitative_comparison": "Each log is parsed once and generates at most one stack push or pop. An equally linear parsed-event baseline has the same asymptotic counts; no parser constant-factor benefit is measured.",
+  "tradeoffs": "Manual parsing trusts format, IDs and nesting and has unchecked allocations. A validated parser may offer better malformed-input handling despite similar complexity.",
+  "verdict": "not_established",
+  "evidence_basis": "Static comparison with the conventional stack algorithm; no parser benchmark.",
+  "problem_id": 636,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033025116/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "12.45",
+    "memory_unit": "MB",
+    "memory_beats_display": "73.44%",
+    "captured_at": "2026-11-02T13:42:53.719Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033025116/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

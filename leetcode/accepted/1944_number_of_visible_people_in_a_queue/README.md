@@ -18,6 +18,30 @@ Sweep from right to left with a monotonic stack of remaining visible height barr
 - Time: O(n), where n is the number of people.
 - Auxiliary space / ownership: O(n) auxiliary stack and O(n) returned counts.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Scan rightward visibility for each person. For each starting person, walk right while tracking the blocking horizon.
+
+- Baseline time: O(n^2) worst case. Space: O(1) working state plus O(n) output.
+- Submitted approach: Right-to-left monotonic stack. Time: O(n). Space: O(n) working stack plus O(n) output.
+
+**How much, by analysis:** A naive scan can consider n(n-1)/2 observer/right-person pairs. The archive pushes each height once and pops it at most once, plus one surviving-barrier check per person. No timing ratio is derived.
+
+**Why:** Shorter horizons that are popped cannot matter to future left-side observers, so repeated suffix scans are avoided.
+
+**Trade-offs and conditions:** Uses extra linear stack storage and the distinct-height visibility model. Small inputs may not amortize allocation overhead; source hardware comments are not benchmarks.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2049493001/) displayed the following at capture on **2026-11-02T13:47:14.671Z**:
+
+- Runtime: **2 ms**; reported runtime `Beats`: **94.80%**.
+- Memory: **54.90 MB**; reported memory `Beats`: **51.06%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Uses the problem's distinct-height visibility model and valid nonnegative size. Both allocation failures are checked, but a failure returns NULL while returnSize still contains the requested length; callers must check the pointer. Heap-allocation commentary is not a measured claim about every embedded target's stack limits.

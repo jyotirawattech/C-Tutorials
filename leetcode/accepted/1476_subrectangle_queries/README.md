@@ -18,6 +18,30 @@ Record each update rectangle and value without rewriting the matrix. To answer a
 - Time: Create and each update are O(1); a query is O(u) for u recorded updates, and teardown is O(1).
 - Auxiliary space / ownership: A fixed history of 500 updates, O(1) for the implemented bound; conceptually O(u) stored history, excluding the borrowed input matrix.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Eager rectangle writes. Rewrite every affected cell on update, then answer queries directly from the matrix.
+
+- Baseline time: O(A) per update of area A; O(1) query. Space: Matrix storage; optional copy if preserving input.
+- Submitted approach: Deferred update history. Time: O(1) append update; O(u) worst-case query after u updates. Space: Fixed 500-update history plus borrowed original matrix.
+
+**How much, by analysis:** An update replaces A cell assignments with one five-field history append, but a query may inspect u rectangles rather than one matrix cell. Whether it is better depends on areas and the update/query mix; no universal winner is established.
+
+**Why:** The archive shifts work from updates to queries by searching newest assignments instead of rewriting cells.
+
+**Trade-offs and conditions:** Query-heavy workloads can be worse. The original matrix must remain alive/unchanged; the history capacity, bounds and allocations are trusted.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2029644148/) displayed the following at capture on **2026-11-02T13:44:11.501Z**:
+
+- Runtime: **33 ms**; reported runtime `Beats`: **61.70%**.
+- Memory: **16.64 MB**; reported memory `Beats`: **21.28%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Borrows the caller's matrix instead of copying it, so that matrix must stay alive and unchanged. The history has no capacity check beyond the platform's at-most-500-operation bound; rectangle/query bounds and allocations are unchecked.

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "cbf17b712534404c58d292e6f24ffb7acdc1b916b3be0ce23880c64a1435f68a",
+  "baseline": {
+    "name": "Reverse one construction step at a time",
+    "approach": "Use the current maximum and subtract the sum of other entries once per reverse step, restoring the heap each time.",
+    "time": "O(n+s log n), for s individual reverse steps",
+    "space": "O(n) heap"
+  },
+  "archived": {
+    "name": "Modulo-batched reverse max-heap",
+    "time": "O(n+r log n), for r modulo-reduction iterations",
+    "space": "O(n) heap and O(log n) recursive heapify stack"
+  },
+  "why": "When the other entries stay fixed, a remainder operation compresses repeated subtractions of their sum; rest==1 is resolved immediately.",
+  "quantitative_comparison": "Replacing x by x%rest can skip many individual x-=rest reverse steps before another element becomes maximal. The number skipped depends on the current values; no fixed improvement factor or measured runtime ratio is asserted.",
+  "tradeoffs": "Benefits depend on the target values. The source assumes positive nonempty input, bounded long long sums and successful heap allocation; arithmetic shortcuts do not replace those preconditions.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static reverse-state arithmetic and heap loop comparison; no empirical benchmark.",
+  "problem_id": 1354,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033686478/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "1",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "64.29%",
+    "memory_display": "14.38",
+    "memory_unit": "MB",
+    "memory_beats_display": "55.71%",
+    "captured_at": "2026-11-02T13:40:27.891Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033686478/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

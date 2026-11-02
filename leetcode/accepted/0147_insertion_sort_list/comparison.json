@@ -1,0 +1,37 @@
+{
+  "source_sha256": "a0474bb7a781c8cf43d60cb150905e304c33eb992022fd8d47805d97d7ddac6d",
+  "baseline": {
+    "name": "Bottom-up linked-list merge sort",
+    "approach": "Repeatedly merge adjacent runs of doubling length by relinking nodes.",
+    "time": "O(n log n) worst case",
+    "space": "O(1) auxiliary for an iterative bottom-up implementation"
+  },
+  "archived": {
+    "name": "Insertion into a sorted list prefix",
+    "time": "O(n^2) worst case; O(n) when each next node inserts immediately at the front",
+    "space": "O(1) auxiliary space; existing list nodes are relinked"
+  },
+  "why": "Insertion sort is direct and can be linear when each next node belongs at the front, but it repeatedly rescans long sorted prefixes on other inputs.",
+  "quantitative_comparison": "For ascending distinct input, this source performs 1+2+...+(n-1)=n(n-1)/2 value comparisons. Bottom-up merging has O(n log n) comparison growth. No general improvement over merge sort is supported.",
+  "tradeoffs": "Both can reuse nodes. This insertion implementation is also not stable for equal values, while a merge sort can preserve their order.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 147,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040538204/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "23",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "69.71%",
+    "memory_display": "11.90",
+    "memory_unit": "MB",
+    "memory_beats_display": "61.06%",
+    "captured_at": "2026-11-02T13:50:15.412Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040538204/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "f606d9ed7503d3f15939fda4328a13e4c9574549d2cefec6768ed88e85f3e0b6",
+  "baseline": {
+    "name": "Three-reversal array rotation",
+    "approach": "Reverse the whole array, then reverse each of the two rotation segments.",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Repeated one-position right shifts",
+    "time": "O(n*(k mod n)), where n=numsSize; worst case O(n^2)",
+    "space": "O(1) auxiliary space; input is modified"
+  },
+  "why": "The archive saves space, but its repeated shifts revisit every element for each residual rotation; it is not the linear three-reversal algorithm.",
+  "quantitative_comparison": "For n>1 and 1<=r=k mod n<n, the archived source makes n*r array writes. Three reversals perform floor(n/2)+floor(r/2)+floor((n-r)/2) swaps, at most n swaps or 2n array writes. Both can return immediately when r=0. This is a write-count model; it is not a runtime ratio. A small r can favor simple shifts, while r growing with n gives quadratic work.",
+  "tradeoffs": "Both mutate the array and use constant extra state. The archive is simple but has no overall time-complexity advantage over reversal.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 189,
+  "source_submission_url": "https://leetcode.com/submissions/detail/463974219/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "540",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "6.23%",
+    "memory_display": "7.88",
+    "memory_unit": "MB",
+    "memory_beats_display": "100.00%",
+    "captured_at": "2026-11-02T13:46:13.936Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/463974219/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

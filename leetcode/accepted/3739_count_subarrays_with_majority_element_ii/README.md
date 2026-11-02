@@ -18,6 +18,30 @@ Map each target occurrence to +1 and every other value to -1, so a subarray has 
 - Time: O(n), including initialization of O(n) frequency slots
 - Auxiliary space / ownership: O(n) auxiliary frequency array; counters use long long for the total
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Extend every subarray and count its target frequency. For each start position, incrementally count target/non-target values for every end position and test majority.
+
+- Baseline time: O(n^2). Space: O(1) auxiliary.
+- Submitted approach: One-step prefix-frequency majority counting. Time: O(n), including initialization of O(n) frequency slots. Space: O(n) auxiliary frequency array; counters use long long for the total.
+
+**How much, by analysis:** The baseline examines n(n+1)/2 subarray extensions. The archive performs n prefix transitions plus initialization of 2n+3 frequency slots. This is a candidate/work-structure comparison, not a stopwatch speedup or a universal constant-factor guarantee.
+
+**Why:** Mapping target to +1 turns majority into a positive subarray sum; prefix sums change by one, so a frequency at one boundary updates the count of valid earlier prefixes.
+
+**Trade-offs and conditions:** Uses O(n) frequency storage and wider total counters. Returning zero on allocation failure is ambiguous, and size arithmetic depends on judged bounds.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2046769368/) displayed the following at capture on **2026-11-02T13:48:28.952Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **21.36 MB**; reported memory `Beats`: **47.06%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Allocation failure returns zero, which is indistinguishable from a valid zero count. Array-size arithmetic and int frequency counters rely on the judged input bounds; the captured fragment needs standard allocation declarations from its judge/wrapper.

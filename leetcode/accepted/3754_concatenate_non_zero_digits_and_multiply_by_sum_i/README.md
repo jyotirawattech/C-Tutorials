@@ -18,6 +18,30 @@ Peel decimal digits from right to left. For each nonzero digit, add it at the ne
 - Time: O(d), where d is the number of decimal digits in n.
 - Auxiliary space / ownership: O(1) auxiliary storage.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Format digits, filter zeros and parse. Convert the number to decimal text, collect nonzero digits, sum them and parse the filtered number.
+
+- Baseline time: O(d), for d decimal digits. Space: O(d) text buffer.
+- Submitted approach: Arithmetic digit peel. Time: O(d). Space: O(1) fixed-width arithmetic state.
+
+**How much, by analysis:** The archive avoids a d-character buffer while taking one loop per digit. Both approaches have linear digit-work; division costs versus conversion costs were not benchmarked.
+
+**Why:** Remainder/division extract digits, and a retained-digit multiplier assembles the filtered value without a text buffer.
+
+**Trade-offs and conditions:** Uses fixed-width long long arithmetic and nonnegative-int input; it is not arbitrary precision. Since int digit count is bounded, practical storage savings are small and no speed advantage is established.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2058859407/) displayed the following at capture on **2026-11-02T13:47:06.645Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.36 MB**; reported memory `Beats`: **50.98%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Implements the nonnegative-int input case and relies on the documented maximum for long long arithmetic. A zero input returns zero; negative inputs also return zero but are outside the intended contract. Exercise internal zeros, trailing zeros and an all-nonzero input.

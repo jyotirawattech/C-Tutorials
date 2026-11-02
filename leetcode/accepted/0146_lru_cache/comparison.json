@@ -1,0 +1,37 @@
+{
+  "source_sha256": "cd18c034cf6d48b9b48fad0754c6e2a288c2f921f422ada5db7b776ee90ea1eb",
+  "baseline": {
+    "name": "Linear-search LRU list",
+    "approach": "Scan cached nodes for each key, then move a found node or evict the oldest.",
+    "time": "O(c) get/put for c cached items",
+    "space": "O(c)"
+  },
+  "archived": {
+    "name": "Direct key lookup plus recency list",
+    "time": "O(1) get/put; O(K) initialization, K=10005",
+    "space": "O(K+c)"
+  },
+  "why": "The key table removes the lookup scan, while doubly linked nodes support constant-time recency moves and eviction.",
+  "quantitative_comparison": "A baseline lookup can inspect c nodes; the archive uses one direct table access and a bounded number of pointer updates. It additionally initializes 10005 table slots; no elapsed-time speedup is measured.",
+  "tradeoffs": "Keys must fit the fixed domain, and table memory/init cost may be wasteful for sparse or tiny caches. Allocations and key bounds are unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static operation/storage analysis of the exact direct-index implementation; no benchmark.",
+  "problem_id": 146,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046774028/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "66",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "12.01%",
+    "memory_display": "115.91",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.90%",
+    "captured_at": "2026-11-02T13:48:20.711Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046774028/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

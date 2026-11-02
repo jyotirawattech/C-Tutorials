@@ -1,0 +1,37 @@
+{
+  "source_sha256": "bc0f193beed115ea45bc8fb98214284b161248f1f26f6e12cb20400cb4233e97",
+  "baseline": {
+    "name": "Delete each matching value by shifting its suffix",
+    "approach": "When val is found, move every later element one slot left and continue.",
+    "time": "O(n^2) worst case",
+    "space": "O(1) auxiliary"
+  },
+  "archived": {
+    "name": "Stable read/write compaction",
+    "time": "O(n), where n=numsSize",
+    "space": "O(1) auxiliary space; input is modified"
+  },
+  "why": "A write cursor retains useful elements directly, avoiding repeated movement of the same suffix.",
+  "quantitative_comparison": "Repeated deletion can move n(n-1)/2 elements when all values are removed. Compaction performs n value tests and at most n retained-element writes; for that all-removed case it performs zero writes. These are element-operation counts, not a stopwatch speedup.",
+  "tradeoffs": "Both modify the array. The returned length defines the useful prefix; trailing values are not cleared or deallocated.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 27,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033798016/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "10.41",
+    "memory_unit": "MB",
+    "memory_beats_display": "20.75%",
+    "captured_at": "2026-11-02T13:51:39.971Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033798016/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

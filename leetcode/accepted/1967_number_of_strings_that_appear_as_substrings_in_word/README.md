@@ -18,6 +18,30 @@ Visit every pattern and use substring search to determine whether it occurs anyw
 - Time: Sum of substring-search costs over all P patterns; a naive search bound is O(P*W*Lmax), where W is word length and Lmax maximum pattern length. Actual strstr implementation cost is platform-dependent.
 - Auxiliary space / ownership: O(1) explicit counter state; any library search workspace is implementation-dependent
 
+## How this solution compares
+
+**Conclusion:** Improvement not established.
+
+**Named baseline:** Explicit naive substring search for each pattern. For every pattern, try each possible starting position and compare characters.
+
+- Baseline time: O(P*W*Lmax) naive upper bound. Space: O(1) explicit search state.
+- Submitted approach: One libc strstr call per pattern. Time: Sum of substring-search costs over all P patterns; a naive search bound is O(P*W*Lmax), where W is word length and Lmax maximum pattern length. Actual strstr implementation cost is platform-dependent.. Space: O(1) explicit counter state; any library search workspace is implementation-dependent.
+
+**How much, by analysis:** The archive makes P strstr calls instead of P explicit search procedures. That alone says nothing about the number of character comparisons; a libc may optimize searches, but no version-specific work count or benchmark was established. No quantitative advantage is claimed.
+
+**Why:** Using the library expresses the same substring predicate clearly, but its implementation is a separate platform detail.
+
+**Trade-offs and conditions:** Library reuse reduces custom matching code. It assumes valid NUL-terminated strings, and actual time/workspace are libc-dependent.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2049518696/) displayed the following at capture on **2026-11-02T13:47:11.081Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.05 MB**; reported memory `Beats`: **64.44%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 All inputs must be valid NUL-terminated strings. Matching is case-sensitive byte-string matching, and the source relies on a judge-provided string.h declaration rather than including it.

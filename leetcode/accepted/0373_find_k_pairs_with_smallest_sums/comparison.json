@@ -1,0 +1,37 @@
+{
+  "source_sha256": "8f1e4d608535f5e140322c5131b982f2cb937103919add5e81303baa466451b7",
+  "baseline": {
+    "name": "Materialize and sort every cross-array pair",
+    "approach": "Create all m*n pairs, sort by sum, and take the first p.",
+    "time": "O(m*n log(m*n)) with comparison sorting",
+    "space": "O(m*n) pair table plus returned p pairs"
+  },
+  "archived": {
+    "name": "Min-heap of sorted-row frontiers",
+    "time": "O((r+p) log(r+1)), where r=min(nums1Size,k) and p=min(k,nums1Size*nums2Size) returned pairs",
+    "space": "O(r) auxiliary heap; O(p) returned pair storage and column sizes"
+  },
+  "why": "Sorted inputs let the algorithm expand only the next candidate from each active row instead of storing the complete Cartesian product.",
+  "quantitative_comparison": "The baseline materializes m*n pairs. This source retains r=min(m,k) heap frontiers and performs p=min(k,m*n) output-extraction cycles, each with at most a pop and next-row push. This is a storage/frontier-work comparison; no measured runtime factor is claimed.",
+  "tradeoffs": "Requires sorted nonempty arrays and more involved heap/ownership code. Allocation failures are unchecked; returned rows, outer pointers and column-size storage all need caller cleanup.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 373,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033580722/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "25",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "49.23%",
+    "memory_display": "61.18",
+    "memory_unit": "MB",
+    "memory_beats_display": "65.38%",
+    "captured_at": "2026-11-02T13:41:54.947Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033580722/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

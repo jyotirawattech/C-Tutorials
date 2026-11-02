@@ -18,6 +18,30 @@ Accumulate each altitude change from an initial altitude of zero. Keep the large
 - Time: O(n), where n is the number of altitude changes.
 - Auxiliary space / ownership: O(1) auxiliary state.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Materialize all prefix altitudes. Store the starting altitude and every cumulative altitude, then find the maximum.
+
+- Baseline time: O(n). Space: O(n) altitude array.
+- Submitted approach: Streaming altitude maximum. Time: O(n). Space: O(1).
+
+**How much, by analysis:** The archive replaces n+1 stored altitudes with two integers and combines accumulation/maximum checks in one pass. Time growth stays linear; no elapsed speedup is claimed.
+
+**Why:** Only the current altitude and largest altitude are needed when returning one maximum.
+
+**Trade-offs and conditions:** Does not retain the route for later queries, and cumulative altitude must fit int. The benefit is storage relative to a materialized-route baseline.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2037096592/) displayed the following at capture on **2026-11-02T13:51:14.452Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.04 MB**; reported memory `Beats`: **22.93%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The cumulative altitude uses int and assumes the problem's bounded sums. Empty input returns the starting altitude zero. Exercise an entirely descending route and a later climb whose peak exceeds the starting point.

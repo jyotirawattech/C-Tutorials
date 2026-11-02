@@ -18,6 +18,30 @@ Count non-dash characters to determine the exact formatted length, then fill the
 - Time: O(n), where n is the input string length.
 - Auxiliary space / ownership: O(1) auxiliary state, plus O(n) returned string.
 
+## How this solution compares
+
+**Conclusion:** Improvement not established.
+
+**Named baseline:** Count and forward-fill formatted output. Count retained characters, compute the first group length, then fill an exact-sized output buffer.
+
+- Baseline time: O(n). Space: O(1) auxiliary state plus O(n) output.
+- Submitted approach: Count and backward-fill output. Time: O(n). Space: O(1) auxiliary state plus O(n) output.
+
+**How much, by analysis:** Both scan n source characters for counting and up to n again for formatting, with one sized output allocation. No asymptotic or measured runtime improvement is established.
+
+**Why:** Backward grouping makes the short leading group fall out naturally, but it does not reduce the two-pass linear work versus a forward fill.
+
+**Trade-offs and conditions:** Requires k>0, ASCII case mapping and bounded lengths. Allocations are unchecked; backward filling is a presentation choice rather than proof of better performance.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2033701198/) displayed the following at capture on **2026-11-02T13:52:41.227Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.49 MB**; reported memory `Beats`: **62.50%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 Requires a terminated input, k>0, and lengths fitting int. Character conversion assumes ASCII's lowercase-to-uppercase offset; it does not implement locale-aware or Unicode casing. Both result allocations are unchecked, and the caller owns the result.

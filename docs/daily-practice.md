@@ -11,6 +11,9 @@ problem acceptance.
    Improve an existing entry for the same problem rather than duplicate it.
 2. Add or update `solution.c` and its local `README.md`. Explain the approach,
    invariants, time and auxiliary-space complexity, ownership and cleanup.
+   Always include a named fair baseline, why this method differs, a quantified
+   theoretical work/space comparison when defensible, and its trade-offs.
+   Same-or-worse, unknown and known-correctness-limit verdicts are valid.
 3. Exercise normal inputs and relevant edge cases: empty/minimum input,
    boundaries, repeated values, no-match cases and allocation behavior where
    supported. Explain constraints the implementation assumes.
@@ -22,6 +25,33 @@ problem acceptance.
 
 Use [the entry template](practice-entry-template.md) for notes. Keep only the
 fields relevant to the problem, but preserve evidence and date distinctions.
+
+## Comparisons need a source and a clear meaning
+
+For the same valid inputs, state the baseline and archived bounds, the mechanism
+behind the difference and an input-size-specific work model when useful. Explain
+conditions and costs. Do not force an advantage or turn asymptotic bounds into
+a measured speed multiplier.
+
+When a LeetCode submission page is actually captured, retain the exact runtime
+and memory strings, their ms/MB units, both Beats percentages, the matching
+submission URL and capture time. These dated UI observations can change with
+the judge's cohort and environment. Beats is a percentile, not percent faster.
+A 0 ms display remains a UI observation; do not divide by it or infer instant work.
+
+The accepted archive's comparison.json binds these records to the original
+problem, submission and source hash. Run `make test-comparisons` to check all
+83 records. A local reviewer with authorized private UI exports may additionally
+run `python3 scripts/check_comparisons.py --raw-dir ../raw` from the candidate
+checkout. Private captures remain outside the public repository.
+
+The initial gate requires paired_benchmark.status = not_run and null measured
+speedup/memory-reduction fields. No new benchmarks are created by documenting
+the judge snapshot or theoretical model. Machine checks validate schema,
+provenance and obvious unsupported claims; the actual bounds, baseline fairness
+and explanation still require source-level review.
+
+See [comparison guidance](comparison-guidance.md) for the full editorial standard.
 
 ## Provenance and dates
 

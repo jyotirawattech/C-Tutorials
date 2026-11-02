@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b9d7fc70963250359970b30a8066ca07cec169a0df2d50f0ab92c6ec069b6869",
+  "baseline": {
+    "name": "Presence bitmap for values 1..n",
+    "approach": "Allocate n+1 markers, record valid values, then scan for the first missing marker.",
+    "time": "O(n)",
+    "space": "O(n) auxiliary markers"
+  },
+  "archived": {
+    "name": "Cyclic placement in the input array",
+    "time": "O(n) amortized, where n=numsSize",
+    "space": "O(1) auxiliary space; input is rearranged"
+  },
+  "why": "The input slots themselves encode which positive values are present, so a separate presence array is unnecessary.",
+  "quantitative_comparison": "The bitmap stores n+1 markers. The archived method keeps constant state and makes at most n successful value-placement swaps before a linear scan. Both have linear growth in work; the established advantage is auxiliary storage, not a measured speed factor.",
+  "tradeoffs": "Rearranges the caller's array. A bitmap can preserve input order and is often easier to audit; valid indexing and the duplicate guard are essential in cyclic placement.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 41,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2037084114/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "14.52",
+    "memory_unit": "MB",
+    "memory_beats_display": "51.89%",
+    "captured_at": "2026-11-02T13:51:18.015Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2037084114/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

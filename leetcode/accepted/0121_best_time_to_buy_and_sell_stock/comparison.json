@@ -1,0 +1,37 @@
+{
+  "source_sha256": "aab06e06f28ef927b8e5e4cc4bd5c138f14b6f811a8aee49f31c9142590c3e27",
+  "baseline": {
+    "name": "Enumerate all buy-before-sell pairs",
+    "approach": "Evaluate every i<j trade and retain the largest nonnegative profit.",
+    "time": "O(n^2)",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Running prefix minimum",
+    "time": "O(n), where n=pricesSize",
+    "space": "O(1) auxiliary space"
+  },
+  "why": "The best purchase price for a sale day is summarized by the minimum of the earlier prefix.",
+  "quantitative_comparison": "A complete pair enumeration evaluates n(n-1)/2 candidate trades; the scan processes n-1 later days. For n>=2 those candidate/scan counts differ by n/2, but the steps are different operations and this is not an n/2 elapsed-time claim.",
+  "tradeoffs": "Both use constant auxiliary space. The scan depends on valid bounded prices for its int arithmetic and supplies only the profit, not the chosen days.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 121,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046785680/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "15.94",
+    "memory_unit": "MB",
+    "memory_beats_display": "72.44%",
+    "captured_at": "2026-11-02T13:47:21.321Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046785680/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

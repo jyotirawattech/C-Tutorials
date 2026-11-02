@@ -1,0 +1,37 @@
+{
+  "source_sha256": "beed4256e8bdb214faea29d554c57cbddcd91cf71f3b95f316e06b49dcf6df3c",
+  "baseline": {
+    "name": "Rebuild filtered digits for every query",
+    "approach": "Scan each substring, append its nonzero digits modulo MOD and sum its digits.",
+    "time": "O(sum of query widths), at most O(q*m)",
+    "space": "O(1) working arithmetic state plus output"
+  },
+  "archived": {
+    "name": "Prefix sums, retained-digit prefixes and powers",
+    "time": "O(m+q)",
+    "space": "O(m) four auxiliary arrays plus O(q) output"
+  },
+  "why": "Prefix differences recover digit sums and retained-digit counts, while modular prefix removal recovers each filtered number without rescanning the substring.",
+  "quantitative_comparison": "The baseline revisits every queried character. The archive performs one m-character preprocessing pass and a bounded number of arithmetic/array operations per query; benefit depends on total query width exceeding setup work. No measured speedup is asserted.",
+  "tradeoffs": "Preprocessing can be unnecessary for one short query and uses several full-length arrays. Partial allocation failure leaks successful allocations; index/arithmetic assumptions remain. Source kernel/stack comments are not validated performance evidence.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static preprocessing-versus-rescan work model with exact allocation trade-offs; no matched benchmark.",
+  "problem_id": 3756,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2060383645/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "30",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "18.18%",
+    "memory_display": "107.09",
+    "memory_unit": "MB",
+    "memory_beats_display": "9.09%",
+    "captured_at": "2026-11-02T13:47:03.229Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2060383645/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

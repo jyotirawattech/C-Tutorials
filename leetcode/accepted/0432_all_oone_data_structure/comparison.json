@@ -1,0 +1,37 @@
+{
+  "source_sha256": "ecbc4bbc360c6b716974a5ae539f995792f798f156453ee0e1fb887146528777",
+  "baseline": {
+    "name": "Key-count table with min/max scan",
+    "approach": "Update counts in a hash map and scan all keys for each extreme-count query.",
+    "time": "Expected O(l) updates and O(k) min/max scan for k bounded-length keys",
+    "space": "O(k) plus hash-table storage"
+  },
+  "archived": {
+    "name": "Ordered count buckets plus key hash",
+    "time": "Expected O(l) inc/dec; worst O(k*l) hash search; O(1) min/max lookup",
+    "space": "O(H+k+b), H=100003 and b frequency buckets"
+  },
+  "why": "Adjacent count buckets maintain the ordering incrementally so extreme queries read the first or last live bucket.",
+  "quantitative_comparison": "A min/max query avoids scanning k keys and reads a bounded number of links. This benefit is conditional on successful state maintenance and bounded keys, not an elapsed speedup claim.",
+  "tradeoffs": "Extra bucket/list complexity and a fixed key buffer replace simple scans. The archived destructor leaks remaining keys/interior buckets, and strcpy depends on the key-length constraint; overall implementation quality is not superior merely because queries are faster in the work model.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static query-cost comparison with known cleanup/bounds limitations explicitly retained; no benchmark.",
+  "problem_id": 432,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029540776/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "31",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "91.43%",
+    "memory_display": "62.88",
+    "memory_unit": "MB",
+    "memory_beats_display": "87.68%",
+    "captured_at": "2026-11-02T13:45:27.462Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029540776/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

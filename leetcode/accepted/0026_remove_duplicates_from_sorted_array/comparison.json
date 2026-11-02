@@ -1,0 +1,37 @@
+{
+  "source_sha256": "77611dd49694affcdcd57f5bc024f56074e3c7321b07f5787c2480d4bff44698",
+  "baseline": {
+    "name": "Erase duplicate entries one at a time",
+    "approach": "On finding a duplicate in a sorted array, shift the remaining suffix left.",
+    "time": "O(n^2) worst case",
+    "space": "O(1)"
+  },
+  "archived": {
+    "name": "Two-cursor prefix compaction",
+    "time": "O(n)",
+    "space": "O(1)"
+  },
+  "why": "A write cursor copies each new unique value once instead of shifting a suffix after every removal.",
+  "quantitative_comparison": "For nonempty input the archive scans exactly n-1 following values; repeated deletion can perform a quadratic number of element moves. This is a work/growth comparison, not a measured speedup.",
+  "tradeoffs": "Both approaches mutate the input and require sorted order. The archive leaves the unused suffix unspecified and has the same growth rate as other standard linear compaction methods.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Source inspection of the slow/fast loops and the stated repeated-shift baseline; no paired timing.",
+  "problem_id": 26,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2035054515/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "12.90",
+    "memory_unit": "MB",
+    "memory_beats_display": "57.76%",
+    "captured_at": "2026-11-02T13:51:36.266Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2035054515/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

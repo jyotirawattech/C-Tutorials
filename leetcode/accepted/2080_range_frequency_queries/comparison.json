@@ -1,0 +1,37 @@
+{
+  "source_sha256": "80b60a1deb4dca792a9206d0a1ccefe233721c77f590b4074634ea51fbf64202",
+  "baseline": {
+    "name": "Scan each queried range",
+    "approach": "Count matching values directly between left and right for every query.",
+    "time": "O(w) per query of width w; O(q*n) worst case across q queries",
+    "space": "O(1) working space while retaining input"
+  },
+  "archived": {
+    "name": "Per-value sorted index lists",
+    "time": "O(n+V) build; O(log(f+1)) query with O(1) handling when the value is absent, where f is its stored frequency",
+    "space": "O(n+V), V=10001"
+  },
+  "why": "Two binary searches locate the queried value's positions in the requested range without examining each range element.",
+  "quantitative_comparison": "A width-w query inspects w values in the baseline; the archive does two logarithmic index-list searches after preprocessing. Overall benefit depends on query count and range widths relative to the O(n+V) setup cost.",
+  "tradeoffs": "Uses additional stored positions and a fixed value domain. One tiny query may not justify preprocessing; updates would require maintaining the index lists. No measured crossover or speedup is available.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static preprocessing/query-cost model from the captured source; no benchmark.",
+  "problem_id": 2080,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029635919/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "59",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "41.67%",
+    "memory_display": "118.58",
+    "memory_unit": "MB",
+    "memory_beats_display": "83.33%",
+    "captured_at": "2026-11-02T13:44:19.079Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029635919/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

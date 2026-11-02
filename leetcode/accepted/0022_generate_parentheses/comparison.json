@@ -1,0 +1,37 @@
+{
+  "source_sha256": "1785ccd583e4602ef61db13694284719fab9d85026b0d01d9b1e87de3a000779",
+  "baseline": {
+    "name": "Generate every bracket string and validate",
+    "approach": "Enumerate all length-2n strings over two bracket choices, then check balance.",
+    "time": "O(n*4^n)",
+    "space": "O(n) working space plus valid output"
+  },
+  "archived": {
+    "name": "Prefix-valid backtracking",
+    "time": "O(n*C_n), where C_n is the nth Catalan number",
+    "space": "O(n) working/recursion plus O(n*C_n) output and a fixed 1500-pointer table"
+  },
+  "why": "The open/close constraints reject invalid prefixes before constructing their remaining suffixes.",
+  "quantitative_comparison": "At n=8 the exhaustive baseline considers 65536 complete bracket strings, while 1430 valid strings must be emitted. The archive prunes invalid prefixes; these candidate/output counts are not an elapsed-time ratio.",
+  "tradeoffs": "The archive still has unavoidable exponential output and relies on n<=8 for its fixed result capacity. Allocation failures are unchecked; small n need not yield a measurable speed advantage.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source/invariant comparison with an explicitly defined exhaustive baseline; no matched runtime benchmark was run.",
+  "problem_id": 22,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2046778526/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "9.97",
+    "memory_unit": "MB",
+    "memory_beats_display": "70.57%",
+    "captured_at": "2026-11-02T13:48:02.114Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2046778526/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

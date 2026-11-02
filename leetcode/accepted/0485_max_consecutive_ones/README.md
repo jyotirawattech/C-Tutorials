@@ -18,6 +18,30 @@ Maintain the length of the current run and the best completed-or-current run see
 - Time: O(n), where n=numsSize
 - Auxiliary space / ownership: O(1) auxiliary space
 
+## How this solution compares
+
+**Conclusion:** Same or worse against this comparator.
+
+**Named baseline:** Branch-based consecutive-ones counter. If the current value is one increment the run, otherwise reset it; update the maximum.
+
+- Baseline time: O(n). Space: O(1).
+- Submitted approach: Arithmetic reset of the consecutive-ones counter. Time: O(n), where n=numsSize. Space: O(1) auxiliary space.
+
+**How much, by analysis:** Both perform n run updates and at most n maximum checks. The archive replaces a reset branch with arithmetic; actual machine branches, instruction cost and prediction behavior are compiler/input dependent. No 'how many times faster' claim is established.
+
+**Why:** Multiplication resets or extends the run for binary values, but computes the same linear scan as a straightforward conditional.
+
+**Trade-offs and conditions:** Arithmetic requires the binary-value contract. The conditional version is more explicit; source-level branchless arithmetic alone is not a measured improvement.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2032923073/) displayed the following at capture on **2026-11-02T13:43:57.845Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **13.29 MB**; reported memory `Beats`: **54.15%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The arithmetic reset assumes every value is exactly zero or one. Values outside the binary domain do not represent a consecutive-ones count, and this source does not validate that contract.

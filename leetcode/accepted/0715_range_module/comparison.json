@@ -1,0 +1,37 @@
+{
+  "source_sha256": "52a2fcc5c899d8689fee0df069402ba935e0e2015274bf5b5a1c41db32c0a1ed",
+  "baseline": {
+    "name": "Track each unit coordinate in a flat array",
+    "approach": "Store one flag for every coordinate in range R and update/query each affected cell.",
+    "time": "O(w) per width-w range operation; O(R) initialization",
+    "space": "O(R) flags"
+  },
+  "archived": {
+    "name": "Lazy segment tree over a fixed node pool",
+    "time": "O(log R) per contiguous range update/query, where R=10^9 coordinate span; construction initializes a fixed pool of P=400000 nodes",
+    "space": "O(P) preallocated node pool plus O(log R) recursion depth"
+  },
+  "why": "Assigning coverage to a whole segment avoids visiting every individual coordinate in a large contiguous interval.",
+  "quantitative_comparison": "The flat model may inspect or write w cells per operation across R=10^9 coordinates. The segment tree follows O(log R) boundary/tree paths; its depth is at most ceil(log2(R))=30. It preallocates P=400000 multi-field nodes rather than R flags, so cell counts are not a byte ratio.",
+  "tradeoffs": "The node pool has no growth-capacity check and construction allocations are unchecked. Sparse interval-list approaches are other reasonable comparators; this advantage is conditional on the flat-array baseline and valid bounded operations.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 715,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029644041/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "103",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "16.67%",
+    "memory_display": "123.65",
+    "memory_unit": "MB",
+    "memory_beats_display": "29.17%",
+    "captured_at": "2026-11-02T13:44:15.295Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029644041/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

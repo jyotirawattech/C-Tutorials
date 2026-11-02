@@ -1,0 +1,37 @@
+{
+  "source_sha256": "bc73050cce9ab46720967f6268ad4e4846ee5f25ccb73148da0eca4360f437bf",
+  "baseline": {
+    "name": "Build normalized intermediate email/phone buffers",
+    "approach": "Copy/lowercase the full email or collect all phone digits before constructing the mask.",
+    "time": "O(n)",
+    "space": "O(n) intermediate storage plus the output"
+  },
+  "archived": {
+    "name": "Single scan with a four-digit rolling phone buffer",
+    "time": "O(n), where n is input length",
+    "space": "O(1) auxiliary scan state plus O(n) returned storage for email (bounded mask storage for a phone)"
+  },
+  "why": "The archive retains only the phone suffix needed by the output, and reads email characters directly when producing its result.",
+  "quantitative_comparison": "For a d-digit phone, the archive retains four digit characters instead of a d-character normalized digit buffer. Both still scan the input and construct the mask in linear work; with the bounded 10..13-digit phone contract this is a small storage trade-off, not a benchmarked speed gain.",
+  "tradeoffs": "Rolling the four digits performs several assignments per digit. Valid ASCII email/phone formats and unchecked allocations remain assumptions; masking is not a general anonymization guarantee.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 831,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033706140/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.62",
+    "memory_unit": "MB",
+    "memory_beats_display": "18.31%",
+    "captured_at": "2026-11-02T13:52:25.823Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033706140/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

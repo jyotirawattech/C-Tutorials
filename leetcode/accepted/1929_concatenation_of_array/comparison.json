@@ -1,0 +1,37 @@
+{
+  "source_sha256": "452bd08511ec3602e1660a89bc9af761f0786103bcf10dfb5178d59aed3d8df9",
+  "baseline": {
+    "name": "Two simple copy loops for the two output halves",
+    "approach": "Allocate 2n output slots, copy nums into the first half, then into the second.",
+    "time": "O(n)",
+    "space": "O(1) auxiliary plus O(n) output"
+  },
+  "archived": {
+    "name": "One loop writing both output halves",
+    "time": "O(n), where n=numsSize",
+    "space": "O(1) auxiliary state plus O(n) returned storage"
+  },
+  "why": "Combining the two loops changes control structure, not the amount of array data that must be produced.",
+  "quantitative_comparison": "Both methods perform exactly 2n output writes and read the n source values as needed. The archive has n loop iterations rather than two n-iteration loops, but compiler optimization and memory behavior decide whether that matters. No speed or memory improvement is established.",
+  "tradeoffs": "The one-loop version is compact; both allocate the same-sized result. Size arithmetic and allocation success are assumed.",
+  "verdict": "same_or_worse",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1929,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2031672202/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "15.02",
+    "memory_unit": "MB",
+    "memory_beats_display": "50.05%",
+    "captured_at": "2026-11-02T13:44:02.914Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2031672202/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

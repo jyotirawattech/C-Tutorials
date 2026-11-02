@@ -1,0 +1,37 @@
+{
+  "source_sha256": "88eb21f2ab9146bb4e7552fc42d95c79532ab34c6b4c45ff456bfa09151a9d4a",
+  "baseline": {
+    "name": "Compare every value with every other value",
+    "approach": "For each element, count how many of the other n-1 values are smaller.",
+    "time": "O(n^2)",
+    "space": "O(1) auxiliary, excluding the n-result array"
+  },
+  "archived": {
+    "name": "Fixed-domain frequencies and prefix counts",
+    "time": "O(n+U), where n=numsSize and U=101 buckets; O(n) for this fixed domain",
+    "space": "O(U) auxiliary bucket storage and O(n) returned result; O(1) auxiliary for fixed U=101"
+  },
+  "why": "The small 0..100 domain lets one frequency summary answer every strict-smaller query.",
+  "quantitative_comparison": "The baseline makes n(n-1) ordered value comparisons when self-pairs are skipped. The archive performs n frequency increments, a U=101 bucket sweep and n answer lookups. This is a bounded-domain work model; different operation costs prevent a fixed runtime-factor claim.",
+  "tradeoffs": "Adds 101 counters and depends on all input values fitting 0..100. Out-of-range input indexes outside the bucket array, and result allocation is unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1365,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032937879/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "12.14",
+    "memory_unit": "MB",
+    "memory_beats_display": "10.44%",
+    "captured_at": "2026-11-02T13:43:07.383Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032937879/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

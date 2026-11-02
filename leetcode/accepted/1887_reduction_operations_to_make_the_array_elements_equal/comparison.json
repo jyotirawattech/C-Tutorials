@@ -1,0 +1,37 @@
+{
+  "source_sha256": "b9688e68f0525ad36c25d1a7f410026ad76175b88a2f70bcc3e916052ca3cfc4",
+  "baseline": {
+    "name": "Simulate every reduction with a full-array maximum search",
+    "approach": "For each legal operation, scan to find the current largest and next distinct largest, then change one occurrence.",
+    "time": "O(n*T) for T reduction operations; O(n^3) upper bound when T=O(n^2)",
+    "space": "O(1) auxiliary"
+  },
+  "archived": {
+    "name": "Sort once and accumulate distinct-value tiers",
+    "time": "O(n log n) with a qsort implementation providing that sorting bound, plus an O(n) scan; C does not mandate qsort's worst-case complexity",
+    "space": "qsort workspace is implementation-dependent; the explicit accumulation uses O(1) state"
+  },
+  "why": "A value's rank among distinct levels directly counts how many reductions it needs, so the operations need not be performed one at a time.",
+  "quantitative_comparison": "With all values distinct, T=n(n-1)/2 individual reductions. This archive does one sort and n-1 adjacent-level updates/accumulations after sorting. It skips explicit simulation of T reductions, but sort/library costs prevent a fixed runtime factor.",
+  "tradeoffs": "Mutates input and relies on qsort's actual algorithm/workspace. The int total assumes bounded problem sizes.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1887,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040528794/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "75",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "43.75%",
+    "memory_display": "18.10",
+    "memory_unit": "MB",
+    "memory_beats_display": "22.92%",
+    "captured_at": "2026-11-02T13:50:26.794Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040528794/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

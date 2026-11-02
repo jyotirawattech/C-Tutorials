@@ -18,6 +18,30 @@ Sort the values so equal values form adjacent groups. Increase a tier counter wh
 - Time: O(n log n) with a qsort implementation providing that sorting bound, plus an O(n) scan; C does not mandate qsort's worst-case complexity
 - Auxiliary space / ownership: qsort workspace is implementation-dependent; the explicit accumulation uses O(1) state
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Simulate every reduction with a full-array maximum search. For each legal operation, scan to find the current largest and next distinct largest, then change one occurrence.
+
+- Baseline time: O(n*T) for T reduction operations; O(n^3) upper bound when T=O(n^2). Space: O(1) auxiliary.
+- Submitted approach: Sort once and accumulate distinct-value tiers. Time: O(n log n) with a qsort implementation providing that sorting bound, plus an O(n) scan; C does not mandate qsort's worst-case complexity. Space: qsort workspace is implementation-dependent; the explicit accumulation uses O(1) state.
+
+**How much, by analysis:** With all values distinct, T=n(n-1)/2 individual reductions. This archive does one sort and n-1 adjacent-level updates/accumulations after sorting. It skips explicit simulation of T reductions, but sort/library costs prevent a fixed runtime factor.
+
+**Why:** A value's rank among distinct levels directly counts how many reductions it needs, so the operations need not be performed one at a time.
+
+**Trade-offs and conditions:** Mutates input and relies on qsort's actual algorithm/workspace. The int total assumes bounded problem sizes.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2040528794/) displayed the following at capture on **2026-11-02T13:50:26.794Z**:
+
+- Runtime: **75 ms**; reported runtime `Beats`: **43.75%**.
+- Memory: **18.10 MB**; reported memory `Beats`: **22.92%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The input is sorted in place and the operation total is held in int under the judged bounds. The comparator uses ordered comparisons rather than potentially overflowing subtraction.

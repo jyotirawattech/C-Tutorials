@@ -1,0 +1,37 @@
+{
+  "source_sha256": "3703772538cdad7ec01a2fc134a5153bb8e19494ea2732a080b5a58a8caa873c",
+  "baseline": {
+    "name": "Separate presence bitmap",
+    "approach": "Mark every observed value in a new n-element bitmap, then emit unmarked positions.",
+    "time": "O(n)",
+    "space": "O(n) auxiliary bitmap plus output"
+  },
+  "archived": {
+    "name": "Sign marks stored in the input",
+    "time": "O(n)",
+    "space": "O(1) marking workspace plus an O(n) allocated output buffer"
+  },
+  "why": "The sign of each input slot serves as its visited flag, removing the separate presence array.",
+  "quantitative_comparison": "The archive avoids n presence flags but still allocates n result integers. Both perform two linear passes, so total memory remains O(n) when returned storage is counted; no time advantage is measured.",
+  "tradeoffs": "Input signs are modified, values must lie in 1..n, and allocation/abs bounds are trusted. A preserving baseline may be preferable when callers need the original data.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static storage-accounting comparison, separating auxiliary and returned memory; no benchmark.",
+  "problem_id": 448,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2032943655/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "7",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "14.16%",
+    "memory_display": "36.04",
+    "memory_unit": "MB",
+    "memory_beats_display": "47.33%",
+    "captured_at": "2026-11-02T13:43:04.065Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2032943655/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

@@ -18,6 +18,30 @@ Store every occurrence in a dense array and keep separate hash-chain nodes mappi
 - Time: getRandom O(1); insert/remove O(n) worst case because they scan hash chains, including occurrence-index repair. Constant expected time requires favorable bucket/load behavior not guaranteed by this fixed table.
 - Auxiliary space / ownership: O(C+H+n) for fixed C=200005 array capacity, H=100003 buckets and n occurrence nodes
 
+## How this solution compares
+
+**Conclusion:** Same or worse against this comparator.
+
+**Named baseline:** Dense occurrence array with per-value index sets. Keep an indexed set of positions for each value and repair the moved last occurrence with expected-constant hash-set operations.
+
+- Baseline time: Expected O(1) insert/remove/getRandom under hash assumptions; worst case depends on maps. Space: O(n) occurrence/index storage plus hash metadata.
+- Submitted approach: Dense occurrence array with scanned hash chains. Time: getRandom O(1); insert/remove O(n) worst case because they scan hash chains, including occurrence-index repair. Constant expected time requires favorable bucket/load behavior not guaranteed by this fixed table.. Space: O(C+H+n) for fixed C=200005 array capacity, H=100003 buckets and n occurrence nodes.
+
+**How much, by analysis:** An archive insert/remove can traverse up to O(n) chain nodes. The named comparator uses a constant expected number of hash operations. The archive also preallocates C=200005 values and H=100003 bucket heads; no exact byte or latency gain is demonstrated.
+
+**Why:** The archive uses the dense-array idea, but linked-chain searches and moved-index repair do not establish an advantage over proper per-value index sets.
+
+**Trade-offs and conditions:** Fixed capacity is unchecked, getRandom requires nonempty input, and rand()%size can be biased. Both designs need a separately justified random-index method if exact uniformity matters.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2029527256/) displayed the following at capture on **2026-11-02T13:45:31.021Z**:
+
+- Runtime: **60 ms**; reported runtime `Beats`: **68.57%**.
+- Memory: **99.12 MB**; reported memory `Beats`: **50.00%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The fixed array capacity is not checked before insertion, getRandom assumes a nonempty collection, and rand()%size can introduce modulo bias. This is judged practice code, not cryptographic randomness or an unrestricted expected-O(1) container.

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e1907a8fba04e303e36c50cb0cd6dfe74ae223a28e4607bad20b2f3f2abf3372",
+  "baseline": {
+    "name": "LFU entries with linear eviction scan",
+    "approach": "Track frequency/recency metadata per entry and scan all cached entries to choose an eviction.",
+    "time": "O(c) eviction for c cached entries",
+    "space": "O(c) metadata"
+  },
+  "archived": {
+    "name": "Direct key table and per-frequency recency lists",
+    "time": "O(1) get/put under fixed domains; O(K+F) initialization",
+    "space": "O(K+F+c+b), K=100005, F=200005 and b allocated lists"
+  },
+  "why": "Minimum-frequency tracking identifies the eviction list, whose tail gives the least-recent entry among ties without scanning c items.",
+  "quantitative_comparison": "Eviction changes from inspecting up to c entries to a bounded list-tail removal, but the archive reserves 300010 direct-table pointer slots and retains empty frequency lists. No timing improvement percentage is established.",
+  "tradeoffs": "Fixed domains and substantial sparse-table memory may outweigh the lookup benefit. The destructor frees only the outer object, leaving allocated nodes/lists/sentinels unreleased; no complete-lifecycle quality advantage is claimed.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static eviction-work comparison with exact fixed-storage and cleanup limitations; no benchmark.",
+  "problem_id": 460,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029340112/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "83",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "48.08%",
+    "memory_display": "125.72",
+    "memory_unit": "MB",
+    "memory_beats_display": "78.08%",
+    "captured_at": "2026-11-02T13:45:49.867Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029340112/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

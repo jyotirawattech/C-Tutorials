@@ -1,6 +1,6 @@
 CC ?= clang
 
-.PHONY: all test test-runner test-archive-integrity test-accepted clean
+.PHONY: all test test-runner test-archive-integrity test-accepted test-comparisons clean
 
 all: test
 
@@ -15,6 +15,9 @@ test-archive-integrity:
 
 test-accepted:
 	@PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_accepted.py --compile
+
+test-comparisons:
+	@PYTHONDONTWRITEBYTECODE=1 python3 scripts/check_comparisons.py
 
 clean:
 	@find . -name "test_runner" -delete

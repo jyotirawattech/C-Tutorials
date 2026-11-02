@@ -1,0 +1,37 @@
+{
+  "source_sha256": "e0ca854e5ef7facb74431c59ee89447f26a8fba9210f38731307b521b77861f3",
+  "baseline": {
+    "name": "Materialize both concatenations before comparison",
+    "approach": "Allocate str1+str2 and str2+str1, compare them, then copy the gcd-length prefix if equal.",
+    "time": "O(n+m)",
+    "space": "O(n+m) temporary concatenations plus O(g) output"
+  },
+  "archived": {
+    "name": "Virtual concatenation comparison",
+    "time": "O(n+m), where n and m are the string lengths; Euclidean length-GCD work is dominated by that scan",
+    "space": "O(1) explicit auxiliary state plus O(g) returned string, where g=gcd(n,m)"
+  },
+  "why": "Character indexing compares both concatenation orders without constructing temporary strings.",
+  "quantitative_comparison": "The two temporary concatenations would contain 2(n+m) characters plus terminators. The archive avoids those buffers and their allocations while retaining up to n+m virtual character comparisons. Time growth remains linear; no measured speed factor is established.",
+  "tradeoffs": "Adds indexing branches and still allocates the output. Strings/length bounds are assumed, and the mismatch path's one-byte allocation is unchecked.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1071,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2041863308/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "8.99",
+    "memory_unit": "MB",
+    "memory_beats_display": "47.56%",
+    "captured_at": "2026-11-02T13:49:10.904Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2041863308/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

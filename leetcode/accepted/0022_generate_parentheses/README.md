@@ -18,6 +18,30 @@ Build each sequence with backtracking, adding an opening parenthesis while fewer
 - Time: O(n*C_n), where C_n is the nth Catalan number and each emitted sequence has length 2n.
 - Auxiliary space / ownership: O(n) working buffer and recursion depth, plus O(n*C_n) returned strings and a fixed 1500-pointer result buffer.
 
+## How this solution compares
+
+**Conclusion:** Advantage with conditions.
+
+**Named baseline:** Generate every bracket string and validate. Enumerate all length-2n strings over two bracket choices, then check balance.
+
+- Baseline time: O(n*4^n). Space: O(n) working space plus valid output.
+- Submitted approach: Prefix-valid backtracking. Time: O(n*C_n), where C_n is the nth Catalan number. Space: O(n) working/recursion plus O(n*C_n) output and a fixed 1500-pointer table.
+
+**How much, by analysis:** At n=8 the exhaustive baseline considers 65536 complete bracket strings, while 1430 valid strings must be emitted. The archive prunes invalid prefixes; these candidate/output counts are not an elapsed-time ratio.
+
+**Why:** The open/close constraints reject invalid prefixes before constructing their remaining suffixes.
+
+**Trade-offs and conditions:** The archive still has unavoidable exponential output and relies on n<=8 for its fixed result capacity. Allocation failures are unchecked; small n need not yield a measurable speed advantage.
+
+### Submission-page performance snapshot
+
+The matching [submission page](https://leetcode.com/submissions/detail/2046778526/) displayed the following at capture on **2026-11-02T13:48:02.114Z**:
+
+- Runtime: **0 ms**; reported runtime `Beats`: **100.00%**.
+- Memory: **9.97 MB**; reported memory `Beats`: **70.57%**.
+
+These are dated platform observations, not a measured improvement over the named baseline. A `Beats` value is not a percentage speedup; a 0 ms display does not establish zero elapsed time. **Paired timing/memory benchmark: not run.** No measured speedup factor or memory reduction is claimed. See the [comparison standard](../../../docs/comparison-guidance.md) and [source-bound comparison data](comparison.json).
+
 ## Assumptions and review notes
 
 The result capacity is chosen for n <= 8 and has no general growth check. Allocations are unchecked; strcpy copies into an exactly sized destination only under the established sequence-length invariant. The caller must free every result string and the pointer array.

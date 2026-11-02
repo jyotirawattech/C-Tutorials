@@ -1,0 +1,37 @@
+{
+  "source_sha256": "bbc869b459376b62624dd643a9b9e7f5521e873cd6ff728c8970a4b33d558ee6",
+  "baseline": {
+    "name": "Sort the whole array then select n-k",
+    "approach": "Use a comparison sort and read the requested rank from the result.",
+    "time": "O(n log n) for a sort with that guarantee",
+    "space": "Implementation-dependent sorting workspace"
+  },
+  "archived": {
+    "name": "Random-pivot three-way quickselect",
+    "time": "Expected O(n) with suitable random pivot behavior; O(n^2) worst case",
+    "space": "In-place partitioning with expected O(log n) recursive depth and O(n) worst-case recursive depth"
+  },
+  "why": "Partitioning needs only the rank-containing side; it avoids fully ordering values irrelevant to the chosen rank and groups duplicate pivots together.",
+  "quantitative_comparison": "Expected partition work is O(n) under suitable pivot behavior, against O(n log n) sorting growth. Repeated extreme pivots can instead produce quadratic work. No fixed speed factor follows from those bounds or from the source's rand/time calls.",
+  "tradeoffs": "Mutates input, reseeds global libc randomness, and has a linear recursion-depth worst case. A guaranteed O(n log n) sort offers a stronger worst-case bound and leaves all ranks ordered.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 215,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2040535241/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "4",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "87.00%",
+    "memory_display": "15.27",
+    "memory_unit": "MB",
+    "memory_beats_display": "83.28%",
+    "captured_at": "2026-11-02T13:50:22.381Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2040535241/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

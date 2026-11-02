@@ -1,0 +1,37 @@
+{
+  "source_sha256": "a8a39ccd67800d6c58a578880fcdd2dc8c74a229ac9a01fc1bc491870ef73bf2",
+  "baseline": {
+    "name": "Recursive list reversal",
+    "approach": "Reverse the suffix recursively and redirect each original forward link while unwinding.",
+    "time": "O(n)",
+    "space": "O(n) call stack"
+  },
+  "archived": {
+    "name": "Iterative reverseList entry point",
+    "time": "O(n)",
+    "space": "O(1) working pointers; separately included recursive variant uses O(n) stack"
+  },
+  "why": "Saving the next pointer and advancing the reversed prefix replaces recursive state with three pointers.",
+  "quantitative_comparison": "The primary archived entry avoids up to n recursive frames while still rewiring each of n nodes once. No runtime ratio follows from the stack difference.",
+  "tradeoffs": "The list must be acyclic and mutable. The raw file also contains a recursive alternative, so constant-space claims apply specifically to reverseList, not every function in the file.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Direct static comparison of both variants present in the captured source; no elapsed benchmark.",
+  "problem_id": 206,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033793518/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "11.52",
+    "memory_unit": "MB",
+    "memory_beats_display": "5.14%",
+    "captured_at": "2026-11-02T13:52:02.906Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033793518/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

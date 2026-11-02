@@ -1,0 +1,37 @@
+{
+  "source_sha256": "bfdcc1795e382ee5e5120e2580bc19b15cde4176b0306b9d737fa56907bfb979",
+  "baseline": {
+    "name": "Search every suffix for the first eligible discount",
+    "approach": "For each price, scan later prices until the first value <= it is found.",
+    "time": "O(n^2) worst case",
+    "space": "O(1) auxiliary for an in-place baseline"
+  },
+  "archived": {
+    "name": "Monotonic pending-discount stack",
+    "time": "O(n) amortized, where n=pricesSize; each index enters and leaves the stack at most once",
+    "space": "O(n) auxiliary stack; the returned pointer aliases the existing input array"
+  },
+  "why": "Pending indices share a forward scan, and each is resolved only once when its first qualifying price arrives.",
+  "quantitative_comparison": "Strictly increasing prices make the baseline perform n(n-1)/2 suffix comparisons. The archive pushes n indices and pops at most n, producing amortized linear work. These bounds do not supply a stopwatch speed factor.",
+  "tradeoffs": "Adds O(n) stack memory and mutates/returns the original array, rather than allocating an independent result. The generic malloc-return comment must not be treated as an ownership guarantee.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 1475,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2033027189/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "0",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "100.00%",
+    "memory_display": "11.90",
+    "memory_unit": "MB",
+    "memory_beats_display": "54.81%",
+    "captured_at": "2026-11-02T13:42:49.621Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2033027189/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}

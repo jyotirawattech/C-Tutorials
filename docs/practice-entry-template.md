@@ -24,6 +24,41 @@ of copying it. State the input assumptions used by this implementation.
 Time: <bound and the variables it uses>
 Auxiliary space: <bound; distinguish output memory if relevant>
 
+## How much better, and why?
+
+Named baseline: <specific valid approach and the same problem constraints>
+
+| Dimension | Baseline | This solution | Evidence and assumptions |
+| --- | --- | --- | --- |
+| Time | <bound> | <bound> | Theoretical analysis; state input variables and conditions |
+| Auxiliary space | <bound> | <bound> | Distinguish working memory from output |
+| Work at a stated input size | <count/model or Unknown> | <count/model or Unknown> | A theoretical work model is not timed speedup |
+
+Why the difference: <mechanism/invariant that removes work or changes storage>
+Trade-offs: <extra memory, constraints, constants, implementation complexity or correctness limits>
+Verdict: Advantage with conditions / Same or worse / Not established / Known correctness limit
+
+### Dated LeetCode UI snapshot, when actually captured
+
+Source submission URL: <exact matching receipt URL or Not captured>
+Captured at: <actual timestamp with timezone or Not captured>
+Runtime display: <exact string> ms; runtime Beats: <exact percentage>
+Memory display: <exact string> MB; memory Beats: <exact percentage>
+
+These are the judge's displayed observations for that submission and capture date.
+A Beats display is a separate platform comparison indicator, not that percent
+faster or less memory than the named baseline. A displayed 0 ms is retained as a
+UI value and is never used as a denominator or evidence of instant execution.
+Missing judge data remains Not captured.
+
+Paired local benchmark: Not run
+Measured speedup factor: null
+Measured memory reduction percent: null
+
+For accepted archive entries, save the source-bound fields in comparison.json
+and run make test-comparisons. The initial comparison gate permits no measured
+gain fields; new paired benchmarks need their own reproducible evidence design.
+
 ## Edge cases exercised
 
 | Case | Expected behavior | Actual local result |

@@ -1,0 +1,37 @@
+{
+  "source_sha256": "946fba5a5567e15898a898c08ba1755046fd65e7064565cfbe868a8f9065050d",
+  "baseline": {
+    "name": "Copy the supplied balances during construction",
+    "approach": "Allocate an owned n-element balance array and copy initial values; use direct indexing for later operations.",
+    "time": "O(n) construction; O(1) operations",
+    "space": "O(n) additional owned balances"
+  },
+  "archived": {
+    "name": "Borrow the caller's balance array",
+    "time": "O(1) construction, deposit, withdraw and transfer",
+    "space": "O(1) auxiliary object; the caller's existing n-element balance array is borrowed"
+  },
+  "why": "Borrowing avoids the constructor copy and duplicate balance storage while keeping the same direct-index operations.",
+  "quantitative_comparison": "The copy baseline reads/writes n balance values into a new array. This source copies zero balance elements and allocates only its small object; deposit/withdraw/transfer have the same constant-growth work. This compares construction/storage, not transaction throughput.",
+  "tradeoffs": "Caller storage must remain alive and can be changed externally. The source does not provide isolation, negative-amount validation or general arithmetic/concurrency safety.",
+  "verdict": "advantage_with_conditions",
+  "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
+  "problem_id": 2043,
+  "source_submission_url": "https://leetcode.com/submissions/detail/2029605836/",
+  "comparison_updated_on": "2026-11-02",
+  "judge_snapshot": {
+    "runtime_display": "23",
+    "runtime_unit": "ms",
+    "runtime_beats_display": "23.08%",
+    "memory_display": "56.33",
+    "memory_unit": "MB",
+    "memory_beats_display": "82.05%",
+    "captured_at": "2026-11-02T13:45:23.820Z",
+    "source_submission_url": "https://leetcode.com/submissions/detail/2029605836/"
+  },
+  "paired_benchmark": {
+    "status": "not_run",
+    "speedup_factor": null,
+    "memory_reduction_percent": null
+  }
+}
