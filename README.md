@@ -37,6 +37,7 @@ In **pure C (C11)** systems programming:
 | **0003** | [**Longest Substring Without Repeating Characters**](02_two_pointers_and_strings/0003_longest_substring_without_repeating_characters) | Two Pointers & Strings | Sliding Window + Direct ASCII Indexing (Zero Heap) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0020** | [**Valid Parentheses**](02_two_pointers_and_strings/0020_valid_parentheses) | Strings & Stack | Bounded LIFO Stack with Early Exit | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ | Local assertions |
 | **0021** | [**Merge Two Sorted Lists**](03_linked_lists/0021_merge_two_sorted_lists) | Linked Lists | Sentinel Stack Dummy Node & In-Place Splicing | $\mathcal{O}(M+N)$ | $\mathcal{O}(1)$ | Local assertions |
+| **0121** | [**Best Time to Buy and Sell Stock**](01_arrays_and_hashing/0121_best_time_to_buy_and_sell_stock) | Arrays | Running Prefix Minimum | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Accepted source + local assertions/oracle |
 | **0136** | [**Single Number**](06_binary_search_and_bits/0136_single_number) | Bit Manipulation | Bitwise XOR Streaming Accumulator | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0141** | [**Linked List Cycle**](03_linked_lists/0141_linked_list_cycle) | Linked Lists | Floyd's Cycle-Finding Algorithm (Tortoise & Hare) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0146** | [**LRU Cache**](05_systems_data_structures/0146_lru_cache) | Systems Data Structures | Doubly Linked List with Sentinels + Hash Table | $\mathcal{O}(1)$ | $\mathcal{O}(K)$ | Local assertions |
@@ -56,7 +57,8 @@ C-Tutorials/
 ├── scripts/
 │   └── run_tests.sh                       # Test execution and detector result reporting
 ├── 01_arrays_and_hashing/
-│   └── 0001_two_sum/
+│   ├── 0001_two_sum/
+│   └── 0121_best_time_to_buy_and_sell_stock/
 ├── 02_two_pointers_and_strings/
 │   ├── 0003_longest_substring_without_repeating_characters/
 │   └── 0020_valid_parentheses/
@@ -85,7 +87,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes the eleven
+This runs the runner's negative regressions, then compiles and executes the twelve
 existing solutions with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
@@ -110,6 +112,12 @@ The optional ASan runtime hung on this host and was terminated without claiming
 a pass. CI is configured for ASan plus UBSan on Linux and UBSan on macOS;
 check the [actual workflow results](https://github.com/jyotirawattech/C-Tutorials/actions)
 for the revision being reviewed.
+
+The 0121 archive was additionally validated locally on 2 November 2026: all twelve
+solution harnesses and six runner regressions passed with fail-fast UBSan. Its
+tests include eleven fixed cases, 1024 deterministic comparisons with a brute-force
+oracle, and a maximum-length input. Twelve separate `leaks` invocations returned
+zero with the same restricted-process notices; ASan was not run for this addition.
 
 ## Daily practice, notes and provenance
 
