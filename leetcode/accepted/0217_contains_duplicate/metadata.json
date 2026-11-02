@@ -1,0 +1,26 @@
+{
+  "problem_id": 217,
+  "title": "Contains Duplicate",
+  "slug": "contains-duplicate",
+  "problem_url": "https://leetcode.com/problems/contains-duplicate/",
+  "submission_url": "https://leetcode.com/submissions/detail/463988887/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "18 / 18",
+  "displayed_submission_time": "Mar 06, 2021 02:18",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "959102a7fd7c5d79bf50e0cbc6c3e125a71462cf9bffc8fcf5bae4cbd2112570",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:46:10.407Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_PORTABILITY_CAVEAT",
+  "source_review_flags": [
+    "Comparator subtraction can have signed overflow on arbitrary full-range int inputs.",
+    "Missing stdlib.h/stdbool.h includes make this a judge fragment rather than a standalone C translation unit."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

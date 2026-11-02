@@ -1,0 +1,26 @@
+{
+  "problem_id": 27,
+  "title": "Remove Element",
+  "slug": "remove-element",
+  "problem_url": "https://leetcode.com/problems/remove-element/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033798016/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "116 / 116",
+  "displayed_submission_time": "Jun 15, 2026 15:41",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "bc0f193beed115ea45bc8fb98214284b161248f1f26f6e12cb20400cb4233e97",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:39.971Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "A readable/writable nums buffer of numsSize elements is assumed."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

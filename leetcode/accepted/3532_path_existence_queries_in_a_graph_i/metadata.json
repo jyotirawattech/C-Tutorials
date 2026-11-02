@@ -1,0 +1,27 @@
+{
+  "problem_id": 3532,
+  "title": "Path Existence Queries in a Graph I",
+  "slug": "path-existence-queries-in-a-graph-i",
+  "problem_url": "https://leetcode.com/problems/path-existence-queries-in-a-graph-i/",
+  "submission_url": "https://leetcode.com/submissions/detail/2061378248/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "550 / 550",
+  "displayed_submission_time": "Jul 09, 2026 12:19",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "894184ce6e21d28cd521b8ab3d292f5caf9da0b4c89f45371cb94bd33d0626f5",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:46:59.860Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Requires platform-provided bool/allocation declarations or a separate wrapper",
+    "Input shape, index and integer-difference preconditions",
+    "Unverified cache-guarantee commentary"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

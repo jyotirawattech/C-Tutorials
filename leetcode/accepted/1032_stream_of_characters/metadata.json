@@ -1,0 +1,27 @@
+{
+  "problem_id": 1032,
+  "title": "Stream of Characters",
+  "slug": "stream-of-characters",
+  "problem_url": "https://leetcode.com/problems/stream-of-characters/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029357663/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "20 / 20",
+  "displayed_submission_time": "Jun 11, 2026 11:36",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "7598463d9d5f957a72f90de47f23051968c9ddb55ed2863d9e76468a41b316d9",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:45:42.782Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Fixed trie and stream capacities",
+    "Unchecked malloc/calloc results",
+    "Alphabet-index and string-termination preconditions"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

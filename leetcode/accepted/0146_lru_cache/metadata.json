@@ -1,0 +1,26 @@
+{
+  "problem_id": 146,
+  "title": "LRU Cache",
+  "slug": "lru-cache",
+  "problem_url": "https://leetcode.com/problems/lru-cache/",
+  "submission_url": "https://leetcode.com/submissions/detail/2046774028/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "25 / 25",
+  "displayed_submission_time": "Jun 26, 2026 17:15",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "cd18c034cf6d48b9b48fad0754c6e2a288c2f921f422ada5db7b776ee90ea1eb",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:48:20.711Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Fixed key-domain indexing",
+    "Unchecked malloc/calloc results"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

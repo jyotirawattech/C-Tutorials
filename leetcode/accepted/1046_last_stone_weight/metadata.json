@@ -1,0 +1,26 @@
+{
+  "problem_id": 1046,
+  "title": "Last Stone Weight",
+  "slug": "last-stone-weight",
+  "problem_url": "https://leetcode.com/problems/last-stone-weight/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033567278/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "74 / 74",
+  "displayed_submission_time": "Jun 15, 2026 12:07",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "e6296e3a4c6b9563dab9be4dcf290758ef80d382e94b24690d23c9b60939b1a1",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:41:58.615Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "In-place mutation",
+    "Recursive heap helper uses stack space"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

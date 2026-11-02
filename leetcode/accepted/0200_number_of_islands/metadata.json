@@ -1,0 +1,27 @@
+{
+  "problem_id": 200,
+  "title": "Number of Islands",
+  "slug": "number-of-islands",
+  "problem_url": "https://leetcode.com/problems/number-of-islands/",
+  "submission_url": "https://leetcode.com/submissions/detail/2046776629/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "49 / 49",
+  "displayed_submission_time": "Jun 26, 2026 17:18",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "82927b1e1010b30dd5a4a50154d33c4e63477bb1148c006978b85aa782daf29f",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:48:09.280Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "In-place grid mutation",
+    "Potential deep recursion",
+    "Rectangular-grid precondition"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

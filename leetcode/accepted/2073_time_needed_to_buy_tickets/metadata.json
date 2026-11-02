@@ -1,0 +1,26 @@
+{
+  "problem_id": 2073,
+  "title": "Time Needed to Buy Tickets",
+  "slug": "time-needed-to-buy-tickets",
+  "problem_url": "https://leetcode.com/problems/time-needed-to-buy-tickets/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033036947/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "65 / 65",
+  "displayed_submission_time": "Jun 14, 2026 22:18",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "f0cf5e9539cafa9f6953c8db6314142a02e780d4eef71b6118d974db5509c4f4",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:42:06.066Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "Source comment claims 'blistering fast ALU bounds checking'; static inspection establishes capped counting, not a speed measurement."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

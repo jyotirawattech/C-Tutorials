@@ -1,0 +1,28 @@
+{
+  "problem_id": 207,
+  "title": "Course Schedule",
+  "slug": "course-schedule",
+  "problem_url": "https://leetcode.com/problems/course-schedule/",
+  "submission_url": "https://leetcode.com/submissions/detail/2049492075/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "54 / 54",
+  "displayed_submission_time": "Jun 29, 2026 08:57",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "9aa220805d10d8eab82adca10c4afa33a925335866f94983c8b549d8e70fefb9",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:47:17.857Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_ERROR_PATH_CAVEAT",
+  "source_review_flags": [
+    "Partial-allocation failure leaks earlier successful allocations.",
+    "No range/row-width checks for prerequisite IDs; fixed queue capacity depends on judged constraints.",
+    "Missing standard bool/stdlib declarations in this captured fragment.",
+    "Source 'zero latency'/'prevents heap fragmentation' comments are unsupported as universal performance claims."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

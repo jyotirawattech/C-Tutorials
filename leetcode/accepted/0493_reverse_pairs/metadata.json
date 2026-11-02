@@ -1,0 +1,27 @@
+{
+  "problem_id": 493,
+  "title": "Reverse Pairs",
+  "slug": "reverse-pairs",
+  "problem_url": "https://leetcode.com/problems/reverse-pairs/",
+  "submission_url": "https://leetcode.com/submissions/detail/2041566308/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "140 / 140",
+  "displayed_submission_time": "Jun 22, 2026 09:22",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "12fcb179e0e50e63df780a8a6bceb7af643c6ee1571d96b0c5d096512ec7c460",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:49:18.112Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Allocation failure is checked but conflated with a valid zero pair count.",
+    "Merge storage is O(n), despite a source comment using 'in-place' terminology.",
+    "The source's fragmentation/latency claims are not supported by benchmarks."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

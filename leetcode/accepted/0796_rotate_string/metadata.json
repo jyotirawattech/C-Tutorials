@@ -1,0 +1,26 @@
+{
+  "problem_id": 796,
+  "title": "Rotate String",
+  "slug": "rotate-string",
+  "problem_url": "https://leetcode.com/problems/rotate-string/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033710099/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "62 / 62",
+  "displayed_submission_time": "Jun 15, 2026 14:23",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "3f1fdafb4e92b9a3df4b4919ed0212bc500e8a5e5a76f565f0df4dadf78c6b92",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:18.093Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unbounded strcpy depends on correctly computed capacity",
+    "String termination and integer-size assumptions"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

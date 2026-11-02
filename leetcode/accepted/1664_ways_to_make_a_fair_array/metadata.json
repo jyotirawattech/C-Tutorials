@@ -1,0 +1,25 @@
+{
+  "problem_id": 1664,
+  "title": "Ways to Make a Fair Array",
+  "slug": "ways-to-make-a-fair-array",
+  "problem_url": "https://leetcode.com/problems/ways-to-make-a-fair-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2040524225/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "105 / 105",
+  "displayed_submission_time": "Jun 21, 2026 09:28",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "b1ee6deadfecf6e9a04f2c3767c1a6dc5a0b30d8e249736476d69a3b44e54a6b",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:50:35.372Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Accumulator range depends on documented input bounds"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 703,
+  "title": "Kth Largest Element in a Stream",
+  "slug": "kth-largest-element-in-a-stream",
+  "problem_url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029347190/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "12 / 12",
+  "displayed_submission_time": "Jun 11, 2026 11:27",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "d714dac6f3ded6ac96849d4b5c9b0d8cef2380db5b70e11795aa4c29d647ad49",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:45:46.265Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Unchecked constructor and heap allocations.",
+    "Invalid k=0 can lead to an out-of-bounds heap[0] access; judged input domain is assumed."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

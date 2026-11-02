@@ -1,0 +1,27 @@
+{
+  "problem_id": 373,
+  "title": "Find K Pairs with Smallest Sums",
+  "slug": "find-k-pairs-with-smallest-sums",
+  "problem_url": "https://leetcode.com/problems/find-k-pairs-with-smallest-sums/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033580722/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "32 / 32",
+  "displayed_submission_time": "Jun 15, 2026 12:17",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "8f1e4d608535f5e140322c5131b982f2cb937103919add5e81303baa466451b7",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:41:54.947Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Unchecked heap/result/row allocations.",
+    "Pair sums use int and depend on the problem's bounded numeric domain; no arbitrary-integer safety claim.",
+    "The source's 'HARDWARE FIX' comment describes widened C multiplication but does not establish register choice or a hardware optimization."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 3756,
+  "title": "Concatenate Non-Zero Digits and Multiply by Sum II",
+  "slug": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+  "problem_url": "https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-ii/",
+  "submission_url": "https://leetcode.com/submissions/detail/2060383645/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "523 / 523",
+  "displayed_submission_time": "Jul 08, 2026 16:04",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "beed4256e8bdb214faea29d554c57cbddcd91cf71f3b95f316e06b49dcf6df3c",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:47:03.229Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Known partial-allocation failure leak",
+    "Requires platform-provided string/allocation declarations or wrapper",
+    "Unverified hardware/kernel-panic commentary"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

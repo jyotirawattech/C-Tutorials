@@ -1,0 +1,27 @@
+{
+  "problem_id": 1967,
+  "title": "Number of Strings That Appear as Substrings in Word",
+  "slug": "number-of-strings-that-appear-as-substrings-in-word",
+  "problem_url": "https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/",
+  "submission_url": "https://leetcode.com/submissions/detail/2049518696/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "82 / 82",
+  "displayed_submission_time": "Jun 29, 2026 09:35",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "c1780ad23d9fc72a1fe00ef65b9a2172779cb5c6ef0ceb7d5594dedbe9f52cc1",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:47:11.081Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_STRING_CONTRACT_CAVEAT",
+  "source_review_flags": [
+    "Uses strstr, flagged by the selected safe-C guidance; original archived code is preserved rather than silently replaced.",
+    "Missing string.h/NULL declaration in the captured fragment.",
+    "Source 'L1 cache almost instantly' claim is not supported by an execution or benchmark."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

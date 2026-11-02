@@ -1,0 +1,27 @@
+{
+  "problem_id": 1590,
+  "title": "Make Sum Divisible by P",
+  "slug": "make-sum-divisible-by-p",
+  "problem_url": "https://leetcode.com/problems/make-sum-divisible-by-p/",
+  "submission_url": "https://leetcode.com/submissions/detail/2040516582/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "145 / 145",
+  "displayed_submission_time": "Jun 21, 2026 09:22",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "1e2752019e4a81ab912622727248b56f03659bc12cbd97fb301a2eda79e41c38",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:10.664Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc/calloc results",
+    "Positive-modulus/nonnegative-input assumptions",
+    "Worst-case hash collisions"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

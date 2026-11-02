@@ -1,0 +1,27 @@
+{
+  "problem_id": 355,
+  "title": "Design Twitter",
+  "slug": "design-twitter",
+  "problem_url": "https://leetcode.com/problems/design-twitter/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029610348/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "20 / 20",
+  "displayed_submission_time": "Jun 11, 2026 15:47",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "4b940978dba76972853467a0e9b548c852aaaf46d0cbaa0b07b6356c3b8fb2a2",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:44:22.563Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "CONFIRMED_LOCAL_COUNTEREXAMPLE_HISTORICAL_ACCEPTED_PRESERVED",
+  "source_review_flags": [
+    "Unchecked calloc/malloc results.",
+    "Fixed valid user-ID domain 1..500 and signed timestamp/count growth are assumed.",
+    "Source comment calls sorting 'Extremely fast'; no benchmark or hardware claim is established."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

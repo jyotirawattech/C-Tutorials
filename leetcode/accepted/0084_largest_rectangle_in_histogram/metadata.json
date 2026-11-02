@@ -1,0 +1,26 @@
+{
+  "problem_id": 84,
+  "title": "Largest Rectangle in Histogram",
+  "slug": "largest-rectangle-in-histogram",
+  "problem_url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033033041/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "99 / 99",
+  "displayed_submission_time": "Jun 14, 2026 22:14",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "065df584b6134b268fe9e3cef28e9cafdb1327c1d35472ab010c7a2428ad7734",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:42:42.796Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc result",
+    "Height-times-width uses int; bounds depend on problem constraints"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

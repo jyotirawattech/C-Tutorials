@@ -1,0 +1,26 @@
+{
+  "problem_id": 33,
+  "title": "Search in Rotated Sorted Array",
+  "slug": "search-in-rotated-sorted-array",
+  "problem_url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2040565062/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "196 / 196",
+  "displayed_submission_time": "Jun 21, 2026 10:20",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "b2015aa17529ff17bd4fb240a1efe8bfdc9124468f4fdbe2d6785eebf2be573d",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:49:29.047Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "Midpoint arithmetic is bounded by valid indices; hardware-specific performance comments are not independently established."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

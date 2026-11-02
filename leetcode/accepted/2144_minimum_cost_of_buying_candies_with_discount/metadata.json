@@ -1,0 +1,26 @@
+{
+  "problem_id": 2144,
+  "title": "Minimum Cost of Buying Candies With Discount",
+  "slug": "minimum-cost-of-buying-candies-with-discount",
+  "problem_url": "https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/",
+  "submission_url": "https://leetcode.com/submissions/detail/2046771410/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "192 / 192",
+  "displayed_submission_time": "Jun 26, 2026 17:12",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "8d80a3a28e32d494530aaa8872cd1e5758ed20fe56e2daf5486c864988808e75",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:48:25.408Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Fixed price-domain indexing",
+    "Unverified cache and platform-size commentary"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

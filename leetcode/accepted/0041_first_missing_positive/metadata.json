@@ -1,0 +1,26 @@
+{
+  "problem_id": 41,
+  "title": "First Missing Positive",
+  "slug": "first-missing-positive",
+  "problem_url": "https://leetcode.com/problems/first-missing-positive/",
+  "submission_url": "https://leetcode.com/submissions/detail/2037084114/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "179 / 179",
+  "displayed_submission_time": "Jun 18, 2026 10:44",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "b9d7fc70963250359970b30a8066ca07cec169a0df2d50f0ab92c6ec069b6869",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:18.015Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "numsSize+1 assumes a bounded problem length rather than arbitrary INT_MAX-sized input."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

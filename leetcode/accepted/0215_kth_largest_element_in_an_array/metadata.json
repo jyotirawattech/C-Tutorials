@@ -1,0 +1,27 @@
+{
+  "problem_id": 215,
+  "title": "Kth Largest Element in an Array",
+  "slug": "kth-largest-element-in-an-array",
+  "problem_url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2040535241/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "46 / 46",
+  "displayed_submission_time": "Jun 21, 2026 09:40",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "bbc869b459376b62624dd643a9b9e7f5521e873cd6ff728c8970a4b33d558ee6",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:50:22.381Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_RANDOMNESS_CAVEAT",
+  "source_review_flags": [
+    "Uses libc rand/srand/time; unsuitable as security randomness and changes process-wide random state.",
+    "No range checks for invalid k/empty input.",
+    "Worst-case recursion may be linear; source 'hardened' commentary does not establish a robustness guarantee."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

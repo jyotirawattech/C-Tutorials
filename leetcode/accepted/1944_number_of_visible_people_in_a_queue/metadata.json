@@ -1,0 +1,27 @@
+{
+  "problem_id": 1944,
+  "title": "Number of Visible People in a Queue",
+  "slug": "number-of-visible-people-in-a-queue",
+  "problem_url": "https://leetcode.com/problems/number-of-visible-people-in-a-queue/",
+  "submission_url": "https://leetcode.com/submissions/detail/2049493001/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "42 / 42",
+  "displayed_submission_time": "Jun 29, 2026 08:59",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "e53351bf587a8b0f3c1881dceb58f02d3dab943b23c03da2068d6d204ee63aa9",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:47:14.671Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Requires platform-provided allocation declarations or a separate standard-header wrapper",
+    "Return-size value remains nonzero on allocation failure",
+    "Hardware commentary is not benchmarking evidence"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

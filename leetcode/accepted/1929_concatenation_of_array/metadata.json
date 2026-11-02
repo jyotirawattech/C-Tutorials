@@ -1,0 +1,26 @@
+{
+  "problem_id": 1929,
+  "title": "Concatenation of Array",
+  "slug": "concatenation-of-array",
+  "problem_url": "https://leetcode.com/problems/concatenation-of-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2031672202/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "92 / 92",
+  "displayed_submission_time": "Jun 13, 2026 16:05",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "452bd08511ec3602e1660a89bc9af761f0786103bcf10dfb5178d59aed3d8df9",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:44:02.914Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Unchecked result malloc.",
+    "No overflow checks for numsSize*2 outside the bounded problem domain."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

@@ -1,0 +1,26 @@
+{
+  "problem_id": 328,
+  "title": "Odd Even Linked List",
+  "slug": "odd-even-linked-list",
+  "problem_url": "https://leetcode.com/problems/odd-even-linked-list/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033789935/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "70 / 70",
+  "displayed_submission_time": "Jun 15, 2026 15:34",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "1e2e145e569cf0c6ac643cc2c3d6bfc0bfb8cb0d2df55202d039e24743fbc930",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:06.764Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Input list mutation",
+    "External judge ListNode support type"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

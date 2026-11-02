@@ -1,0 +1,26 @@
+{
+  "problem_id": 2080,
+  "title": "Range Frequency Queries",
+  "slug": "range-frequency-queries",
+  "problem_url": "https://leetcode.com/problems/range-frequency-queries/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029635919/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "20 / 20",
+  "displayed_submission_time": "Jun 11, 2026 16:13",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "80b60a1deb4dca792a9206d0a1ccefe233721c77f590b4074634ea51fbf64202",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:44:19.079Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc/calloc results",
+    "Fixed value-domain indexing"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

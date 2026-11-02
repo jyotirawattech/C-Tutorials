@@ -1,0 +1,27 @@
+{
+  "problem_id": 381,
+  "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+  "slug": "insert-delete-getrandom-o1-duplicates-allowed",
+  "problem_url": "https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029527256/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "32 / 32",
+  "displayed_submission_time": "Jun 11, 2026 14:26",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "1ea3e0d055efbed3ef33d835036a206eceb2694b68e108afc54ea24b54063a95",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:45:31.021Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_CAPACITY_AND_RANDOMNESS_CAVEATS",
+  "source_review_flags": [
+    "Unchecked object/array/bucket/node allocations.",
+    "Unchecked fixed capacity and possible modulo-by-zero if getRandom is called empty.",
+    "rand is noncryptographic; modulo selection is not an exact-uniformity guarantee."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

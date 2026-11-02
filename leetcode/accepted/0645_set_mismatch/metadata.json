@@ -1,0 +1,26 @@
+{
+  "problem_id": 645,
+  "title": "Set Mismatch",
+  "slug": "set-mismatch",
+  "problem_url": "https://leetcode.com/problems/set-mismatch/",
+  "submission_url": "https://leetcode.com/submissions/detail/2032936506/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "49 / 49",
+  "displayed_submission_time": "Jun 14, 2026 20:32",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "854c25733d3570e0d4b5adf2fff217c5b19742ef9789dba677638272cf2904b4",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:43:54.109Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Unchecked result malloc.",
+    "Unsigned negation is used for bit isolation; the assigned int mask still relies on the bounded problem domain for a straightforward portable interpretation."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

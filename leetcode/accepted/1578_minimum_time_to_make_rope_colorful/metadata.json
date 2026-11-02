@@ -1,0 +1,26 @@
+{
+  "problem_id": 1578,
+  "title": "Minimum Time to Make Rope Colorful",
+  "slug": "minimum-time-to-make-rope-colorful",
+  "problem_url": "https://leetcode.com/problems/minimum-time-to-make-rope-colorful/",
+  "submission_url": "https://leetcode.com/submissions/detail/462403664/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "113 / 113",
+  "displayed_submission_time": "Mar 02, 2021 09:51",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "2d3516ea3bd94de1879adb550672d3ccc2fdfeb63873876d6351edc2aff6eae4",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:46:18.221Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "In-place cost mutation",
+    "String length and integer-sum constraints"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

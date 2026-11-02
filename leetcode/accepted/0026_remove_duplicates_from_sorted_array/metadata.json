@@ -1,0 +1,26 @@
+{
+  "problem_id": 26,
+  "title": "Remove Duplicates from Sorted Array",
+  "slug": "remove-duplicates-from-sorted-array",
+  "problem_url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2035054515/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "362 / 362",
+  "displayed_submission_time": "Jun 16, 2026 16:19",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "77611dd49694affcdcd57f5bc024f56074e3c7321b07f5787c2480d4bff44698",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:36.266Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Sorted-input precondition",
+    "In-place compaction"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

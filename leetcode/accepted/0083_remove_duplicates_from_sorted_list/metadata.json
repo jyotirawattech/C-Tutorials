@@ -1,0 +1,26 @@
+{
+  "problem_id": 83,
+  "title": "Remove Duplicates from Sorted List",
+  "slug": "remove-duplicates-from-sorted-list",
+  "problem_url": "https://leetcode.com/problems/remove-duplicates-from-sorted-list/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033723539/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "168 / 168",
+  "displayed_submission_time": "Jun 15, 2026 14:35",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "367371f5d04d04fc48c5098e146add0ffe6e280cd3f9b629f70c44eeb3d5153c",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:10.839Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_OWNERSHIP_CAVEAT",
+  "source_review_flags": [
+    "Frees caller-supplied duplicate nodes; ownership must permit that.",
+    "Judge-provided ListNode structure is required."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

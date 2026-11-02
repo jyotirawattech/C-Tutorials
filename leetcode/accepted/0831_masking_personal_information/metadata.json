@@ -1,0 +1,28 @@
+{
+  "problem_id": 831,
+  "title": "Masking Personal Information",
+  "slug": "masking-personal-information",
+  "problem_url": "https://leetcode.com/problems/masking-personal-information/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033706140/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "66 / 66",
+  "displayed_submission_time": "Jun 15, 2026 14:19",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "bc73050cce9ab46720967f6268ad4e4846ee5f25ccb73148da0eca4360f437bf",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:25.823Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_FORMAT_CONTRACT_CAVEAT",
+  "source_review_flags": [
+    "Unchecked result allocations.",
+    "country[digit_count-10] assumes a validated 10..13-digit phone contract.",
+    "ASCII-only uppercase conversion by +32 and valid at-sign/local-name positions are assumed.",
+    "Uses strlen on fixed prefix literals, flagged by selected safe-C guidance; original code preserved."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

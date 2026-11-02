@@ -4,6 +4,7 @@
 test_runner
 *.dSYM/
 .DS_Store
+__pycache__/
 
 # Temporary files
 *.tmp

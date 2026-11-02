@@ -1,0 +1,27 @@
+{
+  "problem_id": 3739,
+  "title": "Count Subarrays With Majority Element II",
+  "slug": "count-subarrays-with-majority-element-ii",
+  "problem_url": "https://leetcode.com/problems/count-subarrays-with-majority-element-ii/",
+  "submission_url": "https://leetcode.com/submissions/detail/2046769368/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "516 / 516",
+  "displayed_submission_time": "Jun 26, 2026 17:09",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "c2a5121e49e0a8e7058c9e2550864045c8c7552e7e3519fdc2b05046d895451c",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:48:28.952Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "Missing stdlib.h declarations in the captured fragment.",
+    "mapSize=2*numsSize+3 can overflow outside bounded inputs.",
+    "Source hardware/thread-safety comments do not establish whole-function concurrency safety or measured speed."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

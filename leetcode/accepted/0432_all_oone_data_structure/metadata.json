@@ -1,0 +1,27 @@
+{
+  "problem_id": 432,
+  "title": "All O`one Data Structure",
+  "slug": "all-oone-data-structure",
+  "problem_url": "https://leetcode.com/problems/all-oone-data-structure/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029540776/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "25 / 25",
+  "displayed_submission_time": "Jun 11, 2026 14:39",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "ecbc4bbc360c6b716974a5ae539f995792f798f156453ee0e1fb887146528777",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:45:27.462Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Known incomplete teardown leaks live keys and interior buckets",
+    "Unchecked strcpy into fixed key buffer",
+    "Unchecked malloc/calloc results"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

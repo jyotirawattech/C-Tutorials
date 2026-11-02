@@ -1,0 +1,26 @@
+{
+  "problem_id": 189,
+  "title": "Rotate Array",
+  "slug": "rotate-array",
+  "problem_url": "https://leetcode.com/problems/rotate-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/463974219/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "35 / 35",
+  "displayed_submission_time": "Mar 06, 2021 01:20",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "f606d9ed7503d3f15939fda4328a13e4c9574549d2cefec6768ed88e85f3e0b6",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:46:13.936Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "No new performance measurement is established; large n and k mod n incur repeated full-array shifts."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

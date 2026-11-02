@@ -1,0 +1,27 @@
+{
+  "problem_id": 138,
+  "title": "Copy List with Random Pointer",
+  "slug": "copy-list-with-random-pointer",
+  "problem_url": "https://leetcode.com/problems/copy-list-with-random-pointer/",
+  "submission_url": "https://leetcode.com/submissions/detail/2037081804/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "19 / 19",
+  "displayed_submission_time": "Jun 18, 2026 10:42",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "8f03916fff857afc897e533051957c2ca3d4466481ac9af54d87fceefa6d7d39",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:21.457Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc result",
+    "Temporary input mutation",
+    "Requires judge-provided Node with val/next/random fields and allocation declarations"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

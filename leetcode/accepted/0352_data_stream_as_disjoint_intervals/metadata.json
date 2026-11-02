@@ -1,0 +1,27 @@
+{
+  "problem_id": 352,
+  "title": "Data Stream as Disjoint Intervals",
+  "slug": "data-stream-as-disjoint-intervals",
+  "problem_url": "https://leetcode.com/problems/data-stream-as-disjoint-intervals/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029363865/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "8 / 8",
+  "displayed_submission_time": "Jun 11, 2026 11:41",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "a2c99f58f565ce88468455f28d4ae478d033ce3373a0e280da0ad414323769fa",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:45:38.584Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Fixed value-domain indexing",
+    "Unchecked allocation results",
+    "Recursive find without rank balancing"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

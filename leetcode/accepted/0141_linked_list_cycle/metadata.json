@@ -1,0 +1,26 @@
+{
+  "problem_id": 141,
+  "title": "Linked List Cycle",
+  "slug": "linked-list-cycle",
+  "problem_url": "https://leetcode.com/problems/linked-list-cycle/",
+  "submission_url": "https://leetcode.com/submissions/detail/2043139098/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "29 / 29",
+  "displayed_submission_time": "Jun 23, 2026 14:11",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "eda9ecbbefc56c205c719c49f283c0c552cabe13dc5451e985d682a74ade338f",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:49:07.305Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY",
+  "source_review_flags": [
+    "No allocation or dangerous library call observed.",
+    "Judge-provided ListNode, bool and NULL definitions are required."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

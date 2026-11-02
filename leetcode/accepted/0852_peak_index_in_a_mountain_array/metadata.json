@@ -1,0 +1,25 @@
+{
+  "problem_id": 852,
+  "title": "Peak Index in a Mountain Array",
+  "slug": "peak-index-in-a-mountain-array",
+  "problem_url": "https://leetcode.com/problems/peak-index-in-a-mountain-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2040539355/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "44 / 44",
+  "displayed_submission_time": "Jun 21, 2026 09:46",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "780b47462eed765b0f920c57945e4f20ee6b10acc8f7d4235986f9c531a2e7f0",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:50:12.068Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Valid-mountain and nonempty input preconditions"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

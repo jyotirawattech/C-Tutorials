@@ -1,0 +1,27 @@
+{
+  "problem_id": 1354,
+  "title": "Construct Target Array With Multiple Sums",
+  "slug": "construct-target-array-with-multiple-sums",
+  "problem_url": "https://leetcode.com/problems/construct-target-array-with-multiple-sums/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033686478/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "72 / 72",
+  "displayed_submission_time": "Jun 15, 2026 14:00",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "cbf17b712534404c58d292e6f24ffb7acdc1b916b3be0ce23880c64a1435f68a",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:40:27.891Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc result",
+    "Nonempty positive input precondition",
+    "Total sum relies on problem integer bounds"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

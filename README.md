@@ -15,6 +15,13 @@
 
 </div>
 
+[LeetCode profile](https://leetcode.com/u/user0592I/) · [All 83 accepted C solutions](leetcode/README.md)
+
+The accepted-source archive contains one verified submission per solved problem,
+with original code, problem/submission links, dates, explanations and source-review
+notes. The twelve standalone practice examples below are a separate, partly
+overlapping collection; they are not twelve additional accepted solves.
+
 ---
 
 ## 🎯 Motivation & Engineering Philosophy
@@ -29,7 +36,7 @@ In **pure C (C11)** systems programming:
 
 ---
 
-## 📚 Problem Catalog & Patterns
+## 📚 Standalone Practice Examples & Patterns
 
 | # | Problem | Category | Core Pattern & Data Structure | Time | Space | Verification |
 | :-: | :--- | :--- | :--- | :-: | :-: | :-: |
@@ -120,6 +127,12 @@ oracle, and a maximum-length input. Twelve separate `leaks` invocations returned
 zero with the same restricted-process notices; ASan was not run for this addition.
 
 ## Daily practice, notes and provenance
+
+For the full solved set, open the [83-entry accepted-source catalog](leetcode/README.md).
+Run `make test-accepted` to check its metadata, source hashes and isolated C object
+compilation. This is separate from the twelve behavioral practice harnesses and
+does not claim that every archived algorithm was rerun locally. Historical source
+limitations are documented in the [archive review notes](leetcode/review/README.md).
 
 Use the [daily workflow](docs/daily-practice.md) and
 [entry template](docs/practice-entry-template.md) for new solutions and meaningful

@@ -1,0 +1,26 @@
+{
+  "problem_id": 1470,
+  "title": "Shuffle the Array",
+  "slug": "shuffle-the-array",
+  "problem_url": "https://leetcode.com/problems/shuffle-the-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2032914942/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "53 / 53",
+  "displayed_submission_time": "Jun 14, 2026 20:09",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "79e0f06a0018f71b03283a993007f8ec73fd16d968740a7387a02e4479848d31",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:44:06.267Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc result",
+    "Pointer bounds depend on equal-half input contract"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

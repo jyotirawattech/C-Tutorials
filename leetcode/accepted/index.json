@@ -1,0 +1,423 @@
+{
+  "expected_count": 83,
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "captured_on": "2026-11-02",
+  "scope": "One original accepted C submission per solved problem; overlapping practice examples are separate",
+  "entries": [
+    {
+      "problem_id": 1,
+      "slug": "two-sum",
+      "path": "leetcode/accepted/0001_two_sum"
+    },
+    {
+      "problem_id": 22,
+      "slug": "generate-parentheses",
+      "path": "leetcode/accepted/0022_generate_parentheses"
+    },
+    {
+      "problem_id": 26,
+      "slug": "remove-duplicates-from-sorted-array",
+      "path": "leetcode/accepted/0026_remove_duplicates_from_sorted_array"
+    },
+    {
+      "problem_id": 27,
+      "slug": "remove-element",
+      "path": "leetcode/accepted/0027_remove_element"
+    },
+    {
+      "problem_id": 33,
+      "slug": "search-in-rotated-sorted-array",
+      "path": "leetcode/accepted/0033_search_in_rotated_sorted_array"
+    },
+    {
+      "problem_id": 41,
+      "slug": "first-missing-positive",
+      "path": "leetcode/accepted/0041_first_missing_positive"
+    },
+    {
+      "problem_id": 56,
+      "slug": "merge-intervals",
+      "path": "leetcode/accepted/0056_merge_intervals"
+    },
+    {
+      "problem_id": 80,
+      "slug": "remove-duplicates-from-sorted-array-ii",
+      "path": "leetcode/accepted/0080_remove_duplicates_from_sorted_array_ii"
+    },
+    {
+      "problem_id": 83,
+      "slug": "remove-duplicates-from-sorted-list",
+      "path": "leetcode/accepted/0083_remove_duplicates_from_sorted_list"
+    },
+    {
+      "problem_id": 84,
+      "slug": "largest-rectangle-in-histogram",
+      "path": "leetcode/accepted/0084_largest_rectangle_in_histogram"
+    },
+    {
+      "problem_id": 88,
+      "slug": "merge-sorted-array",
+      "path": "leetcode/accepted/0088_merge_sorted_array"
+    },
+    {
+      "problem_id": 106,
+      "slug": "construct-binary-tree-from-inorder-and-postorder-traversal",
+      "path": "leetcode/accepted/0106_construct_binary_tree_from_inorder_and_postorder_traversal"
+    },
+    {
+      "problem_id": 121,
+      "slug": "best-time-to-buy-and-sell-stock",
+      "path": "leetcode/accepted/0121_best_time_to_buy_and_sell_stock"
+    },
+    {
+      "problem_id": 122,
+      "slug": "best-time-to-buy-and-sell-stock-ii",
+      "path": "leetcode/accepted/0122_best_time_to_buy_and_sell_stock_ii"
+    },
+    {
+      "problem_id": 138,
+      "slug": "copy-list-with-random-pointer",
+      "path": "leetcode/accepted/0138_copy_list_with_random_pointer"
+    },
+    {
+      "problem_id": 141,
+      "slug": "linked-list-cycle",
+      "path": "leetcode/accepted/0141_linked_list_cycle"
+    },
+    {
+      "problem_id": 146,
+      "slug": "lru-cache",
+      "path": "leetcode/accepted/0146_lru_cache"
+    },
+    {
+      "problem_id": 147,
+      "slug": "insertion-sort-list",
+      "path": "leetcode/accepted/0147_insertion_sort_list"
+    },
+    {
+      "problem_id": 150,
+      "slug": "evaluate-reverse-polish-notation",
+      "path": "leetcode/accepted/0150_evaluate_reverse_polish_notation"
+    },
+    {
+      "problem_id": 189,
+      "slug": "rotate-array",
+      "path": "leetcode/accepted/0189_rotate_array"
+    },
+    {
+      "problem_id": 198,
+      "slug": "house-robber",
+      "path": "leetcode/accepted/0198_house_robber"
+    },
+    {
+      "problem_id": 200,
+      "slug": "number-of-islands",
+      "path": "leetcode/accepted/0200_number_of_islands"
+    },
+    {
+      "problem_id": 206,
+      "slug": "reverse-linked-list",
+      "path": "leetcode/accepted/0206_reverse_linked_list"
+    },
+    {
+      "problem_id": 207,
+      "slug": "course-schedule",
+      "path": "leetcode/accepted/0207_course_schedule"
+    },
+    {
+      "problem_id": 215,
+      "slug": "kth-largest-element-in-an-array",
+      "path": "leetcode/accepted/0215_kth_largest_element_in_an_array"
+    },
+    {
+      "problem_id": 217,
+      "slug": "contains-duplicate",
+      "path": "leetcode/accepted/0217_contains_duplicate"
+    },
+    {
+      "problem_id": 232,
+      "slug": "implement-queue-using-stacks",
+      "path": "leetcode/accepted/0232_implement_queue_using_stacks"
+    },
+    {
+      "problem_id": 328,
+      "slug": "odd-even-linked-list",
+      "path": "leetcode/accepted/0328_odd_even_linked_list"
+    },
+    {
+      "problem_id": 352,
+      "slug": "data-stream-as-disjoint-intervals",
+      "path": "leetcode/accepted/0352_data_stream_as_disjoint_intervals"
+    },
+    {
+      "problem_id": 355,
+      "slug": "design-twitter",
+      "path": "leetcode/accepted/0355_design_twitter"
+    },
+    {
+      "problem_id": 373,
+      "slug": "find-k-pairs-with-smallest-sums",
+      "path": "leetcode/accepted/0373_find_k_pairs_with_smallest_sums"
+    },
+    {
+      "problem_id": 380,
+      "slug": "insert-delete-getrandom-o1",
+      "path": "leetcode/accepted/0380_insert_delete_getrandom_o1"
+    },
+    {
+      "problem_id": 381,
+      "slug": "insert-delete-getrandom-o1-duplicates-allowed",
+      "path": "leetcode/accepted/0381_insert_delete_getrandom_o1_duplicates_allowed"
+    },
+    {
+      "problem_id": 432,
+      "slug": "all-oone-data-structure",
+      "path": "leetcode/accepted/0432_all_oone_data_structure"
+    },
+    {
+      "problem_id": 448,
+      "slug": "find-all-numbers-disappeared-in-an-array",
+      "path": "leetcode/accepted/0448_find_all_numbers_disappeared_in_an_array"
+    },
+    {
+      "problem_id": 459,
+      "slug": "repeated-substring-pattern",
+      "path": "leetcode/accepted/0459_repeated_substring_pattern"
+    },
+    {
+      "problem_id": 460,
+      "slug": "lfu-cache",
+      "path": "leetcode/accepted/0460_lfu_cache"
+    },
+    {
+      "problem_id": 482,
+      "slug": "license-key-formatting",
+      "path": "leetcode/accepted/0482_license_key_formatting"
+    },
+    {
+      "problem_id": 485,
+      "slug": "max-consecutive-ones",
+      "path": "leetcode/accepted/0485_max_consecutive_ones"
+    },
+    {
+      "problem_id": 493,
+      "slug": "reverse-pairs",
+      "path": "leetcode/accepted/0493_reverse_pairs"
+    },
+    {
+      "problem_id": 520,
+      "slug": "detect-capital",
+      "path": "leetcode/accepted/0520_detect_capital"
+    },
+    {
+      "problem_id": 633,
+      "slug": "sum-of-square-numbers",
+      "path": "leetcode/accepted/0633_sum_of_square_numbers"
+    },
+    {
+      "problem_id": 636,
+      "slug": "exclusive-time-of-functions",
+      "path": "leetcode/accepted/0636_exclusive_time_of_functions"
+    },
+    {
+      "problem_id": 645,
+      "slug": "set-mismatch",
+      "path": "leetcode/accepted/0645_set_mismatch"
+    },
+    {
+      "problem_id": 686,
+      "slug": "repeated-string-match",
+      "path": "leetcode/accepted/0686_repeated_string_match"
+    },
+    {
+      "problem_id": 703,
+      "slug": "kth-largest-element-in-a-stream",
+      "path": "leetcode/accepted/0703_kth_largest_element_in_a_stream"
+    },
+    {
+      "problem_id": 704,
+      "slug": "binary-search",
+      "path": "leetcode/accepted/0704_binary_search"
+    },
+    {
+      "problem_id": 715,
+      "slug": "range-module",
+      "path": "leetcode/accepted/0715_range_module"
+    },
+    {
+      "problem_id": 739,
+      "slug": "daily-temperatures",
+      "path": "leetcode/accepted/0739_daily_temperatures"
+    },
+    {
+      "problem_id": 796,
+      "slug": "rotate-string",
+      "path": "leetcode/accepted/0796_rotate_string"
+    },
+    {
+      "problem_id": 831,
+      "slug": "masking-personal-information",
+      "path": "leetcode/accepted/0831_masking_personal_information"
+    },
+    {
+      "problem_id": 852,
+      "slug": "peak-index-in-a-mountain-array",
+      "path": "leetcode/accepted/0852_peak_index_in_a_mountain_array"
+    },
+    {
+      "problem_id": 912,
+      "slug": "sort-an-array",
+      "path": "leetcode/accepted/0912_sort_an_array"
+    },
+    {
+      "problem_id": 932,
+      "slug": "beautiful-array",
+      "path": "leetcode/accepted/0932_beautiful_array"
+    },
+    {
+      "problem_id": 994,
+      "slug": "rotting-oranges",
+      "path": "leetcode/accepted/0994_rotting_oranges"
+    },
+    {
+      "problem_id": 1032,
+      "slug": "stream-of-characters",
+      "path": "leetcode/accepted/1032_stream_of_characters"
+    },
+    {
+      "problem_id": 1046,
+      "slug": "last-stone-weight",
+      "path": "leetcode/accepted/1046_last_stone_weight"
+    },
+    {
+      "problem_id": 1071,
+      "slug": "greatest-common-divisor-of-strings",
+      "path": "leetcode/accepted/1071_greatest_common_divisor_of_strings"
+    },
+    {
+      "problem_id": 1200,
+      "slug": "minimum-absolute-difference",
+      "path": "leetcode/accepted/1200_minimum_absolute_difference"
+    },
+    {
+      "problem_id": 1354,
+      "slug": "construct-target-array-with-multiple-sums",
+      "path": "leetcode/accepted/1354_construct_target_array_with_multiple_sums"
+    },
+    {
+      "problem_id": 1365,
+      "slug": "how-many-numbers-are-smaller-than-the-current-number",
+      "path": "leetcode/accepted/1365_how_many_numbers_are_smaller_than_the_current_number"
+    },
+    {
+      "problem_id": 1441,
+      "slug": "build-an-array-with-stack-operations",
+      "path": "leetcode/accepted/1441_build_an_array_with_stack_operations"
+    },
+    {
+      "problem_id": 1470,
+      "slug": "shuffle-the-array",
+      "path": "leetcode/accepted/1470_shuffle_the_array"
+    },
+    {
+      "problem_id": 1475,
+      "slug": "final-prices-with-a-special-discount-in-a-shop",
+      "path": "leetcode/accepted/1475_final_prices_with_a_special_discount_in_a_shop"
+    },
+    {
+      "problem_id": 1476,
+      "slug": "subrectangle-queries",
+      "path": "leetcode/accepted/1476_subrectangle_queries"
+    },
+    {
+      "problem_id": 1578,
+      "slug": "minimum-time-to-make-rope-colorful",
+      "path": "leetcode/accepted/1578_minimum_time_to_make_rope_colorful"
+    },
+    {
+      "problem_id": 1590,
+      "slug": "make-sum-divisible-by-p",
+      "path": "leetcode/accepted/1590_make_sum_divisible_by_p"
+    },
+    {
+      "problem_id": 1664,
+      "slug": "ways-to-make-a-fair-array",
+      "path": "leetcode/accepted/1664_ways_to_make_a_fair_array"
+    },
+    {
+      "problem_id": 1700,
+      "slug": "number-of-students-unable-to-eat-lunch",
+      "path": "leetcode/accepted/1700_number_of_students_unable_to_eat_lunch"
+    },
+    {
+      "problem_id": 1732,
+      "slug": "find-the-highest-altitude",
+      "path": "leetcode/accepted/1732_find_the_highest_altitude"
+    },
+    {
+      "problem_id": 1768,
+      "slug": "merge-strings-alternately",
+      "path": "leetcode/accepted/1768_merge_strings_alternately"
+    },
+    {
+      "problem_id": 1887,
+      "slug": "reduction-operations-to-make-the-array-elements-equal",
+      "path": "leetcode/accepted/1887_reduction_operations_to_make_the_array_elements_equal"
+    },
+    {
+      "problem_id": 1929,
+      "slug": "concatenation-of-array",
+      "path": "leetcode/accepted/1929_concatenation_of_array"
+    },
+    {
+      "problem_id": 1944,
+      "slug": "number-of-visible-people-in-a-queue",
+      "path": "leetcode/accepted/1944_number_of_visible_people_in_a_queue"
+    },
+    {
+      "problem_id": 1967,
+      "slug": "number-of-strings-that-appear-as-substrings-in-word",
+      "path": "leetcode/accepted/1967_number_of_strings_that_appear_as_substrings_in_word"
+    },
+    {
+      "problem_id": 2043,
+      "slug": "simple-bank-system",
+      "path": "leetcode/accepted/2043_simple_bank_system"
+    },
+    {
+      "problem_id": 2073,
+      "slug": "time-needed-to-buy-tickets",
+      "path": "leetcode/accepted/2073_time_needed_to_buy_tickets"
+    },
+    {
+      "problem_id": 2080,
+      "slug": "range-frequency-queries",
+      "path": "leetcode/accepted/2080_range_frequency_queries"
+    },
+    {
+      "problem_id": 2144,
+      "slug": "minimum-cost-of-buying-candies-with-discount",
+      "path": "leetcode/accepted/2144_minimum_cost_of_buying_candies_with_discount"
+    },
+    {
+      "problem_id": 3532,
+      "slug": "path-existence-queries-in-a-graph-i",
+      "path": "leetcode/accepted/3532_path_existence_queries_in_a_graph_i"
+    },
+    {
+      "problem_id": 3739,
+      "slug": "count-subarrays-with-majority-element-ii",
+      "path": "leetcode/accepted/3739_count_subarrays_with_majority_element_ii"
+    },
+    {
+      "problem_id": 3754,
+      "slug": "concatenate-non-zero-digits-and-multiply-by-sum-i",
+      "path": "leetcode/accepted/3754_concatenate_non_zero_digits_and_multiply_by_sum_i"
+    },
+    {
+      "problem_id": 3756,
+      "slug": "concatenate-non-zero-digits-and-multiply-by-sum-ii",
+      "path": "leetcode/accepted/3756_concatenate_non_zero_digits_and_multiply_by_sum_ii"
+    }
+  ]
+}

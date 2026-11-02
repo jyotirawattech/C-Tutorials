@@ -1,0 +1,27 @@
+{
+  "problem_id": 232,
+  "title": "Implement Queue using Stacks",
+  "slug": "implement-queue-using-stacks",
+  "problem_url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033038568/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "23 / 23",
+  "displayed_submission_time": "Jun 14, 2026 22:20",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "fadf83b87ff7c48a5dfb7371be7f9238d5be12a944a854a71d42a162d821f207",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:42:02.613Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Fixed-capacity stacks without overflow checks",
+    "Empty pop/peek unchecked",
+    "Unchecked malloc result"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

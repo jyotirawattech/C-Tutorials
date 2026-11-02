@@ -1,0 +1,26 @@
+{
+  "problem_id": 482,
+  "title": "License Key Formatting",
+  "slug": "license-key-formatting",
+  "problem_url": "https://leetcode.com/problems/license-key-formatting/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033701198/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "40 / 40",
+  "displayed_submission_time": "Jun 15, 2026 14:14",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "f796ccade7dba80c17b2cd8931638efca338023f998c73db1ebb5071a000c7e9",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:41.227Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked malloc results",
+    "Positive divisor and ASCII assumptions"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

@@ -1,0 +1,27 @@
+{
+  "problem_id": 1071,
+  "title": "Greatest Common Divisor of Strings",
+  "slug": "greatest-common-divisor-of-strings",
+  "problem_url": "https://leetcode.com/problems/greatest-common-divisor-of-strings/",
+  "submission_url": "https://leetcode.com/submissions/detail/2041863308/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "128 / 128",
+  "displayed_submission_time": "Jun 22, 2026 13:33",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "e0ca854e5ef7facb74431c59ee89447f26a8fba9210f38731307b521b77861f3",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:49:10.904Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_ERROR_PATH_CAVEAT",
+  "source_review_flags": [
+    "Unchecked one-byte allocation on the mismatch path.",
+    "Uses strlen and memcpy, flagged by selected safe-C guidance; the historical source is preserved rather than silently replaced.",
+    "Captured fragment lacks string/stdlib declarations and assumes bounded string lengths."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

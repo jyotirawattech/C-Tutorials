@@ -1,0 +1,27 @@
+{
+  "problem_id": 206,
+  "title": "Reverse Linked List",
+  "slug": "reverse-linked-list",
+  "problem_url": "https://leetcode.com/problems/reverse-linked-list/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033793518/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "28 / 28",
+  "displayed_submission_time": "Jun 15, 2026 15:37",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "a8a39ccd67800d6c58a578880fcdd2dc8c74a229ac9a01fc1bc491870ef73bf2",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:52:02.906Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Input list mutation",
+    "Recursive alternative has depth risk",
+    "External judge ListNode support type"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

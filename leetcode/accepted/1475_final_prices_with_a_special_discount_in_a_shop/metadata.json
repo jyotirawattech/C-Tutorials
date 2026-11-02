@@ -1,0 +1,26 @@
+{
+  "problem_id": 1475,
+  "title": "Final Prices With a Special Discount in a Shop",
+  "slug": "final-prices-with-a-special-discount-in-a-shop",
+  "problem_url": "https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033027189/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "103 / 103",
+  "displayed_submission_time": "Jun 14, 2026 22:09",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "bfdcc1795e382ee5e5120e2580bc19b15cde4176b0306b9d737fa56907bfb979",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:42:49.621Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_OWNERSHIP_CAVEAT",
+  "source_review_flags": [
+    "Unchecked stack malloc.",
+    "Generic malloc-return comment is inconsistent with the actual returned input alias."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

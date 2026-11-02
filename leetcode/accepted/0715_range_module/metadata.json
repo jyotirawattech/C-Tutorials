@@ -1,0 +1,27 @@
+{
+  "problem_id": 715,
+  "title": "Range Module",
+  "slug": "range-module",
+  "problem_url": "https://leetcode.com/problems/range-module/",
+  "submission_url": "https://leetcode.com/submissions/detail/2029644041/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "56 / 56",
+  "displayed_submission_time": "Jun 11, 2026 16:22",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "52a2fcc5c899d8689fee0df069402ba935e0e2015274bf5b5a1c41db32c0a1ed",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:44:15.295Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "STATIC_REVIEW_ONLY_WITH_CAPACITY_RISK",
+  "source_review_flags": [
+    "Unchecked RangeModule/tree allocations.",
+    "Unchecked node_count growth when children are created, including propagation during queries.",
+    "The fixed valid coordinate/left<right domain is assumed."
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

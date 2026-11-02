@@ -1,0 +1,26 @@
+{
+  "problem_id": 122,
+  "title": "Best Time to Buy and Sell Stock II",
+  "slug": "best-time-to-buy-and-sell-stock-ii",
+  "problem_url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+  "submission_url": "https://leetcode.com/submissions/detail/450652093/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "200 / 200",
+  "displayed_submission_time": "Feb 01, 2021 22:44",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "6383542a19d3ccf95ccc8d87c487e864f6ab5b86a04c256868e64f60ec21256a",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:46:21.332Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Nonempty input precondition",
+    "Profit accumulation relies on integer bounds"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}

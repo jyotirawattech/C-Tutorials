@@ -1,0 +1,26 @@
+{
+  "problem_id": 88,
+  "title": "Merge Sorted Array",
+  "slug": "merge-sorted-array",
+  "problem_url": "https://leetcode.com/problems/merge-sorted-array/",
+  "submission_url": "https://leetcode.com/submissions/detail/2033796939/",
+  "owner_profile_url": "https://leetcode.com/u/user0592I/",
+  "verdict": "Accepted",
+  "language": "C",
+  "platform_testcases_observed": "59 / 59",
+  "displayed_submission_time": "Jun 15, 2026 15:40",
+  "displayed_timezone": "Unspecified",
+  "original_practice_date": "Unknown",
+  "original_assistance": "Unknown",
+  "source_sha256": "ecb7c6fb3297d0ced4354d6ff9baac479e381e32382cfb377e85794971aa5e1c",
+  "capture_method": "Visible source DOM text with display line numbers omitted; no API, cookie or hidden-state access",
+  "captured_at": "2026-11-02T13:51:58.171Z",
+  "publication_date": "2026-11-02",
+  "archive_assistance": "AI-assisted source export, original explanatory notes and validation tooling; submitted algorithm unchanged",
+  "source_review_status": "Static source review only; not executed",
+  "source_review_flags": [
+    "Unchecked caller-provided lengths/capacity",
+    "In-place destination mutation"
+  ],
+  "local_validation_boundary": "Object compilation and archive integrity are separate from behavioral tests. Historical Accepted is not a new runtime/memory-safety guarantee."
+}
