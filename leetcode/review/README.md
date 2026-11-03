@@ -9,7 +9,7 @@ Platform Accepted, successful object compilation, runtime tests and memory-safet
 checks establish different things. `make test-accepted` verifies all 83 archive
 identities/hashes and compiles sources independently with explicit LeetCode support
 declarations. It does not execute every archived algorithm. `make test` exercises
-the twelve standalone practice examples and the integrity/runner regression gates.
+the thirteen standalone practice examples and the integrity/runner regression gates.
 Original code comments are retained as historical text, not independent benchmarks.
 
 ## Reproduced feed-order issue: 355, Design Twitter
@@ -40,6 +40,13 @@ Exit zero means this exact known counterexample was reproduced, **not** that the
 archived feed algorithm is correct. A changed outcome requires review. This case
 was reproduced locally with fail-fast UBSan on 2 November 2026; it is not broad
 behavioral coverage of the remaining archive.
+
+A separately labelled [corrected local adaptation](../../05_systems_data_structures/0355_design_twitter/README.md)
+was added on 3 November 2026. Right-to-left partial passes settle the newest
+prefix; its tests include this counterexample and an independent full-history
+oracle. It does not replace the archived source or inherit its Accepted verdict
+or performance displays. See that entry for the comparison model and actual
+validation limits.
 
 ## Ownership and input-bound limitations
 

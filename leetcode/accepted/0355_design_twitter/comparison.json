@@ -9,16 +9,16 @@
   "archived": {
     "name": "Ten-pass partial bubble ordering of a collected feed",
     "time": "post/follow/unfollow: O(1); feed: O(U + 10T), where U=500 candidate users and T<=10U retained candidate tweets",
-    "space": "Per object O(U^2 + 10U); feed temporary O(T), plus at most ten returned IDs"
+    "space": "Per object O(U^2 + 10U); feed reserves O(10U) temporary capacity regardless of populated T, plus at most ten returned IDs"
   },
   "why": "Retaining only ten tweets per user bounds collection size, but this source's ten left-to-right bubble passes do not reliably put the newest ten tweets at the front.",
   "quantitative_comparison": "A focused local regression expects IDs 309..300 after three users post ten tweets each, but this archive returns 209..200. It therefore fails that concrete correctness comparison. Operation bounds cannot turn an incorrect output into an improvement.",
-  "tradeoffs": "Historical Accepted metadata is preserved, alongside the independently reproduced limitation. The named heap comparator is an analytical correct alternative; no replacement was implemented or benchmarked.",
+  "tradeoffs": "Historical Accepted metadata is preserved, alongside the independently reproduced limitation. The named heap comparator remains an analytical alternative, not an implemented or timed benchmark. A separately labelled partial-sort adaptation was added on 3 November 2026; it does not replace this source or inherit its verdict/measurements.",
   "verdict": "known_correctness_limit",
   "evidence_basis": "Static source inspection and stated algorithm work/storage model. Comparator is an analytical alternative, not an implemented or timed benchmark. Historical platform acceptance is separate from current local validation.",
   "problem_id": 355,
   "source_submission_url": "https://leetcode.com/submissions/detail/2029610348/",
-  "comparison_updated_on": "2026-11-02",
+  "comparison_updated_on": "2026-11-03",
   "judge_snapshot": {
     "runtime_display": "19",
     "runtime_unit": "ms",

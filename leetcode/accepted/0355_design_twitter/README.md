@@ -16,7 +16,7 @@ Keep a follow matrix and a ten-slot circular tweet buffer for each user. A feed 
 ## Complexity
 
 - Time: post/follow/unfollow: O(1); feed: O(U + 10T), where U=500 candidate users and T<=10U retained candidate tweets
-- Auxiliary space / ownership: Per object O(U^2 + 10U); feed temporary O(T), plus at most ten returned IDs
+- Auxiliary space / ownership: Per object O(U^2 + 10U); feed reserves O(10U) temporary capacity regardless of populated T, plus at most ten returned IDs
 
 ## How this solution compares
 
@@ -25,13 +25,13 @@ Keep a follow matrix and a ten-slot circular tweet buffer for each user. A feed 
 **Named baseline:** Correct newest-first merge of per-user tweet streams. Place each followed user's newest tweet in a max-heap; pop up to ten newest tweets, advancing the corresponding user stream.
 
 - Baseline time: O(U+F+L log(F+1)) for F followed streams and L<=10 outputs, after gathering streams. Space: O(F) feed heap, plus stored tweets/follow relationships.
-- Submitted approach: Ten-pass partial bubble ordering of a collected feed. Time: post/follow/unfollow: O(1); feed: O(U + 10T), where U=500 candidate users and T<=10U retained candidate tweets. Space: Per object O(U^2 + 10U); feed temporary O(T), plus at most ten returned IDs.
+- Submitted approach: Ten-pass partial bubble ordering of a collected feed. Time: post/follow/unfollow: O(1); feed: O(U + 10T), where U=500 candidate users and T<=10U retained candidate tweets. Space: Per object O(U^2 + 10U); feed reserves O(10U) temporary capacity regardless of populated T, plus at most ten returned IDs.
 
 **How much, by analysis:** A focused local regression expects IDs 309..300 after three users post ten tweets each, but this archive returns 209..200. It therefore fails that concrete correctness comparison. Operation bounds cannot turn an incorrect output into an improvement.
 
 **Why:** Retaining only ten tweets per user bounds collection size, but this source's ten left-to-right bubble passes do not reliably put the newest ten tweets at the front.
 
-**Trade-offs and conditions:** Historical Accepted metadata is preserved, alongside the independently reproduced limitation. The named heap comparator is an analytical correct alternative; no replacement was implemented or benchmarked.
+**Trade-offs and conditions:** Historical Accepted metadata is preserved, alongside the independently reproduced limitation. The named heap comparator remains an analytical alternative, not an implemented or timed benchmark. A separately labelled partial-sort adaptation was added on 3 November 2026; it does not replace this source or inherit its verdict/measurements.
 
 ### Submission-page performance snapshot
 
@@ -54,4 +54,11 @@ Problem355 has a [reproduced feed-order issue](../../review/README.md); the orig
 
 ## Validation scope
 
-`python3 scripts/check_accepted.py --compile` from the repository root checks source hashes, links, owner/verdict metadata, coverage and isolated object compilation with the documented LeetCode environment declarations. It does **not** execute every archived algorithm. The twelve standalone practice harnesses have a separate `make test` run. Platform acceptance, local compilation, static review and behavioral tests are distinct observations; source comments are not independent benchmarks or universal safety guarantees.
+`python3 scripts/check_accepted.py --compile` from the repository root checks source hashes, links, owner/verdict metadata, coverage and isolated object compilation with the documented LeetCode environment declarations. It does **not** execute every archived algorithm. The thirteen standalone practice harnesses have a separate `make test` run. Platform acceptance, local compilation, static review and behavioral tests are distinct observations; source comments are not independent benchmarks or universal safety guarantees.
+
+## Later local adaptation — 3 November 2026
+
+The [corrected practice implementation](../../../05_systems_data_structures/0355_design_twitter/README.md)
+uses right-to-left partial passes and independent behavioral tests. It is locally
+tested adapted practice, not a new Accepted submission. This historical source,
+metadata, original date and source hash remain unchanged.

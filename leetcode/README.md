@@ -4,7 +4,7 @@
 
 **83 solved problems, 83 original accepted C sources**, checked against the signed-in problem history on 2 November 2026. Each entry links its problem and matching accepted submission, preserves the rendered source, and records the original displayed date separately from this archive date. One attempted-only problem has no accepted source and is outside this solved set.
 
-The twelve standalone practice examples elsewhere in this repository are a separate, partly overlapping collection. They are not twelve additional accepted solves. This archive selects one accepted C submission per solved problem, rather than duplicating every language variant or attempt.
+The thirteen standalone practice examples elsewhere in this repository are a separate, partly overlapping collection. They are not thirteen additional accepted solves. The separately labelled 355 adaptation has no captured platform acceptance; its historical Accepted source remains unchanged. This archive selects one accepted C submission per solved problem, rather than duplicating every language variant or attempt.
 
 Every entry now includes a named baseline, an explanation of how much difference
 the available analysis supports and why, and explicit trade-offs. It also records
@@ -16,7 +16,7 @@ paired benchmarks; no new measured speedup or memory reduction is claimed.
 ## What can be reproduced
 
 ```sh
-make test             # twelve standalone algorithm harnesses and integrity regressions
+make test             # thirteen standalone algorithm harnesses and integrity regressions
 make test-accepted    # all 83 source hashes/metadata and isolated C object compilation
 ```
 
