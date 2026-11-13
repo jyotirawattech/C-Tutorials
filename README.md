@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The fourteen standalone practice examples below are a separate, partly
-overlapping collection; they are not fourteen additional accepted solves.
+notes. The fifteen standalone practice examples below are a separate, partly
+overlapping collection; they are not fifteen additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -58,6 +58,7 @@ In **pure C (C11)** systems programming:
 | **0226** | [**Invert Binary Tree**](04_trees_and_graphs/0226_invert_binary_tree) | Trees & Graphs | Recursive Child Pointer Swapping | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | Local assertions |
 | **0355** | [**Design Twitter: corrected practice**](05_systems_data_structures/0355_design_twitter) | Systems Data Structures | Ring buffers + correct partial newest-first ordering | $\mathcal{O}(U+10T)$ feed | $\mathcal{O}(UK)$ allocated feed workspace | Locally tested adaptation; Accepted not captured |
 | **0432** | [**All O`one: ownership practice**](05_systems_data_structures/0432_all_oone_data_structure) | Systems Data Structures | Hash index + ordered buckets; checked updates and complete teardown | Expected $\mathcal{O}(1)$ update; worst $\mathcal{O}(K)$ | $\mathcal{O}(H+K+B)$ | Locally tested adaptation; Accepted not captured |
+| **0460** | [**LFU Cache: checked ownership practice**](05_systems_data_structures/0460_lfu_cache) | Systems Data Structures | Direct key/frequency tables + per-frequency LRU; checked resource preparation and full teardown | $\mathcal{O}(1)$ domain-bounded get/put | $\Theta(K+F+N+B)$ including retained lists | Locally tested adaptation; Accepted not captured |
 | **0704** | [**Binary Search**](06_binary_search_and_bits/0704_binary_search) | Binary Search | Overflow-Safe Midpoint Calculation `low + (high-low)/2` | $\mathcal{O}(\log N)$ | $\mathcal{O}(1)$ | Local assertions |
 
 ---
@@ -86,7 +87,8 @@ C-Tutorials/
 ├── 05_systems_data_structures/
 │   ├── 0146_lru_cache/
 │   ├── 0355_design_twitter/
-│   └── 0432_all_oone_data_structure/
+│   ├── 0432_all_oone_data_structure/
+│   └── 0460_lfu_cache/
 └── 06_binary_search_and_bits/
     ├── 0136_single_number/
     └── 0704_binary_search/
@@ -103,7 +105,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes fourteen
+This runs the runner's negative regressions, then compiles and executes fifteen
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
@@ -148,11 +150,19 @@ under the repair; it claims no measured runtime or RSS gain. Its local assertion
 include 8,000 oracle operations. Platform acceptance is Not captured, and the
 historical Accepted source remains unchanged.
 
+The separately labelled [460 LFU adaptation](05_systems_data_structures/0460_lfu_cache/README.md)
+keeps the fixed direct-index domains and per-frequency LRU lists, including retained
+empty lists. Checked operations prepare resources before changing values, recency
+or eviction; complete teardown releases nodes and list storage. Its teardown-only
+fixture retains twelve tracked blocks under the historical outer-free body and
+zero under the repair. The notes explain the table-scan cost and domain limits;
+no timed speedup, RSS reduction or new Accepted solve is claimed.
+
 ## Daily practice, notes and provenance
 
 For the full solved set, open the [83-entry accepted-source catalog](leetcode/README.md).
 Run `make test-accepted` to check its metadata, source hashes and isolated C object
-compilation. This is separate from the fourteen behavioral practice harnesses and
+compilation. This is separate from the fifteen behavioral practice harnesses and
 does not claim that every archived algorithm was rerun locally. Historical source
 limitations are documented in the [archive review notes](leetcode/review/README.md).
 
