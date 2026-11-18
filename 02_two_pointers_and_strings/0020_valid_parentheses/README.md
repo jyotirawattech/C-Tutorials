@@ -59,8 +59,8 @@ For the same nonempty even bracket input of n bytes:
 - Empty input now makes zero allocation attempts. The baseline attempts
   malloc(0), whose permitted NULL result causes it to return false. A controlled
   allocator fixture demonstrates that boundary, and a nonempty allocation
-  failure now has a distinct result. These are reusable-API improvements, not a
-  claim that the historical judge-domain Accepted source was disproved.
+  failure now has a distinct result. These are reusable-API improvements, not
+  evidence of a defect in any judge-accepted implementation.
 
 The previous odd-length guard followed a full length scan, so that whole path
 was O(n), not O(1). Given a known length, the new odd-length guard is O(1).
@@ -102,8 +102,9 @@ above; hosted Linux ASan/UBSan and macOS UBSan are separate CI evidence.
 - This checked adaptation and its explanation/tests: **AI-assisted, 17 November 2026**.
 - Exact LeetCode verdict, runtime, memory and Beats values for this changed API:
   **Not captured**. No submission was made to obtain them.
-- Original historical Accepted problem-20 source, metadata and submission date
-  remain unchanged in the separate archive. This is an existing-practice
-  improvement, not another solved identity.
+- As of **18 November 2026**, problem 20 has **no Accepted entry in the
+  83-entry archive**. Those archived sources and dates do not establish
+  acceptance of this standalone practice.
+- This updates existing practice and adds no verified solved identity.
 - Inputs are generic synthetic brackets and bytes. No private conversation,
   employer/customer code, assessment prompt, editorial or full statement is used.
