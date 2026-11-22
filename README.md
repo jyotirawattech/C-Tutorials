@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The sixteen standalone practice examples below are a separate, partly
-overlapping collection; they are not sixteen additional accepted solves.
+notes. The seventeen standalone practice examples below are a separate, partly
+overlapping collection; they are not seventeen additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -54,6 +54,7 @@ In **pure C (C11)** systems programming:
 | **0141** | [**Linked List Cycle**](03_linked_lists/0141_linked_list_cycle) | Linked Lists | Floyd's Cycle-Finding Algorithm (Tortoise & Hare) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0146** | [**LRU Cache**](05_systems_data_structures/0146_lru_cache) | Systems Data Structures | Doubly Linked List with Sentinels + Hash Table | $\mathcal{O}(1)$ | $\mathcal{O}(K)$ | Local assertions |
 | **0206** | [**Reverse Linked List**](03_linked_lists/0206_reverse_linked_list) | Linked Lists | In-Place Three-Pointer Rewiring | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
+| **0207** | [**Course Schedule: checked graph practice**](04_trees_and_graphs/0207_course_schedule) | Trees & Graphs | Kahn traversal on compact edge slices with checked allocations | $\mathcal{O}(V+E)$ | $\mathcal{O}(V+E)$ | Locally tested adaptation; Accepted not captured |
 | **0208** | [**Implement Trie (Prefix Tree)**](04_trees_and_graphs/0208_implement_trie) | Trees & Routing Tables | 26-ary Trie with Direct Indexing & Post-Order Teardown | $\mathcal{O}(L)$ | $\mathcal{O}(N \times \Sigma)$ | Local assertions |
 | **0226** | [**Invert Binary Tree**](04_trees_and_graphs/0226_invert_binary_tree) | Trees & Graphs | Recursive Child Pointer Swapping | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | Local assertions |
 | **0355** | [**Design Twitter: corrected practice**](05_systems_data_structures/0355_design_twitter) | Systems Data Structures | Ring buffers + correct partial newest-first ordering | $\mathcal{O}(U+10T)$ feed | $\mathcal{O}(UK)$ allocated feed workspace | Locally tested adaptation; Accepted not captured |
@@ -83,6 +84,7 @@ C-Tutorials/
 │   ├── 0141_linked_list_cycle/
 │   └── 0206_reverse_linked_list/
 ├── 04_trees_and_graphs/
+│   ├── 0207_course_schedule/
 │   ├── 0208_implement_trie/
 │   └── 0226_invert_binary_tree/
 ├── 05_systems_data_structures/
@@ -108,7 +110,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes sixteen
+This runs the runner's negative regressions, then compiles and executes seventeen
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
