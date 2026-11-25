@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The nineteen standalone practice examples below are a separate, partly
-overlapping collection; they are not nineteen additional accepted solves.
+notes. The twenty standalone practice examples below are a separate, partly
+overlapping collection; they are not twenty additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -64,6 +64,7 @@ In **pure C (C11)** systems programming:
 | **0704** | [**Binary Search**](06_binary_search_and_bits/0704_binary_search) | Binary Search | Overflow-Safe Midpoint Calculation `low + (high-low)/2` | $\mathcal{O}(\log N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0739** | [**Daily Temperatures: output reuse practice**](02_two_pointers_and_strings/0739_daily_temperatures) | Arrays & Monotonic Stacks | Pending links in unfinished answer slots | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ auxiliary + output | Locally tested adaptation; Accepted not captured |
 | **0932** | [**Beautiful Array: checked allocation practice**](07_divide_and_conquer/0932_beautiful_array) | Divide & Conquer | Iterative parity expansion with checked allocation and partial-failure cleanup | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ scratch + output | Locally tested adaptation; Accepted not captured |
+| **1071** | [**Greatest Common Divisor of Strings**](02_two_pointers_and_strings/1071_greatest_common_divisor_of_strings) | Strings | GCD-length prefix check with borrowed result | $\mathcal{O}(N+M)$ | $\mathcal{O}(1)$ | Locally tested adaptation; Accepted not captured |
 
 ---
 
@@ -82,7 +83,8 @@ C-Tutorials/
 ├── 02_two_pointers_and_strings/
 │   ├── 0003_longest_substring_without_repeating_characters/
 │   ├── 0020_valid_parentheses/
-│   └── 0739_daily_temperatures/
+│   ├── 0739_daily_temperatures/
+│   └── 1071_greatest_common_divisor_of_strings/
 ├── 03_linked_lists/
 │   ├── 0021_merge_two_sorted_lists/
 │   ├── 0141_linked_list_cycle/
@@ -114,7 +116,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes nineteen
+This runs the runner's negative regressions, then compiles and executes twenty
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
