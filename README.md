@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The twenty standalone practice examples below are a separate, partly
-overlapping collection; they are not twenty additional accepted solves.
+notes. The twenty-one standalone practice examples below are a separate, partly
+overlapping collection; they are not twenty-one additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -53,6 +53,7 @@ In **pure C (C11)** systems programming:
 | **0136** | [**Single Number**](06_binary_search_and_bits/0136_single_number) | Bit Manipulation | Bitwise XOR Streaming Accumulator | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0141** | [**Linked List Cycle**](03_linked_lists/0141_linked_list_cycle) | Linked Lists | Floyd's Cycle-Finding Algorithm (Tortoise & Hare) | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0146** | [**LRU Cache**](05_systems_data_structures/0146_lru_cache) | Systems Data Structures | Doubly Linked List with Sentinels + Hash Table | $\mathcal{O}(1)$ | $\mathcal{O}(K)$ | Local assertions |
+| **0189** | [**Rotate Array**](01_arrays_and_hashing/0189_rotate_array) | Arrays | Three in-place reversals | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Locally tested adaptation; Accepted not captured |
 | **0206** | [**Reverse Linked List**](03_linked_lists/0206_reverse_linked_list) | Linked Lists | In-Place Three-Pointer Rewiring | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0207** | [**Course Schedule: checked graph practice**](04_trees_and_graphs/0207_course_schedule) | Trees & Graphs | Kahn traversal on compact edge slices with checked allocations | $\mathcal{O}(V+E)$ | $\mathcal{O}(V+E)$ | Locally tested adaptation; Accepted not captured |
 | **0208** | [**Implement Trie (Prefix Tree)**](04_trees_and_graphs/0208_implement_trie) | Trees & Routing Tables | 26-ary Trie with Direct Indexing & Post-Order Teardown | $\mathcal{O}(L)$ | $\mathcal{O}(N \times \Sigma)$ | Local assertions |
@@ -79,6 +80,7 @@ C-Tutorials/
 ├── 01_arrays_and_hashing/
 │   ├── 0001_two_sum/
 │   ├── 0121_best_time_to_buy_and_sell_stock/
+│   ├── 0189_rotate_array/
 │   └── 0448_find_all_numbers_disappeared_in_an_array/
 ├── 02_two_pointers_and_strings/
 │   ├── 0003_longest_substring_without_repeating_characters/
@@ -116,7 +118,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes twenty
+This runs the runner's negative regressions, then compiles and executes twenty-one
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
