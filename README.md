@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The twenty-one standalone practice examples below are a separate, partly
-overlapping collection; they are not twenty-one additional accepted solves.
+notes. The twenty-two standalone practice examples below are a separate, partly
+overlapping collection; they are not twenty-two additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -66,6 +66,7 @@ In **pure C (C11)** systems programming:
 | **0739** | [**Daily Temperatures: output reuse practice**](02_two_pointers_and_strings/0739_daily_temperatures) | Arrays & Monotonic Stacks | Pending links in unfinished answer slots | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ auxiliary + output | Locally tested adaptation; Accepted not captured |
 | **0932** | [**Beautiful Array: checked allocation practice**](07_divide_and_conquer/0932_beautiful_array) | Divide & Conquer | Iterative parity expansion with checked allocation and partial-failure cleanup | $\mathcal{O}(N)$ | $\mathcal{O}(N)$ scratch + output | Locally tested adaptation; Accepted not captured |
 | **1071** | [**Greatest Common Divisor of Strings**](02_two_pointers_and_strings/1071_greatest_common_divisor_of_strings) | Strings | GCD-length prefix check with borrowed result | $\mathcal{O}(N+M)$ | $\mathcal{O}(1)$ | Locally tested adaptation; Accepted not captured |
+| **2073** | [**Time Needed to Buy Tickets**](01_arrays_and_hashing/2073_time_needed_to_buy_tickets) | Arrays | Capped turn counts with checked 64-bit sum | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Locally tested adaptation; Accepted not captured |
 
 ---
 
@@ -81,7 +82,8 @@ C-Tutorials/
 │   ├── 0001_two_sum/
 │   ├── 0121_best_time_to_buy_and_sell_stock/
 │   ├── 0189_rotate_array/
-│   └── 0448_find_all_numbers_disappeared_in_an_array/
+│   ├── 0448_find_all_numbers_disappeared_in_an_array/
+│   └── 2073_time_needed_to_buy_tickets/
 ├── 02_two_pointers_and_strings/
 │   ├── 0003_longest_substring_without_repeating_characters/
 │   ├── 0020_valid_parentheses/
@@ -118,7 +120,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes twenty-one
+This runs the runner's negative regressions, then compiles and executes twenty-two
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
