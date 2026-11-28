@@ -19,8 +19,8 @@
 
 The accepted-source archive contains one verified submission per solved problem,
 with original code, problem/submission links, dates, explanations and source-review
-notes. The twenty-two standalone practice examples below are a separate, partly
-overlapping collection; they are not twenty-two additional accepted solves.
+notes. The twenty-three standalone practice examples below are a separate, partly
+overlapping collection; they are not twenty-three additional accepted solves.
 
 Each archived solution also explains its [comparison with a named baseline](docs/comparison-guidance.md):
 what work or storage changes, why, the conditions and trade-offs, and the dated
@@ -57,6 +57,7 @@ In **pure C (C11)** systems programming:
 | **0206** | [**Reverse Linked List**](03_linked_lists/0206_reverse_linked_list) | Linked Lists | In-Place Three-Pointer Rewiring | $\mathcal{O}(N)$ | $\mathcal{O}(1)$ | Local assertions |
 | **0207** | [**Course Schedule: checked graph practice**](04_trees_and_graphs/0207_course_schedule) | Trees & Graphs | Kahn traversal on compact edge slices with checked allocations | $\mathcal{O}(V+E)$ | $\mathcal{O}(V+E)$ | Locally tested adaptation; Accepted not captured |
 | **0208** | [**Implement Trie (Prefix Tree)**](04_trees_and_graphs/0208_implement_trie) | Trees & Routing Tables | 26-ary Trie with Direct Indexing & Post-Order Teardown | $\mathcal{O}(L)$ | $\mathcal{O}(N \times \Sigma)$ | Local assertions |
+| **0215** | [**Kth Largest Element in an Array**](01_arrays_and_hashing/0215_kth_largest_element_in_an_array) | Arrays | Caller-supplied min-heap and read-only input | $\mathcal{O}(N+(N-K)\log(K+1))$ | $\mathcal{O}(K)$ | Locally tested adaptation; Accepted not captured |
 | **0226** | [**Invert Binary Tree**](04_trees_and_graphs/0226_invert_binary_tree) | Trees & Graphs | Recursive Child Pointer Swapping | $\mathcal{O}(N)$ | $\mathcal{O}(H)$ | Local assertions |
 | **0355** | [**Design Twitter: corrected practice**](05_systems_data_structures/0355_design_twitter) | Systems Data Structures | Ring buffers + correct partial newest-first ordering | $\mathcal{O}(U+10T)$ feed | $\mathcal{O}(UK)$ allocated feed workspace | Locally tested adaptation; Accepted not captured |
 | **0432** | [**All O`one: ownership practice**](05_systems_data_structures/0432_all_oone_data_structure) | Systems Data Structures | Hash index + ordered buckets; checked updates and complete teardown | Expected $\mathcal{O}(1)$ update; worst $\mathcal{O}(K)$ | $\mathcal{O}(H+K+B)$ | Locally tested adaptation; Accepted not captured |
@@ -82,6 +83,7 @@ C-Tutorials/
 │   ├── 0001_two_sum/
 │   ├── 0121_best_time_to_buy_and_sell_stock/
 │   ├── 0189_rotate_array/
+│   ├── 0215_kth_largest_element_in_an_array/
 │   ├── 0448_find_all_numbers_disappeared_in_an_array/
 │   └── 2073_time_needed_to_buy_tickets/
 ├── 02_two_pointers_and_strings/
@@ -120,7 +122,7 @@ No external problem-platform access or package download is needed.
 make test
 ```
 
-This runs the runner's negative regressions, then compiles and executes twenty-two
+This runs the runner's negative regressions, then compiles and executes twenty-three
 standalone practice implementations with strict warnings and fail-fast UBSan. If Apple's `leaks`
 tool is present, it runs a separate plain binary. Any nonzero leak-detector exit
 fails; a missing detector is explicitly skipped and is not a leak-free result.
